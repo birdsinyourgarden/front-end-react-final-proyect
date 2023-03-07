@@ -1,21 +1,15 @@
 import Card from 'react-bootstrap/Card';
+import '../footer/Footer.css';
 
 function Footer() {
   return (
-    <Card>
-      <Card.Header>Quote</Card.Header>
-      <Card.Body>
-        <blockquote className="blockquote mb-0">
-          <p>
-            {' '}
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-            posuere erat a ante.{' '}
-          </p>
-          <footer className="blockquote-footer">
-            Someone famous in <cite title="Source Title">Source Title</cite>
-          </footer>
-        </blockquote>
-      </Card.Body>
+    <Card>    
+      <footer>
+        <div class="container d-flex justify-content-between align-items-center">
+          <img src="./public/Copyright.png" alt="Copyright"></img>
+          <img src="./public/femCoders.png" alt="logo Fem Coders"></img>
+        </div>
+      </footer>    
     </Card>
   );
 }
