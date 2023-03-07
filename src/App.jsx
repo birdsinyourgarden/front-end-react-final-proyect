@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 //import Calendar from 'rsuite/Calendar';
 import { Calendar, Whisper, Popover, Badge } from 'rsuite';
 import Footer from './components/footer/Footer';
+import { Col, Row, Container } from 'react-bootstrap';
+import Sidebar from './components/sidebar/Sidebar';
 
 
 function getTodoList(date) {
@@ -74,7 +76,17 @@ const App = () => {
   return (
     <div>
       <LocalNavbar />
-      <Calendar bordered renderCell={renderCell} />
+      <Container className='green-background mt-3 p-3'>
+        <Row>
+          <Col lg="3">
+            <Sidebar />
+          </Col>
+          <Col lg="9">
+            <Calendar bordered renderCell={renderCell} className='white-background' />
+          </Col>
+        </Row>
+
+      </Container>
       <Footer/>
     </div>
   )
