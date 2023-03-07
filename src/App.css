@@ -60,3 +60,10 @@
   height: 6px;
 }  
 
+.green-background {
+  background-color: #9fba5b;
+}
+
+.white-background {
+  background-color: white;
+}
