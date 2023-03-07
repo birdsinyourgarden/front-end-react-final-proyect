@@ -10,8 +10,7 @@ import '../components/LocalNavbar.css';
 
 function LocalNavbar() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
-      <Container>
+    <Navbar collapseOnSelect expand="lg" variant="light" className="bgnavbar p-3">
         <Navbar.Brand href="#home"><img src="./public/Aidei.png" alt="logo Aidei"></img></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -37,7 +36,6 @@ function LocalNavbar() {
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
-      </Container>
     </Navbar>
   );
 }
