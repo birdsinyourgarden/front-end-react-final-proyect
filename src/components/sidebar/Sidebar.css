@@ -1,6 +1,8 @@
 .green {
     background-color: #cfe695;
-    max-height: 90vh;
+    max-height: 96vh;
+    margin-top: 10px;
+    margin-bottom: 0px;
 }
 
 .scrollbar{

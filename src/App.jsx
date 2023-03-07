@@ -75,8 +75,7 @@ const App = () => {
 
   return (
     <div>
-      <LocalNavbar />
-      <Container className='green-background mt-3 p-3'>
+      <LocalNavbar className='green-background mt-3 p-3'/>
         <Row>
           <Col lg="3">
             <Sidebar />
@@ -86,7 +85,7 @@ const App = () => {
           </Col>
         </Row>
 
-      </Container>
+      
       <Footer/>
     </div>
   )

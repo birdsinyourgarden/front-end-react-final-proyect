@@ -38,7 +38,7 @@
 }
 
 .read-the-docs {
-  color: #888;
+  color: hwb(0 3% 97%);
 }
 
 .calendar-todo-list {
@@ -47,23 +47,33 @@
   list-style: none;
 }
 
-.calendar-todo-list li {
+.calendar-todo-list{
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  background-color: #7839ac;
+  border-radius: 5px;
 }
 
 .calendar-todo-item-badge {
   vertical-align: top;
-  margin-top: 8px;
+  margin-top: 5px;
   width: 6px;
   height: 6px;
+  margin-bottom: 5px;
 }  
 
 .green-background {
   background-color: #9fba5b;
+  margin-bottom: 5px;
+  margin-top: 5px;
+
 }
 
 .white-background {
-  background-color: white;
+  background-color: #cbe38c;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  margin-top: 8px;
 }
+
