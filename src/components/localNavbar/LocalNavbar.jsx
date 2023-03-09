@@ -6,28 +6,30 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import "rsuite/dist/rsuite.css";
-import '../components/LocalNavbar.css';
+import '../localNavbar/LocalNavbar.css';
+import { Link } from "react-router-dom";
 
 function LocalNavbar() {
   return (
     <Navbar collapseOnSelect expand="lg" variant="light" className="bgnavbar p-3">
-        <Navbar.Brand href="#home"><img src="./public/Aidei.png" alt="logo Aidei"></img></Navbar.Brand>
+        <Navbar.Brand href="home"><img src="./public/Aidei.png" alt="logo Aidei"></img></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#features">Empleados</Nav.Link>
-            <Nav.Link href="#pricing">Ausencias</Nav.Link>
-            <NavDropdown title="Solicitudes Vacaciones" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">S. Pendientes</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                S. Atendidas
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3"></NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                
-              </NavDropdown.Item>
-            </NavDropdown>
+          <Link to="empleados" className="link_brand">
+                        Empleados
+                    </Link>
+                    <br/>
+                    <Link to="ausencias" className="link_brand">
+                        Ausencias
+                    </Link>
+                    <br/>
+                    <div>
+                    <Link to="solicitudes" className="link_brand">
+                        Solicitudes Atendidas
+                    </Link>
+                    </div>
+            
           </Nav>
           <Nav>
             <Nav.Link href="#deets"></Nav.Link>
