@@ -12,7 +12,7 @@ function LocalLogin() {
       <Card className='login-card shadow'>
         <Form className="logstyle">
           <Form.Group className="mb-4" controlId="formBasicEmail">
-            <Form.Label>Correo Electronico</Form.Label>
+            <Form.Label>Email</Form.Label>
             <Form.Control type="email" placeholder="Enter email" className='shadow'/>
           </Form.Group>
 
@@ -20,13 +20,14 @@ function LocalLogin() {
             <Form.Label>Contraseña</Form.Label>
             <Form.Control type="password" placeholder="Password" className='shadow'/>
           </Form.Group>
-          <Form.Group className="mb-4" controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="&nbsp;Check me out"/>
-          </Form.Group>
+          {/*<Form.Group className="mb-4" controlId="formBasicCheckbox">
+          <Form.Check type="checkbox" label="&nbsp;Check me out"/>
+          </Form.Group>*/}
           <div className='d-grid'>
-            <Button variant="primary" type="submit" className='shadow'>
-              Entrar
+            <Button id="submitLog" variant="primary" type="submit" className='shadow'>
+              ENTRAR
             </Button>
+            <a id="forgPassword">¿Olvidaste la contraseña?</a>
           </div>
         </Form>
       </Card>

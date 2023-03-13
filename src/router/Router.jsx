@@ -9,6 +9,7 @@ import Empleados from "../views/empleados/Empleados";
 import Ausencias from "../views/ausencias/Ausencias";
 import Solicitudes from "../views/solicitudes/solicitudes";
 import LocalLogin from "../views/login/Local_Login";
+import "./Router.css"
 
 
 
