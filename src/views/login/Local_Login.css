@@ -1,0 +1,11 @@
+.logstyle{
+    text-align: left;
+    padding: 30px;
+}
+
+.login-card {
+    max-width: 500px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 0;
+}

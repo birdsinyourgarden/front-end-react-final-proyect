@@ -1,7 +1,11 @@
+import { Sender } from "../../components/sender/Sender";
+
 function Solicitudes(){
 
     return (
-        <div>Solicitudes Atendidas</div>
+        <div>
+            <Sender />
+        </div>
     )
 }
 
