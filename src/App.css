@@ -1,6 +1,5 @@
-App{
-    height: 100%;
-    wh
-    }
-
-
+.App{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
