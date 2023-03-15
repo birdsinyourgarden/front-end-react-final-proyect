@@ -14,7 +14,7 @@ export const Sender = () => {
 
     return (
     <div className='div-form d-flex justify-content-center flex-direction-column align-items-center mt-1 p-4'>
-        <h1 className='title-form d-flex justify-content-center flex-direction-column align-items-center'>VACACIONES</h1>
+        <h1 className='title-form'>VACACIONES</h1>
         <form className='form-mail d-flex justify-content-center flex-direction-column align-items-center' onSubmit={sendEmail}>
             <label>Nombre</label>
             <input type="text" name='user_name' />

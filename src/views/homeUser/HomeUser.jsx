@@ -1,4 +1,5 @@
 import { Sender } from "../../components/sender/Sender";
+import UploadWidget from "../../components/uploadWidget/UploadWidget";
 import "../homeUser/HomeUser.css"
 
 function HomeUser(){
@@ -6,6 +7,7 @@ function HomeUser(){
     return (
         <div>
             <Sender />
+            <UploadWidget />
         </div>
     )
 }
