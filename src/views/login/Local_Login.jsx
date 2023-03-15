@@ -8,8 +8,8 @@ function LocalLogin() {
   const onSubmit = () =>{};
   const {register} = useForm();
   return (
-    <Container>
-      <Card id="logCard" className='login-card shadow'>
+    <Container id="logCard">
+      <Card className='login-card shadow'>
         <Form className="logstyle">
           <Form.Group className="mb-4" controlId="formBasicEmail">
             <Form.Label>Email</Form.Label>
