@@ -1,5 +1,6 @@
 import React from 'react';
 import emailjs from '@emailjs/browser';
+import '../sender/Sender.css';
 
 export const Sender = () => {
 
@@ -12,10 +13,10 @@ export const Sender = () => {
     }
 
     return (
-    <div className='div-form'>
-        <h1 className='title-form'>Contact Us</h1>
-        <form className='form-mail' onSubmit={sendEmail}>
-            <label>Name</label>
+    <div className='div-form d-flex justify-content-center flex-direction-column align-items-center mt-1 p-4'>
+        <h1 className='title-form d-flex justify-content-center flex-direction-column align-items-center'>VACACIONES</h1>
+        <form className='form-mail d-flex justify-content-center flex-direction-column align-items-center' onSubmit={sendEmail}>
+            <label>Nombre</label>
             <input type="text" name='user_name' />
             <hr />
 
@@ -23,10 +24,10 @@ export const Sender = () => {
             <input type="email" name='user_email' />
             <hr />
 
-            <label>Message</label>
+            <label>Mensaje</label>
             <textarea name="user_message" id="" cols="30" rows="10"></textarea>
             <hr />
-            <button>Send</button>
+            <button><img src="/public/botonEnviar.png" alt="botón enviar"></img></button>
         </form>
     </div>
     )
