@@ -11,7 +11,7 @@ import Sidebar from '../../components/sidebar/Sidebar';
 function Home(){
 
 return (
-    <div>
+    <div className='permanentEmployees'>
         <Row>
         <Col lg="3">
             <Sidebar/>
