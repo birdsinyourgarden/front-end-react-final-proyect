@@ -9,6 +9,7 @@ import Empleados from "../views/empleados/Empleados";
 import Ausencias from "../views/ausencias/Ausencias";
 import Solicitudes from "../views/solicitudes/solicitudes";
 import LocalLogin from "../views/login/Local_Login";
+import HomeUser from "../views/homeUser/HomeUser";
 
 
 
@@ -25,7 +26,7 @@ return (
         <Route path="/empleados" element={<Empleados />} />
         <Route path="/ausencias" element={<Ausencias />} />
         <Route path="/solicitudes" element={<Solicitudes />} />
-            
+        <Route path="/homeUser" element={< HomeUser />} />
     </Routes>
     <Footer />
     </BrowserRouter>

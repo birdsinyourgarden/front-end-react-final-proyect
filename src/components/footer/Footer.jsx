@@ -3,7 +3,7 @@ import '../footer/Footer.css';
 
 function Footer() {
   return (
-    <Card>    
+    <Card className='footer-card'>    
       <footer>
         <div class="d-flex justify-content-between align-items-center">
           <img src="./public/Copyright.png" alt="Copyright"></img>
