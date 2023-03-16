@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import '../uploadWidget/UploadWidget.css';
 
 const UploadWidget = () => {
     const cloudinaryRef = useRef();
@@ -13,8 +14,8 @@ const UploadWidget = () => {
         });
     }, [])
     return (
-        <button onClick={() => widgetRef.current.open()}>
-            Upload
+        <button type="button" className="btn btn-success rounded-4" onClick={() => widgetRef.current.open()}>
+            Añadir documentos
         </button>
     )
 }

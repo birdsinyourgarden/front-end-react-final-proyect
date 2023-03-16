@@ -5,16 +5,12 @@ h1 {
 }
 
 .title-form {
-    background: #98AA57;
+    background: #658A05;
     max-width: fit-content;
 }
 
 .form-mail {
     background: #98AA57;
-}
-
-hr {
-    width: 20rem;
 }
 
 label {

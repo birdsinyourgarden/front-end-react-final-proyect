@@ -1,13 +1,15 @@
-import { Sender } from "../../components/sender/Sender";
-import UploadWidget from "../../components/uploadWidget/UploadWidget";
+import { SenderHolidays } from "../../components/senderHolidays/SenderHolidays";
+import { SenderAbsences } from "../../components/senderAbsences/SenderAbsences";
 import "../homeUser/HomeUser.css"
 
 function HomeUser() {
 
     return (
-        <div className="container" style={{ "max-width": "500px" }}>
-            <Sender />
-            <UploadWidget />
+        <div className="container">
+            <div className="wrap">
+                <SenderHolidays style={{ maxWidth: "500px" }} />
+                <SenderAbsences style={{ maxWidth: "500px" }} />
+            </div>
         </div>
     )
 }
