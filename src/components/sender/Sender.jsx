@@ -13,15 +13,15 @@ export const Sender = () => {
     }
 
     return (
-    <div className='d-flex flex-column align-items-center mt-1 p-4'>
-        <h1 className=''>VACACIONES</h1>
-        <form className='form-mail d-flex flex-column align-items-center' onSubmit={sendEmail}>
+    <div className='p-4'>
+        <h1 className='title-form h2 text-left rounded-4 px-4'>VACACIONES</h1>
+        <form className='form-mail d-flex flex-column align-items-center w-100 rounded-4 p-4' onSubmit={sendEmail}>
             <label>Nombre</label>
             <input type="text" name='user_name' />
             <label>Email</label>
             <input type="email" name='user_email' />
             <label>Mensaje</label>
-            <textarea name="user_message" id="" cols="30" rows="10"></textarea>
+            <textarea name="user_message" cols="25" rows="10" className='mb-4' />
             <button><img src="/public/botonEnviar.png" alt="botón enviar"></img></button>
         </form>
     </div>

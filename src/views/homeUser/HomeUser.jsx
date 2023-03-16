@@ -5,7 +5,7 @@ import "../homeUser/HomeUser.css"
 function HomeUser() {
 
     return (
-        <div className="container">
+        <div className="container" style={{ "max-width": "500px" }}>
             <Sender />
             <UploadWidget />
         </div>

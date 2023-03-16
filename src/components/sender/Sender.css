@@ -1,35 +1,17 @@
-body {
-    margin: 0;
-    padding: 0;
-    background: #E4AFFF;  
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 h1 {
     color: white;
-    font-size: 4rem;
     font-weight: 400;
     font-family: 'Fresca';
 }
 
-/* .title-form {
-    border-radius:30px;
-    background: #98AA57;    
+.title-form {
+    background: #98AA57;
+    max-width: fit-content;
 }
 
 .form-mail {
-    width: 50rem;
-    border-radius:30px;
-    background: #98AA57;    
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
+    background: #98AA57;
+}
 
 hr {
     width: 20rem;
