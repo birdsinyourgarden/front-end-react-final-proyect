@@ -5,7 +5,7 @@ function HomeUser(){
 
     return (
         <div>
-
+            Menú de Usuario
 
 
         </div>
