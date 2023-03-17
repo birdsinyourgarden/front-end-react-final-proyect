@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Home from "../views/home/Home";
-import Perfil from "../views/perfil/Perfil";
+import Profile from "../views/profile/Profile";
 //import Register from "../views/register/Register";
 import LocalNavbar from "../components/localNavbar/LocalNavbar";
 import Footer from "../components/footer/Footer";
-import Empleados from "../views/empleados/Empleados";
-import Ausencias from "../views/ausencias/Ausencias";
+import Employees from "../views/employees/Employees";
+import Absences from "../views/absences/Absences";
 import Solicitudes from "../views/solicitudes/solicitudes";
 import LocalLogin from "../views/login/Local_Login";
 import HomeUser from "../views/homeUser/HomeUser";
@@ -23,8 +23,8 @@ return (
     <Routes>
         <Route path="/" element={<LocalLogin />} />
         <Route path="/home" element={<Home  />} />
-        <Route path="/empleados" element={<Empleados />} />
-        <Route path="/ausencias" element={<Ausencias />} />
+        <Route path="/employees" element={<Employees />} />
+        <Route path="/absences" element={<Absences />} />
         <Route path="/solicitudes" element={<Solicitudes />} />
         <Route path="/homeUser" element={< HomeUser />} />
     </Routes>
