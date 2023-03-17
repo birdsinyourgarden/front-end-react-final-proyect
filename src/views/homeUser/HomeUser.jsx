@@ -6,6 +6,7 @@ function HomeUser() {
 
     return (
         <div className="container">
+            <div></div>
             <div className="wrap">
                 <SenderHolidays style={{ maxWidth: "500px" }} />
                 <SenderAbsences style={{ maxWidth: "500px" }} />
