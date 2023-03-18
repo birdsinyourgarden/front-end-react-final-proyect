@@ -1,7 +1,7 @@
 
-import "./Empleados.css";
+import "./Employees.css";
 
-const Empleados = () => {
+const Employees = () => {
    return (
       <div className="container_book">
         Registro de Empleados
@@ -9,4 +9,4 @@ const Empleados = () => {
    );
 };
 
-export default Empleados;
+export default Employees;
