@@ -1,9 +1,8 @@
-import { SenderHolidays } from "../../components/senderHolidays/SenderHolidays";
-import { SenderAbsences } from "../../components/senderAbsences/SenderAbsences";
+import SenderHolidays from "../../components/senderHolidays/SenderHolidays";
+import SenderAbsences from "../../components/senderAbsences/SenderAbsences";
 import "../homeUser/HomeUser.css"
 
 function HomeUser() {
-
     return (
         <div className="container">
             <div></div>
@@ -15,4 +14,4 @@ function HomeUser() {
     )
 }
 
-export default HomeUser
+export default HomeUser;

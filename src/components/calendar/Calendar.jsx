@@ -74,4 +74,4 @@ function getTodoList(date) {
   
   };
   
-  export default LocalCalendar
+  export default LocalCalendar;

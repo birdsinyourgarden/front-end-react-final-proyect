@@ -2,8 +2,7 @@ import React from 'react';
 import emailjs from '@emailjs/browser';
 import './SenderHolidays.css';
 
-export const SenderHolidays = () => {
-
+export default function SenderHolidays() {
     const sendEmail = (event) => {
         event.preventDefault();
     
@@ -29,4 +28,4 @@ export const SenderHolidays = () => {
         </form>
     </div>
     )
-}
+};

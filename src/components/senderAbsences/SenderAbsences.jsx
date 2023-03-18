@@ -2,9 +2,10 @@ import React from 'react';
 import emailjs from '@emailjs/browser';
 import UploadWidget from "../../components/uploadWidget/UploadWidget";
 import './SenderAbsences.css';
+// import datePicker from '../datePicker/DatePicker';
+import SelectDate from '../selectDate/SelectDate';
 
-export const SenderAbsences = () => {
-
+export default function SenderAbsences () {
     const sendEmail = (event) => {
         event.preventDefault();
     
@@ -17,7 +18,8 @@ export const SenderAbsences = () => {
     <div className='p-4'>
         <h1 className='title-form-blue h2 text-left rounded-4 px-5 py-2'>AUSENCIAS</h1>
         <form className='form-mail-blue d-flex flex-column align-items-center w-100 rounded-4 p-4' onSubmit={sendEmail}>
-            <label>Nombre</label>
+            <label>Días</label>
+            <SelectDate />
             <input type="text" name='user_name' />
             <label>Email</label>
             <input type="email" name='user_email' />
@@ -31,4 +33,4 @@ export const SenderAbsences = () => {
         </form>
     </div>
     )
-}
+};
