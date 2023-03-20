@@ -20,12 +20,12 @@ export default function SenderAbsences () {
         <form className='form-mail-blue d-flex flex-column align-items-center w-100 rounded-4 p-4' onSubmit={sendEmail}>
             <label>Días</label>
             <SelectDate />
+            {/* <input type="text" name='user_name' /> */}
+            <label>Horas</label>
             <SelectTime />
-            <input type="text" name='user_name' />
-            <label>Email</label>
-            <input type="email" name='user_email' />
-            <label>Mensaje</label>
-            <textarea name="user_message" cols="27" rows="10" className='mb-4' />
+            {/* <input type="email" name='user_email' /> */}
+            {/* <label>Mensaje</label>
+            <textarea name="user_message" cols="27" rows="10" className='mb-4' /> */}
             <div className="mb-4">
                 <button className='btn btn-link'><img src="/deleteGreen.png" alt="botón borrar"></img></button>
                 <button className='btn btn-link'><img src="/sendGreen.png" alt="botón enviar"></img></button>
