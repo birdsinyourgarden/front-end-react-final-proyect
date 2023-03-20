@@ -1,10 +1,13 @@
+import React, { useState, useEffect } from "react";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import '../login/Local_Login.css';
 import { useForm } from "react-hook-form";
 import { Card, Container } from 'react-bootstrap';
+// import { login } from "../../services/user.service";
+import { Link, useNavigate } from "react-router-dom";
 
-function LocalLogin() {
+const LocalLogin = () => {
   const onSubmit = () =>{};
   const {register} = useForm();
   return (
@@ -33,6 +36,6 @@ function LocalLogin() {
       </Card>
     </Container>
   );
-}
 
+}
 export default LocalLogin;
