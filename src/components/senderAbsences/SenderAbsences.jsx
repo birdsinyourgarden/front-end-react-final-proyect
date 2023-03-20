@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser';
 import UploadWidget from "../../components/uploadWidget/UploadWidget";
 import './SenderAbsences.css';
 import SelectDate from '../selectDate/SelectDate';
+import SelectTime from '../selectTime/SelectTime';
 
 export default function SenderAbsences () {
     const sendEmail = (event) => {
@@ -19,6 +20,7 @@ export default function SenderAbsences () {
         <form className='form-mail-blue d-flex flex-column align-items-center w-100 rounded-4 p-4' onSubmit={sendEmail}>
             <label>Días</label>
             <SelectDate />
+            <SelectTime />
             <input type="text" name='user_name' />
             <label>Email</label>
             <input type="email" name='user_email' />
