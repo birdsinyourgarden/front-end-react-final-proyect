@@ -24,7 +24,7 @@ function LocalNavbar() {
                     <br/>
                     <div>
                     <Link to="solicitudes" className="link_brand">
-                        Solicitudes Atendidas
+                        Solicitudes
                     </Link>
                     </div>
                     <div>

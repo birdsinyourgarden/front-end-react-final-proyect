@@ -1,15 +1,23 @@
+import React, { useState, useEffect } from "react";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import '../login/Local_Login.css';
 import { useForm } from "react-hook-form";
 import { Card, Container } from 'react-bootstrap';
+// import { login } from "../../services/user.service";
+import { Link, useNavigate } from "react-router-dom";
 
-function LocalLogin() {
+const LocalLogin = () => {
   const onSubmit = () =>{};
   const {register} = useForm();
   return (
+<<<<<<< HEAD
+    <Container>
+      <Card id="logCard" className='login-card shadow'>
+=======
     <Container id="logCard">
       <Card className='login-card shadow'>
+>>>>>>> dev
         <Form className="logstyle">
           <Form.Group className="mb-4" controlId="formBasicEmail">
             <Form.Label>Email</Form.Label>
@@ -20,8 +28,13 @@ function LocalLogin() {
             <Form.Label>Contraseña</Form.Label>
             <Form.Control type="password" placeholder="Password" className='shadow'/>
           </Form.Group>
+<<<<<<< HEAD
+          {/*<Form.Group className="mb-4" controlId="formBasicCheckbox">
+          <Form.Check type="checkbox" label="&nbsp;Check me out"/>
+=======
           {/* <Form.Group className="mb-4" controlId="formBasicCheckbox">
             <Form.Check type="checkbox" label="&nbsp;Check me out"/>
+>>>>>>> dev
           </Form.Group>*/}
           <div className='d-grid'>
             <Button id="submitLog" variant="primary" type="submit" className='shadow'>
@@ -33,6 +46,6 @@ function LocalLogin() {
       </Card>
     </Container>
   );
-}
 
+}
 export default LocalLogin;
