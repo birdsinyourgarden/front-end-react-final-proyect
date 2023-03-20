@@ -13,7 +13,7 @@ export default function SenderAbsences () {
     const [endTime, setEndTime] = useState(null);
     const sendEmail = (event) => {
         event.preventDefault();   
-        emailjs.sendForm('service_19vqrs9','template_phlgxgh',event.target,'WrHmfsnC8q7_pqnIC')
+        emailjs.sendForm('service_19vqrs9','ausencias',event.target,'WrHmfsnC8q7_pqnIC')
         .then(response => console.log(response))
         .catch(error => console.log(error))
     }
@@ -26,6 +26,7 @@ export default function SenderAbsences () {
                 <div className="col mb-4">
                     <label>Inicio</label>
                     <DatePicker
+                        name="startDate"
                         selected={startDate}
                         onChange={(date) => setStartDate(date)}
                         selectsStart
@@ -37,6 +38,7 @@ export default function SenderAbsences () {
                         className="mb-2"
                     />
                     <DatePicker
+                        name="startTime"
                         selected={startTime}
                         onChange={(date) => setStartTime(date)}
                         showTimeSelect
@@ -47,11 +49,11 @@ export default function SenderAbsences () {
                         dateFormat="HH:mm"
                         placeholderText="Selecciona una hora"
                     />
-                    {/* <input type="text" name="user_name" /> */}
                 </div>
                 <div className="col mb-4">
                     <label>Fin</label>
                     <DatePicker
+                        name="endDate"
                         selected={endDate}
                         onChange={(date) => setEndDate(date)}
                         selectsEnd
@@ -64,6 +66,7 @@ export default function SenderAbsences () {
                         className="mb-2"
                     />
                     <DatePicker
+                        name="endTime"
                         selected={endTime}
                         onChange={(date) => setEndTime(date)}
                         showTimeSelect
@@ -76,9 +79,6 @@ export default function SenderAbsences () {
                     />
                 </div>
             </div>
-            {/* <input type="email" name="user_email" /> */}
-            {/* <label>Mensaje</label>
-            <textarea name="user_message" cols="27" rows="10" className="mb-4" /> */}
             <div className="mb-3">
                 <button className="btn btn-link"><img src="/deleteGreen.png" alt="botón borrar"></img></button>
                 <button className="btn btn-link"><img src="/sendGreen.png" alt="botón enviar"></img></button>

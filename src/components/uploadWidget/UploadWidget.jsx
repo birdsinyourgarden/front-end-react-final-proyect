@@ -14,7 +14,7 @@ const UploadWidget = () => {
         });
     }, [])
     return (
-        <button type="button" className="btn btn-success rounded-4" onClick={() => widgetRef.current.open()}>
+        <button type="button" className="btn btn-custom rounded-4 p-2" onClick={() => widgetRef.current.open()}>
             Añadir documentos
         </button>
     )

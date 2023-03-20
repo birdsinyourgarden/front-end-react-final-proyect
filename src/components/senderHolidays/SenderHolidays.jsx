@@ -10,7 +10,7 @@ export default function SenderHolidays() {
     const [endDate, setEndDate] = useState(null);
     const sendEmail = (event) => {
         event.preventDefault();
-        emailjs.sendForm('service_19vqrs9','template_phlgxgh',event.target,'WrHmfsnC8q7_pqnIC')
+        emailjs.sendForm('service_19vqrs9','vacaciones',event.target,'WrHmfsnC8q7_pqnIC')
         .then(response => console.log(response))
         .catch(error => console.log(error))
     }
@@ -23,6 +23,7 @@ export default function SenderHolidays() {
                 <div className="col mb-4">
                     <label>Inicio</label>
                     <DatePicker
+                        name="startDate"
                         selected={startDate}
                         onChange={(date) => setStartDate(date)}
                         selectsStart
@@ -37,6 +38,7 @@ export default function SenderHolidays() {
                 <div className="col mb-4">
                     <label>Fin</label>
                     <DatePicker
+                        name="endDate"
                         selected={endDate}
                         onChange={(date) => setEndDate(date)}
                         selectsEnd
@@ -50,11 +52,6 @@ export default function SenderHolidays() {
                     />
                 </div>
             </div>
-            {/* <input type="text" name="user_name" /> */}
-            {/* <label>Email</label>
-            <input type="email" name="user_email" />
-            <label>Mensaje</label>
-            <textarea name="user_message" cols="27" rows="10" className="mb-4" /> */}
             <div>
                 <button className="btn btn-link"><img src="/deleteBlue.png" alt="botón borrar"></img></button>
                 <button className="btn btn-link"><img src="/sendBlue.png" alt="botón enviar"></img></button>
