@@ -1,7 +1,7 @@
 function Solicitudes(){
 
     return (
-        <div>Solicitudes Atendidas</div>
+        <div>Solicitudes</div>
     )
 }
 

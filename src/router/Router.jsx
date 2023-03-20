@@ -5,7 +5,7 @@ import Perfil from "../views/perfil/Perfil";
 //import Register from "../views/register/Register";
 import LocalNavbar from "../components/localNavbar/LocalNavbar";
 import Footer from "../components/footer/Footer";
-import Empleados from "../views/empleados/Empleados";
+import Employees from "../views/employees/Employees";
 import Ausencias from "../views/ausencias/Ausencias";
 import Solicitudes from "../views/solicitudes/solicitudes";
 import LocalLogin from "../views/login/Local_Login";
@@ -23,7 +23,7 @@ return (
     <Routes>
         <Route path="/" element={<LocalLogin />} />
         <Route path="/home" element={<Home  />} />
-        <Route path="/empleados" element={<Empleados />} />
+        <Route path="/employees" element={<Employees />} />
         <Route path="/ausencias" element={<Ausencias />} />
         <Route path="/solicitudes" element={<Solicitudes />} />
             

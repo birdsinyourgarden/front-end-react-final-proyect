@@ -16,7 +16,7 @@ function LocalNavbar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-          <Link to="empleados" className="link_brand">
+          <Link to="employees" className="link_brand">
                         Empleados
                     </Link>
                     <br/>
@@ -26,7 +26,7 @@ function LocalNavbar() {
                     <br/>
                     <div>
                     <Link to="solicitudes" className="link_brand">
-                        Solicitudes Atendidas
+                        Solicitudes
                     </Link>
                     </div>
             
