@@ -1,7 +1,5 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-
-import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -20,13 +18,18 @@ function LocalNavbar() {
                         Empleados
                     </Link>
                     <br/>
-                    <Link to="ausencias" className="link_brand">
+                    <Link to="absences" className="link_brand">
                         Ausencias
                     </Link>
                     <br/>
                     <div>
                     <Link to="solicitudes" className="link_brand">
                         Solicitudes
+                    </Link>
+                    </div>
+                    <div>
+                    <Link to="homeUser" className="link_brand">
+                      Menú Usuario
                     </Link>
                     </div>
             

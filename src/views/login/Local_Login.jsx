@@ -11,8 +11,13 @@ const LocalLogin = () => {
   const onSubmit = () =>{};
   const {register} = useForm();
   return (
+<<<<<<< HEAD
     <Container>
       <Card id="logCard" className='login-card shadow'>
+=======
+    <Container id="logCard">
+      <Card className='login-card shadow'>
+>>>>>>> dev
         <Form className="logstyle">
           <Form.Group className="mb-4" controlId="formBasicEmail">
             <Form.Label>Email</Form.Label>
@@ -23,8 +28,13 @@ const LocalLogin = () => {
             <Form.Label>Contraseña</Form.Label>
             <Form.Control type="password" placeholder="Password" className='shadow'/>
           </Form.Group>
+<<<<<<< HEAD
           {/*<Form.Group className="mb-4" controlId="formBasicCheckbox">
           <Form.Check type="checkbox" label="&nbsp;Check me out"/>
+=======
+          {/* <Form.Group className="mb-4" controlId="formBasicCheckbox">
+            <Form.Check type="checkbox" label="&nbsp;Check me out"/>
+>>>>>>> dev
           </Form.Group>*/}
           <div className='d-grid'>
             <Button id="submitLog" variant="primary" type="submit" className='shadow'>

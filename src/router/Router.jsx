@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Home from "../views/home/Home";
-import Perfil from "../views/perfil/Perfil";
+import Profile from "../views/profile/Profile";
 //import Register from "../views/register/Register";
 import LocalNavbar from "../components/localNavbar/LocalNavbar";
 import Footer from "../components/footer/Footer";
 import Employees from "../views/employees/Employees";
-import Ausencias from "../views/ausencias/Ausencias";
+import Absences from "../views/absences/Absences";
 import Solicitudes from "../views/solicitudes/solicitudes";
 import LocalLogin from "../views/login/Local_Login";
-import "./Router.css"
+import HomeUser from "../views/homeUser/HomeUser";
 
 
 
@@ -24,9 +24,9 @@ return (
         <Route path="/" element={<LocalLogin />} />
         <Route path="/home" element={<Home  />} />
         <Route path="/employees" element={<Employees />} />
-        <Route path="/ausencias" element={<Ausencias />} />
+        <Route path="/absences" element={<Absences />} />
         <Route path="/solicitudes" element={<Solicitudes />} />
-            
+        <Route path="/homeUser" element={< HomeUser />} />
     </Routes>
     <Footer />
     </BrowserRouter>

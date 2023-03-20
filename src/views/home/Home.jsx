@@ -14,10 +14,10 @@ return (
     <div>
         <Row>
         <Col lg="3">
-            <Sidebar />
+            <Sidebar/>
         </Col>
         <Col lg="9">
-            <LocalCalendar className='white-background' />
+        <LocalCalendar className='white-background' />
         </Col>
         </Row>
     </div>
