@@ -1,6 +1,7 @@
 import React from 'react';
 import emailjs from '@emailjs/browser';
 import './SenderHolidays.css';
+import SelectDate from '../selectDate/SelectDate';
 
 export default function SenderHolidays() {
     const sendEmail = (event) => {
@@ -15,7 +16,8 @@ export default function SenderHolidays() {
     <div className='p-4'>
         <h1 className='title-form h2 text-left rounded-4 px-5 py-2'>VACACIONES</h1>
         <form className='form-mail d-flex flex-column align-items-center w-100 rounded-4 p-4' onSubmit={sendEmail}>
-            <label>Nombre</label>
+            <label>Días</label>
+            <SelectDate />
             <input type="text" name='user_name' />
             <label>Email</label>
             <input type="email" name='user_email' />

@@ -2,7 +2,6 @@ import React from 'react';
 import emailjs from '@emailjs/browser';
 import UploadWidget from "../../components/uploadWidget/UploadWidget";
 import './SenderAbsences.css';
-// import datePicker from '../datePicker/DatePicker';
 import SelectDate from '../selectDate/SelectDate';
 
 export default function SenderAbsences () {
