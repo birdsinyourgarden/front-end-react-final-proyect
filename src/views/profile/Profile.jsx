@@ -1,8 +1,8 @@
-function Perfil(){
+function Profile(){
 
     return (
         <div>Perfil</div>
     )
 }
 
-export default Perfil
+export default Profile

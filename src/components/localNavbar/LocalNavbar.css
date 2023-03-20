@@ -1,3 +1,11 @@
 .bgnavbar{
     background-color: #FFE8C6;
+    border-radius: calc(0.375rem - 1px);
+}
+
+.link_brand{
+    text-decoration: none;
+    color:#222;
+    font-weight: 600;
+    margin-left: 10px;
 }
