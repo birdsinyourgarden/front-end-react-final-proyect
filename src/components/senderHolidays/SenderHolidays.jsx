@@ -10,7 +10,7 @@ export default function SenderHolidays() {
     const [endDate, setEndDate] = useState(null);
     const sendEmail = (event) => {
         event.preventDefault();
-        emailjs.sendForm('service_19vqrs9','vacaciones',event.target,'WrHmfsnC8q7_pqnIC')
+        emailjs.sendForm('service_19vqrs9','holidays',event.target,'WrHmfsnC8q7_pqnIC')
         .then(response => console.log(response))
         .catch(error => console.log(error))
     }

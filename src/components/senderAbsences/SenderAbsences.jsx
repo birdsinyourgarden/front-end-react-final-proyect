@@ -13,7 +13,7 @@ export default function SenderAbsences () {
     const [endTime, setEndTime] = useState(null);
     const sendEmail = (event) => {
         event.preventDefault();   
-        emailjs.sendForm('service_19vqrs9','ausencias',event.target,'WrHmfsnC8q7_pqnIC')
+        emailjs.sendForm('service_19vqrs9','absences',event.target,'WrHmfsnC8q7_pqnIC')
         .then(response => console.log(response))
         .catch(error => console.log(error))
     }

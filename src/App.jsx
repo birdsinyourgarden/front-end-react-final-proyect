@@ -1,4 +1,4 @@
-// import "./App.css";
+import "./App.css";
 import Router from "./router/Router";
 //import { axiosInterceptor } from "./interceptors/axios.interceptor";
 
