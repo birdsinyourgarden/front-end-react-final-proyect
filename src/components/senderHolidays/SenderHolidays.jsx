@@ -18,7 +18,6 @@ export default function SenderHolidays() {
             showCancelButton: true,
             confirmButtonText: 'Sí, enviar',
             cancelButtonText: 'Cancelar',
-            position: 'center',
         }).then((result) => {
             if (result.isConfirmed) {
                 emailjs
