@@ -7,7 +7,7 @@ function HomeUser() {
         <div className="container">
             <div className="wrap">
                 <SenderHolidays />
-                <SenderAbsences />
+                <SenderAbsences />    
             </div>
         </div>
     )

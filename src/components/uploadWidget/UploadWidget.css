@@ -1,6 +1,8 @@
 .btn-custom {
     background-color: #658A05;
     color: white;
+    font-family: 'Fresca';
+    letter-spacing: 1px;
 }
 
 .btn-custom:hover {

@@ -4,17 +4,37 @@ import 'react-datepicker/dist/react-datepicker.css';
 import es from 'date-fns/locale/es';
 import emailjs from '@emailjs/browser';
 import './SenderHolidays.css';
+import Swal from 'sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
 
 export default function SenderHolidays() {
     const [startDate, setStartDate] = useState(null);
     const [endDate, setEndDate] = useState(null);
     const sendEmail = (event) => {
         event.preventDefault();
-        emailjs.sendForm('service_19vqrs9','holidays',event.target,'WrHmfsnC8q7_pqnIC')
-        .then(response => console.log(response))
-        .catch(error => console.log(error))
-    }
-
+        Swal.fire({
+            title: '¿Quieres enviar la petición?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Sí, enviar',
+            cancelButtonText: 'Cancelar',
+            position: 'center',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                emailjs
+                .sendForm('service_19vqrs9', 'holidays', event.target, 'WrHmfsnC8q7_pqnIC')
+                .then((response) => {
+                console.log(response);
+                Swal.fire('¡Enviada!', 'La petición ha sido enviada con éxito.', 'success');
+                })
+                .catch((error) => {
+                console.log(error);
+                Swal.fire('¡Error!', 'Ha ocurrido un error al enviar la petición.', 'error');
+                });
+            }
+        });
+    };
+    
     return (
     <div className="width p-4">
         <h1 className="title-form h2 text-left rounded-4 px-5 py-2">VACACIONES</h1>
