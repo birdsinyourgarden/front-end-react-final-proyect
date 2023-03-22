@@ -1,0 +1,38 @@
+label {
+    display: flex;
+    align-items: center;
+  }
+  
+  span::after {
+    padding-left: 5px;
+  }
+  
+  input:invalid + span::after {
+    content: "✖";
+  }
+  
+  input:valid + span::after {
+    content: "✓";
+  }
+  
+  span::after {
+    padding-left: 5px;
+  }
+  
+  input:invalid + span::after {
+    content: "✖";
+  }
+  
+  input:valid + span::after {
+    content: "✓";
+  }
+
+  .text-left {
+	font-size: 25px;
+    background: #CFE695;
+    background-size: 10%;
+	color: #000;
+	padding-left: 10px;
+	line-height: 55px;
+    
+}
