@@ -27,7 +27,7 @@ label {
     content: "✓";
   }
 
-  .text-left {
+  .userName {
 	font-size: 25px;
     background: #CFE695;
     background-size: 10%;
@@ -35,4 +35,11 @@ label {
 	padding-left: 10px;
 	line-height: 55px;
     
+}
+
+.text-center {
+	font-size: 25px;
+  font: inter;
+  font-weight: 400;
+	color: #000;
 }

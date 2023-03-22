@@ -6,99 +6,44 @@ const  Absences= () => {
       <Container className="p-5">
          <Card className="text-start">
             <Card.Title className="text-center">
-               Actualizar Día
+               <h1>Actualizar Ausencia</h1> 
                </Card.Title>
                <div>
-               <table cellpadding="4">
-   <tr><th>Заголовок 1</th></tr>
-   <tr><td>Ячейка 3</td></tr>
-  </table>
-               </div>                                
-                    <Card.Body>
-            <Form>
-                
-               <Form.Group className="mb-3" controlId="employeeName">
-                  <Form.Label>Nombre</Form.Label>
-                  <Form.Control type="text" placeholder="Nombre del Empleado" />
-               </Form.Group>
-               <Form.Group className="mb-3" controlId="employeeStarting">
-                  <Form.Label>Inicio del Contrato</Form.Label>
-                  <input
-                     type="date"
-                     name="party"
-                     min="2010-04-01"
-                     max="2024-04-20"
-                     required />
-               <span class="validity"></span>
-               </Form.Group>
-               <Form.Group className="mb-3" controlId="employeeFinished">
-                  <Form.Label>Fin del Contrato</Form.Label>
-                  <input
-                     type="date"
-                     name="party"
-                     min="2010-04-01"
-                     max="2024-04-20"
-                     required />
-               <span class="validity"></span>
-               </Form.Group>
-
-               <Form.Group className="mb-3" controlId="employeeSurName">
-                  <Form.Label>Apellidos</Form.Label>
-                  <Form.Control type="text" placeholder="Apellido del Empleado" />
-               </Form.Group>
-               <Form.Group className="mb-3" controlId="employeeEmail">
-                  <Form.Label>Correo</Form.Label>
-                  <Form.Control type="email" placeholder="Correo del empleado" />
-               </Form.Group>
-               <Form.Group className="mb-3" controlId="password">
-                  <Form.Label>Password</Form.Label>
-                  <Form.Control type="password" placeholder="Password" />
-               </Form.Group>
-               <Form.Group className="mb-3" controlId="confirmPassword">
-                  <Form.Label>Confirmar Password</Form.Label>
-                  <Form.Control type="password" placeholder="Confirmar Password" />
-               </Form.Group>
-               <Form.Group className="mb-3" controlId="employeePhone">
-                  <Form.Label>Telefono</Form.Label>
-                  <Form.Control type="text" placeholder="Telefono del empleado" />
-               </Form.Group>
-               <Form.Group className="mb-3" controlId="employeeDni">
-                  <Form.Label>DNI/NIE</Form.Label>
-                  <Form.Control type="text" placeholder="DNI o NIE del empleado" />
-               </Form.Group>
+               <table className="userName">
+                     <tr><th>Montse Martos</th></tr>
+               </table>
+               </div>
+               <div>
+               <table className="dateAbscens">
+               <tr><td>23/03/2023 - 25/03/2023</td></tr>
+               </table>
+               </div>   
+               <Card.Body>             
                <Form.Group>
-               <Form.Label>Sector</Form.Label>
+               <Form.Label>Evento</Form.Label>
                <Form.Select className="mb-3" controlId="employeeSector">
-               <option value="Jardinería">Jardinería</option>
-               <option value="Limpieza Málaga">Limpieza Málaga</option>
-               <option value="Limpieza Cádiz">Limpieza Cádiz</option>
-               <option value="Limpieza Cádiz">Hilo Doble</option>
+               <option value="Vacaciones">Vacaciones</option>
+               <option value="Ausencia Autorizada - Enfermedad">Ausencia Autorizada - Enfermedad</option>
+               <option value="Cita Médica">Cita Médica</option>
+               <option value="Acompañamiento médico Familiar">Acompañamiento médico Familiar</option>
+               <option value="Baja IT">Baja IT</option>
+               <option value="Baja Maternidad">Baja Maternidad</option>
+               <option value="Baja Paternidad">Baja Paternidad</option>
+               <option value="Matrimonio o Pareja de Hecho">Matrimonio o Pareja de Hecho</option>
+               <option value="Fallecimiento Familiar">Fallecimiento Familiar</option>
+               <option value="Formación">Formación</option>
+               <option value="Mudanzas">Mudanzas</option>
+               <option value="Otros...">Otros...</option>
+
+
+
                   </Form.Select>
                   </Form.Group>
                   <Form.Group className="mb-3" controlId="employeePhoto">
                   <Form.Label>Foto</Form.Label>
                   <Form.Control type="text" placeholder="Imagen del Empleado" />
                </Form.Group>
-               <Form.Group className="mb-3" controlId="employeeStarting">
-                  <Form.Label>Inicio del Contrato</Form.Label>
-                  <input
-                     type="date"
-                     name="party"
-                     min="2010-04-01"
-                     max="2024-04-20"
-                     required />
-               <span class="validity"></span>
-               </Form.Group>
-               <Form.Group className="mb-3" controlId="employeeFinished">
-                  <Form.Label>Fin del Contrato</Form.Label>
-                  <input
-                     type="date"
-                     name="party"
-                     min="2010-04-01"
-                     max="2024-04-20"
-                     required />
-               <span class="validity"></span>
-               </Form.Group>
+                              
                <Form.Group>
                <Form.Label>Estatus del Empleado</Form.Label>
                <Form.Select className="mb-3" controlId="employeeStatus">
@@ -120,14 +65,25 @@ const  Absences= () => {
                <option value="true">Si</option>
                   </Form.Select>
                   </Form.Group>
+
+                  
    <Button variant="primary" type="submit">
-               Crear Usuario
+               Borrar
                </Button>
-            </Form>
+
+               <div class="d-grid gap-2 d-md-block">
+  <button class="btn btn-primary" type="button">Botón</button>
+  <button class="btn btn-primary" type="button">Botón</button>
+</div>
+
+               <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <button class="btn btn-primary me-md-2" type="button">Cancelada</button>
+  <button class="btn btn-primary" type="button">Rechazada</button>
+</div>
             </Card.Body>
          </Card>
       </Container>
-   );
+);
 };
 
 export default Absences;
