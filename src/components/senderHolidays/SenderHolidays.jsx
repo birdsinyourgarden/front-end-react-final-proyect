@@ -33,6 +33,11 @@ export default function SenderHolidays() {
             }
         });
     };
+
+    const handleDelete = () => {
+        setStartDate(null);
+        setEndDate(null);
+    };
     
     return (
     <div className="width p-4">
@@ -51,7 +56,8 @@ export default function SenderHolidays() {
                         locale={es}
                         dateFormat="dd/MM/yyyy"
                         placeholderText="Selecciona una fecha"
-                        className="mb-2"
+                        className="picker mb-2"
+                        required
                     />
                 </div>
                 <div className="col mb-4">
@@ -67,13 +73,14 @@ export default function SenderHolidays() {
                         locale={es}
                         dateFormat="dd/MM/yyyy"
                         placeholderText="Selecciona una fecha"
-                        className="mb-2"
+                        className="picker mb-2"
+                        required
                     />
                 </div>
             </div>
             <div>
-                <button className="btn btn-link"><img src="/deleteBlue.png" alt="botón borrar"></img></button>
-                <button className="btn btn-link"><img src="/sendBlue.png" alt="botón enviar"></img></button>
+                <button type="reset" className="btn btn-link" onClick={handleDelete}><img src="/deleteBlue.png" alt="botón borrar"></img></button>
+                <button type="submit" className="btn btn-link"><img src="/sendBlue.png" alt="botón enviar"></img></button>
             </div>
         </form>
     </div>
