@@ -52,6 +52,7 @@ export default function SenderHolidays() {
                         dateFormat="dd/MM/yyyy"
                         placeholderText="Selecciona una fecha"
                         className="mb-2"
+                        required
                     />
                 </div>
                 <div className="col mb-4">
@@ -68,6 +69,7 @@ export default function SenderHolidays() {
                         dateFormat="dd/MM/yyyy"
                         placeholderText="Selecciona una fecha"
                         className="mb-2"
+                        required
                     />
                 </div>
             </div>

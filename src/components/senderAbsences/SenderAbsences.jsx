@@ -36,6 +36,7 @@ export default function SenderAbsences () {
                         dateFormat="dd/MM/yyyy"
                         placeholderText="Selecciona una fecha"
                         className="mb-2"
+                        required
                     />
                     <DatePicker
                         name="startTime"
@@ -48,6 +49,7 @@ export default function SenderAbsences () {
                         timeCaption="Hora"
                         dateFormat="HH:mm"
                         placeholderText="Selecciona una hora"
+                        required
                     />
                 </div>
                 <div className="col mb-4">
@@ -64,6 +66,7 @@ export default function SenderAbsences () {
                         dateFormat="dd/MM/yyyy"
                         placeholderText="Selecciona una fecha"
                         className="mb-2"
+                        required
                     />
                     <DatePicker
                         name="endTime"
@@ -76,6 +79,7 @@ export default function SenderAbsences () {
                         timeCaption="Hora"
                         dateFormat="HH:mm"
                         placeholderText="Selecciona una hora"
+                        required
                     />
                 </div>
             </div>
