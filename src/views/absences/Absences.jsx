@@ -35,50 +35,29 @@ const  Absences= () => {
                <option value="Mudanzas">Mudanzas</option>
                <option value="Otros...">Otros...</option>
 
-
-
                   </Form.Select>
                   </Form.Group>
-                  <Form.Group className="mb-3" controlId="employeePhoto">
-                  <Form.Label>Foto</Form.Label>
-                  <Form.Control type="text" placeholder="Imagen del Empleado" />
+                  <Form.Group className="mb-3" controlId="description">
+                  <Form.Label>Descripciones</Form.Label>
+                  <Form.Control type="text" placeholder="Description de Ausencias" />
                </Form.Group>
                               
                <Form.Group>
-               <Form.Label>Estatus del Empleado</Form.Label>
+               <Form.Label>Justificantes</Form.Label>
                <Form.Select className="mb-3" controlId="employeeStatus">
                <option value="true">Activo</option>
                <option value="false">Baja</option>
                   </Form.Select>
                   </Form.Group>
-               <Form.Group>
-               <Form.Label>Tipo de Contrato del Empleado</Form.Label>
-               <Form.Select className="mb-3" controlId="employeeType">
-               <option value="true">Permanente</option>
-               <option value="false">Temporal</option>
-                  </Form.Select>
-                  </Form.Group>
-                  <Form.Group>
-               <Form.Label>Es Administrador?</Form.Label>
-               <Form.Select className="mb-3" controlId="employeeAuth">
-               <option value="false">No</option>
-               <option value="true">Si</option>
-                  </Form.Select>
-                  </Form.Group>
-
                   
-   <Button variant="primary" type="submit">
-               Borrar
-               </Button>
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-start">                     
+               <button type="button" class="btn btn-danger">Borrar</button>
+                  </div>
+               
 
-               <div class="d-grid gap-2 d-md-block">
-  <button class="btn btn-primary" type="button">Botón</button>
-  <button class="btn btn-primary" type="button">Botón</button>
-</div>
-
-               <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <button class="btn btn-primary me-md-2" type="button">Cancelada</button>
-  <button class="btn btn-primary" type="button">Rechazada</button>
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+   <button class="btn btn-primary btn-success me-md-2" type="button">Cancelada</button>
+   <button class="btn btn-primary" type="button">Rechazada</button>
 </div>
             </Card.Body>
          </Card>
