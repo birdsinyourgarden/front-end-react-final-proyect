@@ -10,7 +10,7 @@ h1 {
 }
 
 .form-mail-blue {
-    background: #8DB4CD;
+    background: #1CA5FF;
 }
 
 label {
@@ -36,4 +36,8 @@ textarea {
 
 button {
     cursor: pointer;
+}
+
+#senderBtns{
+    margin-top: 2em;
 }
