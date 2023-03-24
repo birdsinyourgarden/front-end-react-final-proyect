@@ -34,7 +34,7 @@ export default function SenderHolidays() {
         });
     };
 
-    const handleDelete = () => {
+    const handleReset = () => {
         setStartDate(null);
         setEndDate(null);
     };
@@ -79,7 +79,7 @@ export default function SenderHolidays() {
                 </div>
             </div>
             <div>
-                <button type="reset" className="btn btn-link" onClick={handleDelete}><img src="/deleteBlue.png" alt="botón borrar"></img></button>
+                <button type="reset" className="btn btn-link" onClick={handleReset}><img src="/resetBlue.png" alt="botón borrar"></img></button>
                 <button type="submit" className="btn btn-link"><img src="/sendBlue.png" alt="botón enviar"></img></button>
             </div>
         </form>

@@ -38,7 +38,7 @@ export default function SenderAbsences () {
         });
     };
 
-    const handleDelete = () => {
+    const handleReset = () => {
         setStartDate(null);
         setEndDate(null);
         setStartTime(null);
@@ -124,7 +124,7 @@ export default function SenderAbsences () {
             </div>
             <UploadWidget />
             <div id="senderBtns" className="mb-3">
-                <button type="reset" className="btn btn-link" onClick={handleDelete}><img src="/deleteGreen.png" alt="botón borrar"></img></button>
+                <button type="reset" className="btn btn-link" onClick={handleReset}><img src="/resetGreen.png" alt="botón borrar"></img></button>
                 <button type="submit" className="btn btn-link"><img src="/sendGreen.png" alt="botón enviar"></img></button>
             </div>
         </form>
