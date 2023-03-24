@@ -13,6 +13,7 @@ export default function SenderAbsences () {
     const [endDate, setEndDate] = useState(null);
     const [startTime, setStartTime] = useState(null);
     const [endTime, setEndTime] = useState(null);
+    // const [message, setMessage] = useState(null);
 
     const sendEmail = (event) => {
         event.preventDefault();   
@@ -28,6 +29,7 @@ export default function SenderAbsences () {
                 .sendForm('service_19vqrs9', 'absences', event.target, 'WrHmfsnC8q7_pqnIC')
                 .then((response) => {
                 console.log(response);
+                handleReset();
                 Swal.fire('¡Enviada!', 'La petición ha sido enviada con éxito.', 'success');
                 })
                 .catch((error) => {
@@ -43,12 +45,13 @@ export default function SenderAbsences () {
         setEndDate(null);
         setStartTime(null);
         setEndTime(null);
+        document.getElementById("absence-form").reset();
     };
 
     return (
     <div className="width p-4">
         <h1 className="title-form-blue h2 text-left rounded-4 px-5 py-2">AUSENCIAS</h1>
-        <form className="form-mail-blue rounded-4 px-5 py-4" onSubmit={sendEmail}>
+        <form id="absence-form" className="form-mail-blue rounded-4 px-5 py-4" onSubmit={sendEmail}>
             <div className="row">
                 <div className="col mb-4">
                     <label>Inicio</label>
