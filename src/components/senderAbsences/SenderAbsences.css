@@ -37,3 +37,7 @@ textarea {
 button {
     cursor: pointer;
 }
+
+#senderBtns{
+    margin-top: 2em;
+}
