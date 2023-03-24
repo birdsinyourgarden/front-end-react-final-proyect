@@ -4,3 +4,7 @@
     flex-direction: row;
     justify-content: space-around;
 }
+
+.picker {
+    border-radius: 8px;
+}
