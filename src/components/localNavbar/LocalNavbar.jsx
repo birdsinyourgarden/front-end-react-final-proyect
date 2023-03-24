@@ -15,7 +15,7 @@ function LocalNavbar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
           <Link to="employees" className="link_brand">
-                        Empleados
+                        Plantilla
                     </Link>
                     <br/>
                     <Link to="profile" className="link_brand">
@@ -33,7 +33,7 @@ function LocalNavbar() {
                     </div>
                     <div>
                     <Link to="homeUser" className="link_brand">
-                      Menú Usuario
+                      Menú Personal
                     </Link>
                     </div>
             
