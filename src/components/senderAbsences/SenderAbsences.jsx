@@ -122,11 +122,11 @@ export default function SenderAbsences () {
                     />
                 </div>
             </div>
-            <div className="mb-3">
+            <UploadWidget />
+            <div id="senderBtns" className="mb-3">
                 <button type="reset" className="btn btn-link" onClick={handleDelete}><img src="/deleteGreen.png" alt="botón borrar"></img></button>
                 <button type="submit" className="btn btn-link"><img src="/sendGreen.png" alt="botón enviar"></img></button>
             </div>
-            <UploadWidget />
         </form>
     </div>
     )
