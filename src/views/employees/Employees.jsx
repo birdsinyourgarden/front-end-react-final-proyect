@@ -59,6 +59,12 @@ const  Employees= () => {
                         required: true,
                         maxLength: 30,
                         })}/>
+                        {errors.name?.type === "required" && (
+               <small className="fail">The field cannot be empty</small>
+            )}
+            {errors.name?.type === "maxLength" && (
+               <small className="fail">Maximum characters are eight</small>
+            )}
                </Form.Group>
                <Form.Group className="mb-3" controlId="employeeSurName">
                   <Form.Label>Apellidos</Form.Label>
@@ -70,13 +76,19 @@ const  Employees= () => {
                         required: true,
                         maxLength: 42,
                         })}/>
+                        {errors.surname?.type === "required" && (
+               <small className="fail">The field cannot be empty</small>
+            )}
+            {errors.surname?.type === "maxLength" && (
+               <small className="fail">Maximum characters are eight</small>
+            )}
                </Form.Group>
                <Form.Group className="mb-3" controlId="employeeEmail">
                   <Form.Label>Correo</Form.Label>
                   <input
             type="email"
             placeholder="Escribe el Correo"
-            className='form-control shadow'
+            className='form-control shadow'                             
             {...register("email", {
                         required: true,
                         maxLength: 42,
@@ -93,6 +105,12 @@ const  Employees= () => {
                         minLength: 4,
                         maxLength: 15,
                         })}/>
+                        {errors.password?.type === "required" && (
+               <small className="fail">The field cannot be empty</small>
+            )}
+            {errors.title?.type === "maxLength" && (
+               <small className="fail">Maximum characters are eight</small>
+            )}
                </Form.Group>
                <Form.Group className="mb-3" controlId="confirmPassword">
                   <Form.Label>Confirmar Password</Form.Label>
@@ -105,6 +123,12 @@ const  Employees= () => {
                         minLength: 4,
                         maxLength: 15,
                         })}/>
+                        {errors.title?.type === "required" && (
+               <small className="fail">The field cannot be empty</small>
+            )}
+            {errors.title?.type === "maxLength" && (
+               <small className="fail">Maximum characters are eight</small>
+            )}
                </Form.Group>
                <Form.Group className="mb-3" controlId="employeePhone">
                   <Form.Label>Teléfono</Form.Label>
@@ -117,6 +141,12 @@ const  Employees= () => {
                         minLength: 9,
                         maxLength: 15,
                         })}/>
+                        {errors.title?.type === "required" && (
+               <small className="fail">The field cannot be empty</small>
+            )}
+            {errors.title?.type === "maxLength" && (
+               <small className="fail">Maximum characters are eight</small>
+            )}
                </Form.Group>
                <Form.Group className="mb-3" controlId="employeeDni">
                   <Form.Label>DNI/NIE</Form.Label>
@@ -129,6 +159,12 @@ const  Employees= () => {
                         minLength: 5,
                         maxLength: 10,
                         })}/>
+                        {errors.title?.type === "required" && (
+               <small className="fail">The field cannot be empty</small>
+            )}
+            {errors.title?.type === "maxLength" && (
+               <small className="fail">Maximum characters are eight</small>
+            )}
                </Form.Group>
                <Form.Group>
                <Form.Label>Sector</Form.Label>
@@ -185,6 +221,12 @@ const  Employees= () => {
                      })}
                   />
                <span class="validity"></span>
+               {errors.title?.type === "required" && (
+               <small className="fail">The field cannot be empty</small>
+            )}
+            {errors.title?.type === "maxLength" && (
+               <small className="fail">Maximum characters are eight</small>
+            )}
                </Form.Group>
                <Form.Group>
             
@@ -195,6 +237,12 @@ const  Employees= () => {
                         })}>
                <option value="true">Activo</option>
                <option value="false">Baja</option>
+               {errors.status?.type === "required" && (
+               <small className="fail">The field cannot be empty</small>
+            )}
+            {errors.status?.type === "maxLength" && (
+               <small className="fail">Maximum characters are eight</small>
+            )}
                   </Form.Select>
                   </Form.Group>
                <Form.Group>
@@ -205,6 +253,12 @@ const  Employees= () => {
                         })}>
                <option value="true">Permanente</option>
                <option value="false">Temporal</option>
+               {errors.contractType?.type === "required" && (
+               <small className="fail">The field cannot be empty</small>
+            )}
+            {errors.contractType?.type === "maxLength" && (
+               <small className="fail">Maximum characters are eight</small>
+            )}
                   </Form.Select>
                   </Form.Group>
                   <Form.Group>
@@ -215,6 +269,12 @@ const  Employees= () => {
                            })}>
                <option value="false">No</option>
                <option value="true">Si</option>
+               {errors.isAdmin?.type === "required" && (
+               <small className="fail">The field cannot be empty</small>
+            )}
+            {errors.isAdmin?.type === "maxLength" && (
+               <small className="fail">Maximum characters are eight</small>
+            )}
                   </Form.Select>
                   </Form.Group>
    <Button variant="primary" type="submit">
