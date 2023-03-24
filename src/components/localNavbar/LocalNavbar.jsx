@@ -18,6 +18,10 @@ function LocalNavbar() {
                         Empleados
                     </Link>
                     <br/>
+                    <Link to="profile" className="link_brand">
+                        Perfil
+                    </Link>
+                    <br/>
                     <Link to="absences" className="link_brand">
                         Ausencias
                     </Link>

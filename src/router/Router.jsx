@@ -27,6 +27,7 @@ return (
         <Route path="/absences" element={<Absences />} />
         <Route path="/solicitudes" element={<Solicitudes />} />
         <Route path="/homeUser" element={< HomeUser />} />
+        <Route path="/profile" element={< Profile />} />
     </Routes>
     <Footer />
     </BrowserRouter>
