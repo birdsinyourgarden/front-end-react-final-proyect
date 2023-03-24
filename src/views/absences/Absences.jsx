@@ -20,35 +20,35 @@ const  Absences= () => {
                </div>   
                <Card.Body>             
                <Form.Group>
-               <Form.Label>Evento</Form.Label>
-               <Form.Select className="mb-3" controlId="employeeSector">
-               <option value="Vacaciones">Vacaciones</option>
-               <option value="Ausencia Autorizada - Enfermedad">Ausencia Autorizada - Enfermedad</option>
-               <option value="Cita Médica">Cita Médica</option>
-               <option value="Acompañamiento médico Familiar">Acompañamiento médico Familiar</option>
-               <option value="Baja IT">Baja IT</option>
-               <option value="Baja Maternidad">Baja Maternidad</option>
-               <option value="Baja Paternidad">Baja Paternidad</option>
-               <option value="Matrimonio o Pareja de Hecho">Matrimonio o Pareja de Hecho</option>
-               <option value="Fallecimiento Familiar">Fallecimiento Familiar</option>
-               <option value="Formación">Formación</option>
-               <option value="Mudanzas">Mudanzas</option>
-               <option value="Otros...">Otros...</option>
+                  <Form.Label>Evento</Form.Label>
+                        <Form.Select className="mb-3" controlId="employeeSector">
+                           <option value="Vacaciones">Vacaciones</option>
+                           <option value="Ausencia Autorizada - Enfermedad">Ausencia Autorizada - Enfermedad</option>
+                           <option value="Cita Médica">Cita Médica</option>
+                           <option value="Acompañamiento médico Familiar">Acompañamiento médico Familiar</option>
+                           <option value="Baja IT">Baja IT</option>
+                           <option value="Baja Maternidad">Baja Maternidad</option>
+                           <option value="Baja Paternidad">Baja Paternidad</option>
+                           <option value="Matrimonio o Pareja de Hecho">Matrimonio o Pareja de Hecho</option>
+                           <option value="Fallecimiento Familiar">Fallecimiento Familiar</option>
+                           <option value="Formación">Formación</option>
+                           <option value="Mudanzas">Mudanzas</option>
+                           <option value="Otros...">Otros...</option>
+                        </Form.Select>
+               </Form.Group>
 
-                  </Form.Select>
-                  </Form.Group>
-                  <Form.Group className="mb-3" controlId="description">
+               <Form.Group className="mb-3" controlId="description">
                   <Form.Label>Descripcion</Form.Label>
-                  <textarea type="text" placeholder="Description de Ausencias" rows="5"/>
+                     <textarea type="text" placeholder="Description de Ausencias" rows="5"/>
                </Form.Group>
                               
                <Form.Group>
-               <Form.Label>Justificant</Form.Label>
-               <Form.Select className="mb-3" controlId="employeeStatus">
-               <option value="true">Activo</option>
-               <option value="false">Baja</option>
-                  </Form.Select>
-                  </Form.Group>
+                  <Form.Label>Justificant</Form.Label>
+                     <Form.Select className="mb-3" controlId="employeeStatus">
+                        <option value="true">Activo</option>
+                        <option value="false">Baja</option>
+                     </Form.Select>
+               </Form.Group>
                   
                   <div class="d-grid gap-2 d-md-flex justify-content-md-start">                     
                <button type="button" class="btn btn-danger">Borrar</button>
