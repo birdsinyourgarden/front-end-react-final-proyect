@@ -15,7 +15,7 @@ const  Absences= () => {
                </div>
                <div>
                <table className="dateAbscens">
-               <tr><td>23/03/2023 - 25/03/2023</td></tr>
+               <tr><td>Dias de Petición. 23/03/2023 - 25/03/2023</td></tr>
                </table>
                </div>   
                <Card.Body>             
@@ -38,12 +38,12 @@ const  Absences= () => {
                   </Form.Select>
                   </Form.Group>
                   <Form.Group className="mb-3" controlId="description">
-                  <Form.Label>Descripciones</Form.Label>
+                  <Form.Label>Descripcion</Form.Label>
                   <Form.Control type="text" placeholder="Description de Ausencias" />
                </Form.Group>
                               
                <Form.Group>
-               <Form.Label>Justificantes</Form.Label>
+               <Form.Label>Justificant</Form.Label>
                <Form.Select className="mb-3" controlId="employeeStatus">
                <option value="true">Activo</option>
                <option value="false">Baja</option>
