@@ -13,7 +13,11 @@ export default function SenderAbsences () {
     const [endDate, setEndDate] = useState(null);
     const [startTime, setStartTime] = useState(null);
     const [endTime, setEndTime] = useState(null);
-    // const [message, setMessage] = useState(null);
+    const [documentURL, setDocumentURL] = useState('');
+
+    function getURL(data) {
+        setDocumentURL(data);
+    }
 
     const sendEmail = (event) => {
         event.preventDefault();   
@@ -28,13 +32,11 @@ export default function SenderAbsences () {
                 emailjs
                 .sendForm('service_19vqrs9', 'absences', event.target, 'WrHmfsnC8q7_pqnIC')
                 .then((response) => {
-                console.log(response);
-                handleReset();
-                Swal.fire('¡Enviada!', 'La petición ha sido enviada con éxito.', 'success');
+                    handleReset();
+                    Swal.fire('¡Enviada!', 'La petición ha sido enviada con éxito.', 'success');
                 })
                 .catch((error) => {
-                console.log(error);
-                Swal.fire('¡Error!', 'Ha ocurrido un error al enviar la petición.', 'error');
+                    Swal.fire('¡Error!', 'Ha ocurrido un error al enviar la petición.', 'error');
                 });
             }
         });
@@ -125,7 +127,8 @@ export default function SenderAbsences () {
                     />
                 </div>
             </div>
-            <UploadWidget />
+            <UploadWidget url={getURL} />
+            <input type="hidden" name="documentURL" value={documentURL} />
             <div id="senderBtns" className="mb-3">
                 <button type="reset" className="btn btn-link" onClick={handleReset}><img src="/resetGreen.png" alt="botón borrar"></img></button>
                 <button type="submit" className="btn btn-link"><img src="/sendGreen.png" alt="botón enviar"></img></button>
