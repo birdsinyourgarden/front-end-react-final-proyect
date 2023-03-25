@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import es from 'date-fns/locale/es';
@@ -7,6 +8,8 @@ import UploadWidget from '../../components/uploadWidget/UploadWidget';
 import './SenderAbsences.css';
 import Swal from 'sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
+
+const baseUrl = import.meta.env.VITE_BACKEND_URL;
 
 export default function SenderAbsences () {
     const [startDate, setStartDate] = useState(null);
@@ -29,6 +32,11 @@ export default function SenderAbsences () {
             cancelButtonText: 'Cancelar',
         }).then((result) => {
             if (result.isConfirmed) {
+                /* try {
+                    axios.post(baseUrl + "/auth/createAbsence", event.target);
+                } catch (error) {
+                    console.error("Error calling the API", error.message);
+                } */
                 emailjs
                 .sendForm('service_19vqrs9', 'absences', event.target, 'WrHmfsnC8q7_pqnIC')
                 .then((response) => {
