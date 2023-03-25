@@ -7,10 +7,10 @@ import { useEffect } from "react"
 import { useState } from "react";
 
 function Sidebar () {
-    const [employees, setEmployees] = useState(null);
+    const [employeesArray, setEmployees] = useState(null);
     
     const showEmployees = () => {
-    getEmployees ().then(
+    getEmployees().then(
         response => {
             setEmployees(response.data)
         }
@@ -25,7 +25,7 @@ function Sidebar () {
     return (
         <Alert variant="success" className="green scrollbar contenedor">
             {
-                employees && employees.map(employee => {
+                employeesArray && employeesArray.map(employee => {
                     return (
                         <Userpill name={employee.name + ' ' + employee.surname} image={employee.image} />
                     )
