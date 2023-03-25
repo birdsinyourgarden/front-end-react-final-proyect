@@ -133,6 +133,7 @@ export default function SenderAbsences () {
                         cols="25"
                         rows="4"
                         placeholder="Añade un motivo"
+                        maxLength={255}
                         required
                     />
                 </div>
