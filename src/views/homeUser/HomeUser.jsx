@@ -6,7 +6,7 @@ import LocalCalendar from '../../components/calendar/Calendar';
 function HomeUser() {
   return (
     <div className="container">
-      <div className="width mx-auto p-4">
+      <div className="max-width mx-auto p-4">
         <LocalCalendar compact />
       </div>
       <div className="wrap">
