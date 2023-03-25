@@ -26,7 +26,7 @@ function getTodoList(date) {
   }
 }
 
-const LocalCalendar = () => {
+const LocalCalendar = (props) => {
   function renderCell(date) {
     const list = getTodoList(date);
     const displayList = list.filter((item, index) => index < 2);
@@ -75,6 +75,7 @@ const LocalCalendar = () => {
           bordered
           renderCell={renderCell}
           isoWeek
+          compact={props.compact}
           className="white-background"
         />
       </CustomProvider>
