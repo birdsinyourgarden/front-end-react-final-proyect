@@ -71,7 +71,12 @@ function getTodoList(date) {
     return (
       <div>
         <CustomProvider locale={esES}>
-              <Calendar bordered renderCell={renderCell} className='white-background' />
+              <Calendar
+                bordered
+                renderCell={renderCell}
+                isoWeek
+                className='white-background'
+              />
               </CustomProvider>
       </div>
     )
