@@ -17,6 +17,7 @@ export default function SenderAbsences () {
     const [startTime, setStartTime] = useState(null);
     const [endTime, setEndTime] = useState(null);
     const [documentURL, setDocumentURL] = useState('');
+    const [added, setAdded] = useState(false);
 
     function getURL(data) {
         setDocumentURL(data);
@@ -55,6 +56,7 @@ export default function SenderAbsences () {
         setEndDate(null);
         setStartTime(null);
         setEndTime(null);
+        setAdded(false);
         document.getElementById("absence-form").reset();
     };
 
@@ -135,7 +137,7 @@ export default function SenderAbsences () {
                     />
                 </div>
             </div>
-            <UploadWidget url={getURL} />
+            <UploadWidget url={getURL} added={added} onAdd={() => setAdded(true)} />
             <input type="hidden" name="documentURL" value={documentURL} />
             <div id="senderBtns" className="mb-3">
                 <button type="reset" className="btn btn-link" onClick={handleReset}><img src="/resetGreen.png" alt="botón borrar"></img></button>
