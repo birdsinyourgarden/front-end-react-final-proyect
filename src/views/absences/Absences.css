@@ -60,14 +60,33 @@
         border: 1px solid rgb(124, 179, 137);
 }
 
-.description {  
+.DescriptionTitle {  
+  max-width: 160px;
+  font-size: 25px;
+  color: #000;
+  margin-left: -15px;
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(160, 178, 225);
+  background: 
+  linear-gradient(#74b4d0, #97b2dc) content-box,
+  linear-gradient(#6f92b9, #d7ed96) border-box;
+}
+
+.Description {
   max-width: max-content;
-  flex-direction: column;
-  align-self: flex-end;
-  float: left;
-  margin: 19px;
-  padding: 6px; 
-  border: 1px solid rgb(124, 179, 137);
+  margin-left: 250px;
+  margin-top: -45px;
+  border: 1px solid rgb(140, 195, 139);
+  }
+
+  textarea {
+    background:
+  linear-gradient(#CFE695, #96AA1B) content-box,
+  linear-gradient(#a9e0b0, #d7ed96) border-box;
+  color: rgb(4, 4, 4);
 
 }
 

@@ -39,9 +39,12 @@ const  Absences= () => {
                         </Form.Select>
                   </Form.Group>
 
-               <Form.Group className="description" controlId="description">
-                  <Form.Label>Descripcion</Form.Label>
-                     <textarea type="text" placeholder="Description de Ausencias" rows="5"/>
+               <Form.Group controlId="description">
+                  <Form.Label class="DescriptionTitle">Descripcion</Form.Label>
+               </Form.Group>
+
+               <Form.Group class="Description">
+                     <textarea type="text" placeholder="Description de Ausencias" rows="3"/>
                </Form.Group>
                               
                <Form.Group className="mb-3" controlId="justify">
