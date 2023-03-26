@@ -19,9 +19,11 @@ const  Absences= () => {
                </table>
                </div>   
                <Card.Body>             
-               <Form.Group className="mb-3" controlId="event">
-                  <Form.Label>Evento</Form.Label>
-                        <Form.Select className="mb-3" controlId="employeeSector">
+               <Form.Group  controlId="event">
+                  <Form.Label class="event">Evento</Form.Label>
+               </Form.Group>
+                  <Form.Group>
+                        <Form.Select className="list" controlId="abscensSector">
                            <option value="Vacaciones">Vacaciones</option>
                            <option value="Ausencia Autorizada - Enfermedad">Ausencia Autorizada - Enfermedad</option>
                            <option value="Cita Médica">Cita Médica</option>
@@ -35,9 +37,9 @@ const  Absences= () => {
                            <option value="Mudanzas">Mudanzas</option>
                            <option value="Otros...">Otros...</option>
                         </Form.Select>
-               </Form.Group>
+                  </Form.Group>
 
-               <Form.Group className="mb-3" controlId="description">
+               <Form.Group className="description" controlId="description">
                   <Form.Label>Descripcion</Form.Label>
                      <textarea type="text" placeholder="Description de Ausencias" rows="5"/>
                </Form.Group>
