@@ -1,13 +1,18 @@
-  .h1 {
-	font-size: 5px;
-  font: inter;
+  .Card.Body {
+    position: absolute;
+    flex-wrap: wrap;
+  }
+  
+  h1 {
+	font-size: 6px;
+  font:bold;
   color: #000;
-}
-
+  }
+  
 .userName {
     max-width: 160px;
     margin-left: 50px;
-    margin-top: -75px;
+    margin-top: -5px;
 	  font-size: 15px;
     background: #CFE695;
     background-size: 10%;
@@ -20,7 +25,7 @@
 .dateAbscens {
   max-width: 260px;
   margin-left: 0px;
-    margin-top: -45px;
+    margin-top: 12px;
   font-size: 12px;
   background: #CFE695;
   color: #000;
@@ -47,6 +52,7 @@
         max-width: 300px;
         margin-left: 250px;
         margin-top: -45px;
+        flex-wrap: wrap;
         background-color: rgb(154, 197, 222);
         border-collapse: collapse; 
         border: 1px solid rgb(124, 179, 137);
@@ -110,8 +116,6 @@
   border-collapse: collapse; 
   border: 1px solid rgb(124, 179, 137);
 }
-
-
 
 .btn-danger {
   max-width: 300px;

@@ -5,9 +5,9 @@ const  Absences= () => {
    return (
       <Container className="p-5">
          <Card className="text-start">
-            <Card.Title className="text-center">
+             <Card.Body>
+               <Card.Title className="text-center">
                <h1>Actualizar Ausencia</h1> 
-               </Card.Title>
                <div>
                <table className="userName">
                      <tr><th>Montse Martos</th></tr>
@@ -18,12 +18,11 @@ const  Absences= () => {
                <tr><td>Dias de Petición. 23/03/2023 - 25/03/2023</td></tr>
                </table>
                </div>   
-               <Card.Body>             
+               </Card.Title>
+                         
                <Form.Group  controlId="event">
-                  <Form.Label class="event">Evento</Form.Label>
-               </Form.Group>
-                  <Form.Group>
-                        <Form.Select className="list" controlId="abscensSector">
+               <Form.Label class="event">Evento</Form.Label>
+               <Form.Select className="list" controlId="abscensSector">
                            <option value="Vacaciones">Vacaciones</option>
                            <option value="Ausencia Autorizada - Enfermedad">Ausencia Autorizada - Enfermedad</option>
                            <option value="Cita Médica">Cita Médica</option>
