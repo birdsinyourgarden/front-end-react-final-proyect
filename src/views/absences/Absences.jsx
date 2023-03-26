@@ -52,23 +52,25 @@ const  Absences= () => {
                   </Form.Group>
                   <Form.Group>
                      <Form.Select className="choice" controlId="justificationStatus">
-                        <option value="true">Activo</option>
-                        <option value="false">Baja</option>
+                        <option value="true">Justificado</option>
+                        <option value="false">Acusasion</option>
                      </Form.Select>
                   </Form.Group>
                                  
-                  <div class="d-grid gap-2 d-md-flex justify-content-md-start">                     
-               <button type="button" class="btn btn-danger">Borrar</button>
-                  </div>
-               
+   <div class="buttons">
+      <div class="d-grid gap-2 d-md-flex justify-content-md-start">                     
+            <button type="button" class="btn btn-danger">Borrar</button>
+      </div>
 
-<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-   <button class="btn btn-primary btn-success me-md-2" type="button">Cancelada</button>
-   <button class="btn btn-primary" type="button">Rechazada</button>
-</div>
-            </Card.Body>
-         </Card>
-      </Container>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button class="btn btn-primary btn-success me-md-2" type="button">Cancelada</button>
+            <button class="btn btn-primary" type="button">Rechazada</button>
+      </div>
+
+   </div>
+   </Card.Body>
+      </Card>
+         </Container>
 );
 };
 

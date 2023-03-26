@@ -96,14 +96,26 @@
   justify-content: center;
   align-items: center;
   border: 1px solid rgb(160, 178, 225);
-  background: 
-  linear-gradient(#74b4d0, #97b2dc) content-box,
-  linear-gradient(#6f92b9, #d7ed96) border-box;
+  background:
+  linear-gradient(#CFE695, #96AA1B) content-box,
+  linear-gradient(#a9e0b0, #d7ed96) border-box;
+  
 }
 
 .choice {
   max-width: 300px;
   margin-left: 250px;
   margin-top: -55px;
-  border: 1px solid rgb(140, 195, 139);
-  }
+  background-color: rgb(154, 197, 222);
+  border-collapse: collapse; 
+  border: 1px solid rgb(124, 179, 137);
+}
+
+
+
+.btn-danger {
+  max-width: 300px;
+  margin-left: -15px;
+  margin-top: 80px;
+
+}
