@@ -7,7 +7,7 @@
 .userName {
     max-width: 160px;
     margin-left: 50px;
-    margin-top: -45px;
+    margin-top: -75px;
 	  font-size: 15px;
     background: #CFE695;
     background-size: 10%;
@@ -20,7 +20,7 @@
 .dateAbscens {
   max-width: 260px;
   margin-left: 0px;
-    margin-top: -15px;
+    margin-top: -45px;
   font-size: 12px;
   background: #CFE695;
   color: #000;
