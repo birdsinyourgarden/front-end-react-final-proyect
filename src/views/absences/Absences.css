@@ -1,19 +1,14 @@
-  .Card.Body {
-    position: absolute;
-    flex-wrap: wrap;
-  }
-  
-  h1 {
-	font-size: 6px;
+  .text-center {
+	font-size: 15px;
   font:bold;
   color: #000;
   }
   
 .userName {
-    max-width: 160px;
+    max-width: 260px;
     margin-left: 50px;
     margin-top: -5px;
-	  font-size: 15px;
+	  font-size: 25px;
     background: #CFE695;
     background-size: 10%;
 	  color: #000;
@@ -23,10 +18,10 @@
 }
 
 .dateAbscens {
-  max-width: 260px;
+  max-width: 300px;
   margin-left: 0px;
     margin-top: 12px;
-  font-size: 12px;
+  font-size: 15px;
   background: #CFE695;
   color: #000;
   border: solid .25em transparent;
