@@ -1,10 +1,7 @@
-
-
   .h1 {
-	font-size: 15px;
+	font-size: 5px;
   font: inter;
-  font-weight: 300;
-	color: #000;
+  color: #000;
 }
 
 .userName {
@@ -21,7 +18,7 @@
 }
 
 .dateAbscens {
-  max-width: 300px;
+  max-width: 260px;
   margin-left: 0px;
     margin-top: -15px;
   font-size: 12px;
@@ -30,12 +27,6 @@
   border: solid .25em transparent;
   border-radius: 1.375em;
   }
-
-    .absences {
-      display: flex;
-      justify-content: space-between;
-      margin: 30%;
-    }
         
 .event {
   max-width: 160px;
@@ -43,6 +34,7 @@
   color: #000;
   margin-left: -15px;
     margin-top: 45px;
+    border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,6 +58,7 @@
   color: #000;
   margin-left: -15px;
   margin-top: 45px;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,13 +69,15 @@
 }
 
 .Description {
-  max-width: max-content;
+  max-width: 300px;
   margin-left: 250px;
   margin-top: -45px;
   border: 1px solid rgb(140, 195, 139);
   }
 
   textarea {
+    width: 300px;
+    height: 150px;
     background:
   linear-gradient(#CFE695, #96AA1B) content-box,
   linear-gradient(#a9e0b0, #d7ed96) border-box;
@@ -90,6 +85,25 @@
 
 }
 
-.mb-3 {
-
+.justificationTitle {
+  max-width: 160px;
+  font-size: 25px;
+  color: #000;
+  margin-left: -15px;
+  margin-top: 45px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(160, 178, 225);
+  background: 
+  linear-gradient(#74b4d0, #97b2dc) content-box,
+  linear-gradient(#6f92b9, #d7ed96) border-box;
 }
+
+.choice {
+  max-width: 300px;
+  margin-left: 250px;
+  margin-top: -55px;
+  border: 1px solid rgb(140, 195, 139);
+  }

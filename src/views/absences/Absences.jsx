@@ -1,4 +1,4 @@
-import { Card, Container, Form, Button } from "react-bootstrap";
+import { Card, Container, Form, Button, FormGroup } from "react-bootstrap";
 import "../absences/Absences.css";
 
 const  Absences= () => {
@@ -44,17 +44,19 @@ const  Absences= () => {
                </Form.Group>
 
                <Form.Group class="Description">
-                     <textarea type="text" placeholder="Description de Ausencias" rows="3"/>
+                     <textarea type="text" placeholder="Description de Ausencias" rows="5"/>
                </Form.Group>
                               
-               <Form.Group className="mb-3" controlId="justify">
-                  <Form.Label>Justificant</Form.Label>
-                     <Form.Select className="mb-3" controlId="employeeStatus">
+               <Form.Group className="mb-3" controlId="justification">
+                  <Form.Label class="justificationTitle">Justificante</Form.Label>
+                  </Form.Group>
+                  <Form.Group>
+                     <Form.Select className="choice" controlId="justificationStatus">
                         <option value="true">Activo</option>
                         <option value="false">Baja</option>
                      </Form.Select>
-               </Form.Group>
-                  
+                  </Form.Group>
+                                 
                   <div class="d-grid gap-2 d-md-flex justify-content-md-start">                     
                <button type="button" class="btn btn-danger">Borrar</button>
                   </div>
