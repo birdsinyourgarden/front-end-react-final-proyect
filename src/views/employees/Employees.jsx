@@ -1,18 +1,36 @@
 import { Card, Container, Form, Button } from "react-bootstrap";
+import React, { useState } from "react";
 import "../employees/Employees.css";
 import { useForm } from "react-hook-form";
 import { registerEmployee } from "../../services/employee.service";
 import { Link, useNavigate } from "react-router-dom";
-import { useEffect } from "react";
-import Swal from 'sweetalert2';
-
+import Swal from "sweetalert2";
 
 const Employees = () => {
+
+      const[employeeName, setemployeeName]= useState(null);
+      const[employeeSurName,setemployeeSurName]= useState(null);
+      const[employeeEmail,setemployeeEmail]= useState(null);
+      const[password,setpassword]= useState(null);
+      const[confirmPassword,setconfirmPassword]= useState(null);
+      const[employeePhone,setemployeePhone]= useState(null);
+      const[employeeDni,setemployeeDni]= useState(null);
+      const[employeeSector,setemployeeSector]= useState(null);
+      const[employeePhoto,setemployeePhoto]= useState(null);
+      const[employeeStarting,setemployeeStarting]= useState(false);
+      const[employeeFinished,setemployeeFinished]= useState(false);
+      const[employeeStatus,setemployeeStatus]= useState(false);
+      const[employeeType, setemployeeType]= useState(false);
+      const[employeeAuth, setemployeeAuth] = useState(false);
+
+
    const {
       register,
       handleSubmit,
       formState: { errors },
    } = useForm();
+
+   const onErrors = (e) => {}
 
    const customSubmit = (data) => {
       console.log("enviando la data");
@@ -32,52 +50,56 @@ const Employees = () => {
       formData.append("isAdmin", data.isAdmin);
       registerEmployee(formData)
          .then((response) => {
-            console.log("data enviada", response);
+            handleReset();
+            Swal.fire ( {
+               title:'Enviado',
+               text:'Se ha registrado con exito', 
+               icon:'success',
+               position: 'center',
          })
-         .catch((e) => {
-            console.log(e);
+         .catch((error) => {
+            Swal.fire(
+            '¡Error!',
+            'Ha ocurrido un error al enviar la petición.',
+            'error'
+            );
          });
-   };
+      })
 
-   const onErrors = (e) => {
-      console.log("error", e);
-   };
+      const handleReset = () => {
+         setemployeeName(null);
+         setemployeeSurName(null);
+         setemployeeEmail(null);
+         setpassword(null);
+         setconfirmPassword(null);
+         setemployeePhone(null);
+         setemployeeDni(null);
+         setemployeeSector(null);
+         setemployeePhoto(null);
+         setemployeeStarting(false);
+         setemployeeFinished(false);
+         setemployeeStatus(false);
+         setemployeeType(false);
+         setemployeeAuth(false);
+      document.getElementById("employees-form").reset();
+      };
+   
+         
+   }
 
-   useEffect(()=>{
-      showMessage();
-   }, []);
-
-const showMessage=()=>{
-   Swal.fire ( {
-      title:'Enviado',
-      text:'Se ha registrado con exito', 
-      icon:'success',
-      position: 'center'
-   }).then(registerEmployee(formData=>{
-      if(response.isConfirmed){
-         Swal.fire (
-            'Enviado',
-            'Se ha registrado con exito', 
-            'success');
-            if (response.isDenied){
-               Swal.fire ('Informacion', 'Revise los campos', 'info');
-            }
-      }
-   }))
-}
 
    return (
       <Container className="p-5">
          <Card className="text-start">
             <Card.Title className="text-center">Registro de Empleados</Card.Title>
             <Card.Body>
-               <Form onSubmit={handleSubmit(customSubmit, onErrors)}>
+               <Form id="employees-form" onSubmit={handleSubmit(customSubmit, onErrors)}>
                   <Form.Group className="mb-3" controlId="employeeName">
                      <Form.Label>Nombre</Form.Label>
                      <input
                         type="text"
                         placeholder="Escribe el Nombre"
-                        className="form-control shadow"
+                        className={errors.name ? 'form-control shadow fail' : 'form-control shadow'}
                         {...register("name", {
                            required: true,
                            maxLength: 30,
@@ -95,37 +117,29 @@ const showMessage=()=>{
                      <input
                         type="text"
                         placeholder="Escribe los Apellidos"
-                        className="form-control shadow"
+                        className={errors.surname ? 'form-control shadow fail' : 'form-control shadow'}
                         {...register("surname", {
                            required: true,
-                           maxLength: 42,
-                        })}
+                           maxLength: 15,
+                        })}aria-invalid={errors.surname ? "true" : "false"} 
                      />
-                     {errors.surname?.type === "required" && (
-                        <small className="fail">Corrija el campo</small>
-                     )}
-                     {errors.surname?.type === "maxLength" && (
-                        <small className="fail">Corrija el campo</small>
-                     )}
+                     {errors.surname?.type === 'required' && <p role="alert">Apellido es requerido</p>}
                   </Form.Group>
                   <Form.Group className="mb-3" controlId="employeeEmail">
                      <Form.Label>Correo</Form.Label>
-                     <input
-                        type="email"
-                        placeholder="Escribe el Correo"
-                        className="form-control shadow"
-                        {...register("email", {
-                           required: true,
-                           maxLength: 42,
-                        })}
-                     />
+                        <input
+                        className={errors.email ? 'form-control shadow fail' : 'form-control shadow'}
+                        {...register("email", { required: "Email Address is required" })} 
+                        aria-invalid={errors.email ? "true" : "false"} 
+                        />
+      {errors.email && <p role="alert">{errors.email?.message}</p>}
                   </Form.Group>
                   <Form.Group className="mb-3" controlId="password">
                      <Form.Label>Password</Form.Label>
                      <input
                         type="password"
                         placeholder="Escribe una contraseña"
-                        className="form-control shadow"
+                        className={errors.password? 'form-control shadow fail' : 'form-control shadow'}
                         {...register("password", {
                            required: true,
                            minLength: 4,
@@ -144,17 +158,17 @@ const showMessage=()=>{
                      <input
                         type="password"
                         placeholder="Vuelve a escribir la contraseña"
-                        className="form-control shadow"
+                        className={errors.password2 ? 'form-control shadow fail' : 'form-control shadow'}
                         {...register("password2", {
                            required: true,
                            minLength: 4,
                            maxLength: 15,
                         })}
                      />
-                     {errors.password?.type === "required" && (
+                     {errors.password2?.type === "required" && (
                         <small className="fail">The field cannot be empty</small>
                      )}
-                     {errors.password?.type === "maxLength" && (
+                     {errors.password2?.type === "maxLength" && (
                         <small className="fail">Maximum characters are eight</small>
                      )}
                   </Form.Group>
@@ -163,7 +177,7 @@ const showMessage=()=>{
                      <input
                         type="number"
                         placeholder="Escribe un teléfono"
-                        className="form-control shadow"
+                        className={errors.phone ? 'form-control shadow fail' : 'form-control shadow'}
                         {...register("phone", {
                            required: true,
                            minLength: 9,
@@ -182,7 +196,7 @@ const showMessage=()=>{
                      <input
                         type="text"
                         placeholder="DNI/NIE"
-                        className="form-control shadow"
+                        className={errors.idNumber ? 'form-control shadow fail' : 'form-control shadow'}
                         {...register("idNumber", {
                            required: true,
                            minLength: 5,
@@ -199,7 +213,7 @@ const showMessage=()=>{
                   <Form.Group>
                      <Form.Label>Sector</Form.Label>
                      <Form.Select
-                        className="mb-3 form-control shadow"
+                        className={errors.sector? 'form-control shadow fail' : 'form-control shadow'}
                         controlId="employeeSector"
                         {...register("sector", {
                            required: true,
@@ -216,18 +230,17 @@ const showMessage=()=>{
                      <Form.Label>Foto</Form.Label>
                      <input
                         type="file"
-                        placeholder=""
                         className="form-control shadow"
                         {...register("image", {
                            required: true,
                         })}
-                     />
-                     {errors.image?.type === "required" && (
-                        <small className="fail">The field cannot be empty</small>
-                     )}
-                     {errors.image?.type === "maxLength" && (
-                        <small className="fail">Maximum characters are eight</small>
-                     )}
+            />
+            {errors.image?.type === "required" && (
+               <small className="fail">The field cannot be empty</small>
+            )}
+            {errors.image?.type === "maxLength" && (
+               <small className="fail">Maximum characters are eight</small>
+            )}
                   </Form.Group>
                   <Form.Group className="mb-3" controlId="employeeStarting">
                      <Form.Label>Inicio del Contrato</Form.Label>
@@ -260,7 +273,7 @@ const showMessage=()=>{
                   <Form.Group>
                      <Form.Label>Estado del Empleado</Form.Label>
                      <Form.Select
-                        className=" form-control shadow mb-3"
+                        className={errors.status ? 'form-control shadow fail' : 'form-control shadow'}
                         controlId="employeeStatus"
                         {...register("status", {
                            required: true,
@@ -269,18 +282,12 @@ const showMessage=()=>{
                         <option selected>Elija una opción</option>
                         <option value="true">Activo</option>
                         <option value="false">Baja</option>
-                        {errors.status?.type === "required" && (
-                           <small className="fail">The field cannot be empty</small>
-                        )}
-                        {errors.status?.type === "maxLength" && (
-                           <small className="fail">Maximum characters are eight</small>
-                        )}
                      </Form.Select>
                   </Form.Group>
                   <Form.Group>
                      <Form.Label>Tipo de Contrato del Empleado</Form.Label>
                      <Form.Select
-                        className="mb-3 form-control shadow"
+                        className={errors.contractType ? 'form-control shadow fail' : 'form-control shadow'}
                         controlId="employeeType"
                         {...register("contractType", {
                            required: true,
@@ -289,18 +296,12 @@ const showMessage=()=>{
                         <option selected>Elija una opción</option>
                         <option value="true">Permanente</option>
                         <option value="false">Temporal</option>
-                        {errors.contractType?.type === "required" && (
-                           <small className="fail">The field cannot be empty</small>
-                        )}
-                        {errors.contractType?.type === "maxLength" && (
-                           <small className="fail">Maximum characters are eight</small>
-                        )}
                      </Form.Select>
                   </Form.Group>
                   <Form.Group>
                      <Form.Label>Es Administrador?</Form.Label>
                      <Form.Select
-                        className="mb-3 form-control shadow"
+                        className={errors.isAdmin ? 'form-control shadow fail' : 'form-control shadow'}
                         controlId="employeeAuth"
                         {...register("isAdmin", {
                            required: true,
@@ -309,12 +310,6 @@ const showMessage=()=>{
                         <option selected>Elija una opción</option>
                         <option value="false">No</option>
                         <option value="true">Si</option>
-                        {errors.isAdmin?.type === "required" && (
-                           <small className="fail">The field cannot be empty</small>
-                        )}
-                        {errors.isAdmin?.type === "maxLength" && (
-                           <small className="fail">Maximum characters are eight</small>
-                        )}
                      </Form.Select>
                   </Form.Group>
                   <Button variant="primary" type="submit">

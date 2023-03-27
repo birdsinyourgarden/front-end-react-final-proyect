@@ -15,11 +15,13 @@
     "bootstrap": "^5.2.3",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.2",
+    "react-bootstrap-icons": "^1.10.2",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.5",
     "react-icons": "^4.8.0",
     "react-router-dom": "^6.8.2",
-    "rsuite": "^5.28.1"
+    "rsuite": "^5.28.1",
+    "sweetalert2": "^11.7.3"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",

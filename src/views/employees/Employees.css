@@ -26,3 +26,7 @@ label {
   input:valid + span::after {
     content: "✓";
   }
+
+  .fail {
+    border-color: red;
+  }

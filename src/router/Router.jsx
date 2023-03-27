@@ -21,7 +21,7 @@ return (
     <BrowserRouter>
         <LocalNavbar />
     <Routes>
-        <Route path="/" element={<LocalLogin />} />
+        <Route path="/login" element={<LocalLogin />} />
         <Route path="/home" element={<Home  />} />
         <Route path="/employees" element={<Employees />} />
         <Route path="/absences" element={<Absences />} />

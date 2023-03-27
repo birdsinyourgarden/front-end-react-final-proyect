@@ -27,6 +27,7 @@ const LocalLogin = () => {
         const {data } =  response
         if (data.access_token) {
           localStorage.setItem('token', data.access_token)
+          localStorage.setItem('isAdmin', data.user.isAdmin)
           if (data.user.isAdmin === 1) {
             navigate('/home')
           } else if (data.user.isAdmin === 0) {
@@ -49,6 +50,7 @@ const LocalLogin = () => {
  useEffect(() => {
   // validar token
  }, [])
+
 
   return (
     <Container id="logCard">

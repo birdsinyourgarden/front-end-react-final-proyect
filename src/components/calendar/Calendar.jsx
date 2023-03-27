@@ -1,30 +1,47 @@
+import { useEffect, useState } from 'react';
 import { Calendar, Whisper, Popover, Badge } from 'rsuite';
 import '../calendar/Calendar.css';
-
-function getTodoList(date) {
-    const day = date.getDate();
-  
-    switch (day) {
-      case 10:
-        return [
-          { time: '10:30 am', title: 'Meeting' },
-          { time: '12:00 pm', title: 'Lunch' }
-        ];
-      case 15:
-        return [
-          { time: '09:30 pm', title: 'Products Introduction Meeting' },
-          { time: '12:30 pm', title: 'Client entertaining' },
-          { time: '02:00 pm', title: 'Product design discussion' },
-          { time: '05:00 pm', title: 'Product test and acceptance' },
-          { time: '06:30 pm', title: 'Reporting' },
-          { time: '10:00 pm', title: 'Going home to walk the dog' }
-        ];
-      default:
-        return [];
-    }
-  }
+import { getAbsences } from '../../services/employee.service'
   
   const LocalCalendar = () => {
+    const [calendarData, setCalendarData] = useState(null)
+
+    function getTodoList(date) {
+      const day = date.getDate();
+      const month = date.getMonth();
+      const year = date.getFullYear()
+      calendarData.forEach(row => {
+        console.log(row)
+      })
+    
+      switch (day) {
+        case 10:
+          return [
+            { time: '10:30 am', title: 'Meeting' },
+            { time: '12:00 pm', title: 'Lunch' }
+          ];
+        case 15:
+          return [
+            { time: '09:30 pm', title: 'Products Introduction Meeting' },
+            { time: '12:30 pm', title: 'Client entertaining' },
+            { time: '02:00 pm', title: 'Product design discussion' },
+            { time: '05:00 pm', title: 'Product test and acceptance' },
+            { time: '06:30 pm', title: 'Reporting' },
+            { time: '10:00 pm', title: 'Going home to walk the dog' }
+          ];
+        default:
+          return [];
+      }
+    }
+
+    useEffect(() => {
+      getAbsences().then(
+        res => {
+          setCalendarData(res.data)
+        }
+      )
+    }, [])
+
     function renderCell(date) {
       const list = getTodoList(date);
       const displayList = list.filter((item, index) => index < 2);
@@ -67,9 +84,11 @@ function getTodoList(date) {
     }
   
     return (
-      <div>
-              <Calendar bordered renderCell={renderCell} className='white-background' />
-      </div>
+      calendarData && (
+        <div>
+                <Calendar bordered renderCell={renderCell} className='white-background' />
+        </div>
+      )
     )
   
   };

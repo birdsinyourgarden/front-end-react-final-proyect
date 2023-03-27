@@ -27,7 +27,7 @@ function Sidebar () {
             {
                 employeesArray && employeesArray.map(employee => {
                     return (
-                        <Userpill name={employee.name + ' ' + employee.surname} image={employee.image} />
+                        <Userpill name={employee.name + ' ' + employee.surname} image={employee.image} id={employee.id} refreshAction={showEmployees} />
                     )
                 })
             }
