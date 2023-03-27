@@ -20,7 +20,7 @@ const  Absences= () => {
                </div>   
                </Card.Title>
                      
-               <Form.Group  controlId="event">
+               <Form.Group  controlId="event"> 
                   <Form.Label class="event">Evento</Form.Label>
                      <Form.Select className="list" controlId="abscensSector">
                            <option value="1">Ausencia Autorizada - Enfermedad</option>
