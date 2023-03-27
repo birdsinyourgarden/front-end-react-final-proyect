@@ -2,13 +2,14 @@
 	font-size: 15px;
   font:bold;
   color: #000;
+  
   }
   
 .userName {
     max-width: 260px;
     margin-left: 50px;
     margin-top: -5px;
-	  font-size: 25px;
+    font-size: 25px;
     background: #CFE695;
     background-size: 10%;
 	  color: #000;
@@ -20,7 +21,7 @@
 .dateAbscens {
   max-width: 300px;
   margin-left: 0px;
-    margin-top: 12px;
+  margin-top: 12px;
   font-size: 15px;
   background: #CFE695;
   color: #000;
@@ -28,14 +29,18 @@
   border-radius: 1.375em;
   }
         
-.event {
-  max-width: 160px;
+label {
+  max-width: 40%;
+  width: 10em;
   font-size: 25px;
+  display: flex;
+  margin: auto;
+  flex-flow: column wrap;
+  flex-wrap: wrap;
   color: #000;
   margin-left: -15px;
-    margin-top: 45px;
-    border-radius: 10px;
-  display: flex;
+  margin-top: 45px;
+  border-radius: 10px;
   justify-content: center;
   align-items: center;
   background:
@@ -44,71 +49,88 @@
 }
 
 .list {
-        max-width: 300px;
-        margin-left: 250px;
-        margin-top: -45px;
-        background-color: rgb(154, 197, 222);
-        border-collapse: collapse; 
-        border: 1px solid rgb(124, 179, 137);
+  max-width: 100%;
+  width: 25em;
+  margin-left: 45em;
+  margin-top: -5em; 
+  display: flex;
+  margin: auto;
+  flex-flow: column wrap;
+  background-color: rgb(154, 197, 222);
+  border-collapse: collapse; 
+
+}
+select option [value="2"], [value="3"], 
+              [value="4"], [value="5"]
+{
+  background: rgb(214, 241, 10);
+}
+
+select option [value="9"], [value="10"], [value="11"], 
+              [value="12"], [value="13"], [value="14"]
+{
+  background: rgba(230, 31, 237, 0.88);
+}
+
+select option [value="16"], [value="17"], [value="18"]
+{
+  background: rgba(123, 115, 68, 0.653);
+}
+
+select option [value="18"], [value="19"], [value="20"]              
+{
+  background: rgb(219, 143, 151);
+}
+
+select option [value="20"], [value="21"]              
+{
+  background: rgba(237, 151, 31, 0.88);
 }
 
 .DescriptionTitle {  
-  max-width: 160px;
+  max-width: 40%;
+  width: 10em;
   font-size: 25px;
+  display: flex;
+  margin: auto;
+  flex-flow: column wrap;
   color: #000;
   margin-left: -15px;
   margin-top: 45px;
   border-radius: 10px;
-  display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid rgb(160, 178, 225);
   background: 
   linear-gradient(#74b4d0, #97b2dc) content-box,
   linear-gradient(#6f92b9, #d7ed96) border-box;
 }
 
-.Description {
-  max-width: 300px;
-  margin-left: 250px;
-  margin-top: -45px;
-  border: 1px solid rgb(140, 195, 139);
-  }
-
-  textarea {
-    width: 300px;
-    height: 150px;
-    background:
-  linear-gradient(#CFE695, #96AA1B) content-box,
-  linear-gradient(#a9e0b0, #d7ed96) border-box;
-  color: rgb(4, 4, 4);
-
-}
-
-.justificationTitle {
-  max-width: 160px;
-  font-size: 25px;
-  color: #000;
-  margin-left: -15px;
-  margin-top: 45px;
-  border-radius: 10px;
+textarea {
+  max-width: 100%;
+    height: 8em;
+    width: 25em;
+  margin-left: 45em; 
+  margin: auto;
+  margin-top: 5px; 
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid rgb(160, 178, 225);
+  flex-flow: column wrap;
+  border: 1px solid rgb(140, 195, 139);
   background:
   linear-gradient(#CFE695, #96AA1B) content-box,
   linear-gradient(#a9e0b0, #d7ed96) border-box;
-  
+  color: rgb(4, 4, 4);
 }
 
 .choice {
-  max-width: 300px;
-  margin-left: 250px;
-  margin-top: -55px;
+  max-width: 100%;
+      width: 25em;
+  margin-left: 45em;
+  margin-top: -3.5em; 
+  display: flex;
+  margin: auto;
+  flex-flow: column wrap;
   background-color: rgb(154, 197, 222);
   border-collapse: collapse; 
-  border: 1px solid rgb(124, 179, 137);
 }
 
 .btn-danger {

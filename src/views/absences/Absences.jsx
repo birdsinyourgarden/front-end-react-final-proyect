@@ -5,7 +5,7 @@ const  Absences= () => {
    return (
       <Container className="p-5">
          <Card className="text-start">
-             <Card.Body>
+            <Card.Body>
                <Card.Title className="text-center">
                <h1>Actualizar Ausencia</h1> 
                <div>
@@ -19,24 +19,33 @@ const  Absences= () => {
                </table>
                </div>   
                </Card.Title>
-                         
+                     
                <Form.Group  controlId="event">
-               <Form.Label class="event">Evento</Form.Label>
-               <Form.Select className="list" controlId="abscensSector">
-                           <option value="Vacaciones">Vacaciones</option>
-                           <option value="Ausencia Autorizada - Enfermedad">Ausencia Autorizada - Enfermedad</option>
-                           <option value="Cita Médica">Cita Médica</option>
-                           <option value="Acompañamiento médico Familiar">Acompañamiento médico Familiar</option>
-                           <option value="Baja IT">Baja IT</option>
-                           <option value="Baja Maternidad">Baja Maternidad</option>
-                           <option value="Baja Paternidad">Baja Paternidad</option>
-                           <option value="Matrimonio o Pareja de Hecho">Matrimonio o Pareja de Hecho</option>
-                           <option value="Fallecimiento Familiar">Fallecimiento Familiar</option>
-                           <option value="Formación">Formación</option>
-                           <option value="Mudanzas">Mudanzas</option>
-                           <option value="Otros...">Otros...</option>
-                        </Form.Select>
-                  </Form.Group>
+                  <Form.Label class="event">Evento</Form.Label>
+                     <Form.Select className="list" controlId="abscensSector">
+                           <option value="1">Ausencia Autorizada - Enfermedad</option>
+                           <option value="2">Cita Médica</option>
+                           <option value="3">Acompañamiento al médico de familiares adultos</option>
+                           <option value="4">Acompañamiento al médico familiares menores</option>
+                           <option value="5">Hospitalización de familares</option>
+                           <option value="6">Otros</option>
+                           <option value="7">Exámenes</option>
+                           <option value="8">Mudanzas</option>
+                           <option value="9">Baja IT</option>
+                           <option value="10">Baja Maternidad</option>
+                           <option value="11">Maternidad: 2 semanas extras retribuidas Arrabal</option>
+                           <option value="12">Matrernidad: 2 semanas extras sin retribición</option>
+                           <option value="13">Baja Paternidad</option>
+                           <option value="14">Periodo de lactancia</option>
+                           <option value="15">Matrimonio o inclución registro pareja de Hecho</option>
+                           <option value="16">Fallecimiento Familiar</option>
+                           <option value="17">Horas fuera del horario habitual</option>
+                           <option value="18">Recuperación horas fuera del horario habitual</option>
+                           <option value="19">Horas Sindicales</option>
+                           <option value="20">Recuperación horas sindicales</option>
+                           <option value="21">Jornada fuera del centro de trabajo</option>
+                     </Form.Select>
+               </Form.Group>
 
                <Form.Group controlId="description">
                   <Form.Label class="DescriptionTitle">Descripcion</Form.Label>
