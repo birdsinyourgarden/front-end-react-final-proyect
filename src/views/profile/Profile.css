@@ -1,3 +1,69 @@
+@media only screen and (max-width: 600px) {
+    #profileHeader{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    #detailTitle{
+        font-size: 1.1rem;
+    }
+
+    #detailsHeader{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    #detailContent{
+        width: 28vh!important;
+    }
+
+    #detailFields{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 2vh;
+    }
+
+    #fieldContent{
+        margin-top: 1.2vh;
+    }
+
+}
+
+@media only screen and (max-width: 850px) {
+    #profileHeader{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    #detailTitle{
+        font-size: 1.1rem;
+    }
+
+    #detailsHeader{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    #detailContent{
+        width: 28vh!important;
+    }
+
+    #detailFields{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 2vh;
+    }
+
+    #fieldContent{
+        margin-top: 1.2vh;
+    }
+
+}
+
 .profileWrapper{
     height: 100%;
 }
@@ -12,6 +78,7 @@
     text-align: left;
     padding-left: 3vh;
     padding-top: 1vh;
+    border-radius: 5px;
 }
 
 #profileTemplate{
@@ -22,6 +89,7 @@ width: 100%;
     background-color: #9BAD5B;
     border: none;
     border-radius: 10px;
+    
 }
 
 #profileDetails{
@@ -66,7 +134,7 @@ width: 100%;
     padding-right: 10px;
     width: fit-content;
     margin-right: 20px;
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
 
 
@@ -78,7 +146,7 @@ width: 100%;
     height: fit-content;
     width: fit-content;
     margin-right: 5em;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 #detailsHeader{
@@ -100,9 +168,9 @@ width: 100%;
     border-radius: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    width: fit-content;
+    width: 20vh;
     margin-right: 20px;
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
 
 #fieldContent{
@@ -110,13 +178,30 @@ width: 100%;
     border-radius: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    width: fit-content;
+    width: 20vh;
     margin-right: 5em;
-    font-size: 1.2em;
+    font-size: 1.1em;
+    justify-content: center;
 }
+
 #employPhoto{
     border-radius: 100%;
     width: 17vh;
     height: auto;
     margin: auto;
 }
+
+.btnRight{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#editBtn{
+    background-color: #658A05;
+    border: none;
+    font-family: 'Fresca', sans-serif;
+    font-size: 1.2em;
+    margin-top: 1.2em ;
+    justify-self: flex-end;
+}
+
