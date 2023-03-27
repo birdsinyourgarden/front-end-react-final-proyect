@@ -3,58 +3,58 @@ import "../profile/Profile.css";
 
 const  Profile= () => {
     return (
-        <Container className="p-5">
-            <Card id="profileCard" className="text-start">
-                <Card.Title id="profileHeader" className="text-center">
-                    <div id="photoContainer">
-                        <img id="employPhoto" src="https://res.cloudinary.com/dkbwmuo7n/image/upload/v1679689850/sierri.jpg" alt="" />
-                    </div>
-                    <div id="detailsContainer">
-                        <div id="nameDetails">
-                            <p>Nombre: Maria Pepote Popeye</p>
+        <div className="profileWrapper">
+            <Container id="profileTemplate" className="p-5">
+                <Card id="profileCard" className="text-start">
+                    <Card.Title id="profileHeader" className="text-center">
+                        <div id="photoContainer">
+                            <img id="employPhoto" src="https://res.cloudinary.com/dkbwmuo7n/image/upload/v1679689850/sierri.jpg" alt="" />
                         </div>
-                        <div>
-                            <p>Estatus actual: Habilitado</p>
+                        <div id="detailsContainer">
+                            <div id="nameDetails">
+                                <p>Nombre: Maria Pepote Popeye</p>
+                            </div>
+                            <div>
+                                <p>Estatus actual: Habilitado</p>
+                            </div>
+                            <div>
+                                <p>Tipo de Contrato: Temporal</p>
+                            </div>
                         </div>
-                        <div>
-                            <p>Tipo de Contrato: Permanente</p>
-                        </div>
-                    </div>
-                </Card.Title>
-            <Card.Body id="profileDetails">
-            <Form>    
-                <Form.Group className="mb-3" controlId="employeeDni">
-                    <Form.Label id="fieldTitle">DNI/NIE</Form.Label>
-                    <p>25587562P</p>
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="employeeDni">
-                    <Form.Label id="fieldTitle">Sector</Form.Label>
-                    <p>Jardinería</p>
-                </Form.Group>    
-                <Form.Group className="mb-3" controlId="employeeStarting">
-                    <Form.Label id="fieldTitle">Inicio del Contrato</Form.Label>
-                    <p>01/01/2023</p>
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="employeeFinished">
-                    <Form.Label id="fieldTitle">Fin del Contrato</Form.Label>
-                    <p>01/05/2023</p>
-                </Form.Group>    
-                <Form.Group className="mb-3" controlId="employeeEmail">
-                    <Form.Label id="fieldTitle">Correo</Form.Label>
-                    <p>jdjd@gg.com</p>
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="password">
-                    <Form.Label id="fieldTitle">Password</Form.Label>
-                    <p>kdkjlds_2255</p>
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="employeePhone">
-                    <Form.Label id="fieldTitle">Telefono</Form.Label>
-                    <p>665955558</p>
-                </Form.Group>
-            </Form>
-            </Card.Body>
-        </Card>
-    </Container>
+                    </Card.Title>
+                <Card.Body id="profileDetails">
+                <Form>    
+                    <Form.Group id="detailFields" className="mb-3" controlId="employeeDni">
+                        <Form.Label id="fieldTitle">DNI/NIE</Form.Label>
+                        <Form.Label id="fieldContent">25587562P</Form.Label>
+                    </Form.Group>
+                    <Form.Group id="detailFields" className="mb-3" controlId="employeeDni">
+                        <Form.Label id="fieldTitle">Sector</Form.Label>
+                        <Form.Label id="fieldContent">Jardinería</Form.Label>
+                    </Form.Group>    
+                    <Form.Group id="detailFields" className="mb-3" controlId="employeeStarting">
+                        <Form.Label id="fieldTitle">Inicio del Contrato</Form.Label>
+                        <Form.Label id="fieldContent">01/01/2023</Form.Label>
+                        <Form.Label id="fieldTitle">Fin del Contrato</Form.Label>
+                        <Form.Label id="fieldContent">01/05/2023</Form.Label>
+                    </Form.Group>   
+                    <Form.Group id="detailFields" className="mb-3" controlId="employeeEmail">
+                        <Form.Label id="fieldTitle">Correo</Form.Label>
+                        <Form.Label id="fieldContent">jdjd@gg.com</Form.Label>
+                    </Form.Group>
+                    <Form.Group id="detailFields" className="mb-3" controlId="password">
+                        <Form.Label id="fieldTitle">Contraseña</Form.Label>
+                        <Form.Label id="fieldContent">kdkjlds_2255</Form.Label>
+                    </Form.Group>
+                    <Form.Group id="detailFields" className="mb-3" controlId="employeePhone">
+                        <Form.Label id="fieldTitle">Telefono</Form.Label>
+                        <Form.Label id="fieldContent">665955558</Form.Label>
+                    </Form.Group>
+                </Form>
+                </Card.Body>
+            </Card>
+        </Container>
+    </div>
     );
 };
 

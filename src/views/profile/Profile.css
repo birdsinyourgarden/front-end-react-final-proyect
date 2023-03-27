@@ -1,11 +1,21 @@
+.profileWrapper{
+    height: 100%;
+}
+
+#profileTemplate{
+width: 100%;
+} 
+
 #profileCard{
     background-color: #9BAD5B;
     border: none;
+    border-radius: 10px;
 }
 
 #profileDetails{
     background-color: #CFE695;
     border: none;
+    border-radius: 10px;
 }
 
 #profileHeader{
@@ -14,24 +24,46 @@
     justify-content: space-around;
 }
 
+#photoContainer, #detailsContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 #detailsContainer{
     border: solid 2px rgb(114, 250, 202);
 }
 
 #photoContainer{
     border: solid 2px rgb(115, 20, 177);
-    min-width: 20%;
+    width: 20;
 }
-/*
 #nameDetails{
     align-self: center;
-}*/
+}
+
+#detailFields{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
 #fieldTitle{
-    background-color: #FBFBFB;
-    border-radius: 5px;
+    background: #FBFBFB;
+    border-radius: 10px;
     padding-left: 10px;
     padding-right: 10px;
     width: fit-content;
+    margin-right: 20px;
+    font-size: 1.3em;
+}
+
+#fieldContent{
+    background: rgba(251, 251, 251, 0.58);
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: fit-content;
+    margin-right: 5em;
+    font-size: 1.2em;
 }
 #employPhoto{
     border-radius: 100%;
