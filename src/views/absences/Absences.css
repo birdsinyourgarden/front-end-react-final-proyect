@@ -1,9 +1,31 @@
-  .text-center {
-	font-size: 15px;
-  font:bold;
-  color: #000;
-  
-  }
+      .text-center {
+        box-sizing: border-box;
+        position: absolute;
+    width: 830px;
+    height: 65px;
+    left: -145px;
+    top: -31px;
+    background: #658A05;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+      font-size: 15px;
+      font:bold;
+      color: #ffffff;
+        }
+
+form {
+
+    /* Frame 1 */
+
+position: absolute;
+width: 865px;
+height: 527px;
+left: 288px;
+top: 319px;
+
+background: #9BAD5B;
+}
   
 .userName {
     max-width: 260px;
