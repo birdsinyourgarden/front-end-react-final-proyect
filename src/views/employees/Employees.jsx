@@ -3,6 +3,9 @@ import "../employees/Employees.css";
 import { useForm } from "react-hook-form";
 import { registerEmployee } from "../../services/employee.service";
 import { Link, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import Swal from 'sweetalert2';
+
 
 const Employees = () => {
    const {
@@ -39,6 +42,29 @@ const Employees = () => {
    const onErrors = (e) => {
       console.log("error", e);
    };
+
+   useEffect(()=>{
+      showMessage();
+   }, []);
+
+const showMessage=()=>{
+   Swal.fire ( {
+      title:'Enviado',
+      text:'Se ha registrado con exito', 
+      icon:'success',
+      position: 'center'
+   }).then(registerEmployee(formData=>{
+      if(response.isConfirmed){
+         Swal.fire (
+            'Enviado',
+            'Se ha registrado con exito', 
+            'success');
+            if (response.isDenied){
+               Swal.fire ('Informacion', 'Revise los campos', 'info');
+            }
+      }
+   }))
+}
 
    return (
       <Container className="p-5">
