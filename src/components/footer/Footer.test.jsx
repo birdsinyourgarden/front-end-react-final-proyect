@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import Footer from './footer';
 
-describe('footer tests', () => {
+describe('footer', () => {
   it('renders logo', () => {
     render(Footer());
     expect(screen.getByRole('img', { name: 'logo Fem Coders' })).toBeInTheDocument();
