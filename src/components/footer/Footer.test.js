@@ -1,9 +1,13 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import Footer from './Footer';
+import { render, screen } from '@testing-library/react';
+import Footer from './footer';
 
-test('renders footer component', () => {
-    const { getByTestId } = render(<Footer />);
-    const footerElement = getByTestId('footer');
-    expect(footerElement).toBeInTheDocument();
+describe('footer tests', () => {
+  it('renders logo', () => {
+    render(Footer());
+    expect(screen.getByRole('img', { name: 'logo Fem Coders' })).toBeInTheDocument();
+  });
+  it('renders copyright', () => {
+    render(Footer());
+    expect(screen.getByRole('img', { name: 'Copyright' })).toBeInTheDocument();
+  });
 });
