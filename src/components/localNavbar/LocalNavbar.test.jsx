@@ -18,3 +18,10 @@ test('Local Navbar links are rendered correctly', () => {
   expect(solicitudesLink).toHaveAttribute('href', '/solicitudes');
   expect(menuUsuarioLink).toHaveAttribute('href', '/homeUser');
 });
+
+describe('Local Navbar', () => {
+  it('renders logo', () => {
+    const { getByRole } = render(<BrowserRouter><LocalNavbar /></BrowserRouter>);
+    expect(getByRole('img', { name: 'logo Aidei' })).toBeVisible();
+  });
+});
