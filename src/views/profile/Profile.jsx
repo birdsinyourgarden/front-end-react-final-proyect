@@ -18,11 +18,11 @@ const  Profile= () => {
                             <Form className="mainDetails">    
                                 <Form.Group id="detailsHeader" className="mb-3" controlId="employeeDni">
                                     <Form.Label id="detailTitle">Nombre:</Form.Label>
-                                    <Form.Label id="fieldContent">María Pepote Popeye</Form.Label>
+                                    <Form.Label id="detailContent">María Pepote Popeye</Form.Label>
                                 </Form.Group>
                                 <Form.Group id="detailsHeader" className="mb-3" controlId="employeeDni">
                                     <Form.Label id="detailTitle">Estatus actual:</Form.Label>
-                                    <Form.Label id="fieldContent">Activo</Form.Label>
+                                    <Form.Label id="detailContent">Activo</Form.Label>
                                 </Form.Group>
                             </Form> 
                         </div>

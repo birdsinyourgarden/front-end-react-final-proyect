@@ -31,7 +31,6 @@ width: 100%;
 }
 
 #profileHeader{
-    border: solid 2px salmon;
     display: flex;
     justify-content: flex-start;
 }
@@ -42,17 +41,24 @@ width: 100%;
 }
 
 #detailsContainer{
-    border: solid 2px rgb(114, 250, 202);
+    display: flex;
+    align-content:flex-end;
 }
 
 #photoContainer{
-    border: solid 2px rgb(115, 20, 177);
     width: 18vh;
     height: 18vh;
     margin-left: 0;
     margin-right: 10vh;
     
 }
+
+.mainDetails{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 #detailTitle{
     color: white;
     border-radius: 10px;
@@ -63,10 +69,16 @@ width: 100%;
     font-size: 1.3em;
 }
 
-.mainDetails{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+
+#detailContent{
+    background: rgba(251, 251, 251, 0.58);
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: fit-content;
+    width: fit-content;
+    margin-right: 5em;
+    font-size: 1.2em;
 }
 
 #detailsHeader{
@@ -79,7 +91,9 @@ width: 100%;
     display: flex;
     flex-direction: row;
     align-content: center;
+    
 }
+
 
 #fieldTitle{
     background: #FBFBFB;
