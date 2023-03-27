@@ -1,5 +1,7 @@
 import { Calendar, Whisper, Popover, Badge } from 'rsuite';
 import '../calendar/Calendar.css';
+import { CustomProvider } from 'rsuite';
+import esES from 'rsuite/locales/es_ES';
 
 function getTodoList(date) {
     const day = date.getDate();
@@ -68,10 +70,12 @@ function getTodoList(date) {
   
     return (
       <div>
+        <CustomProvider locale={esES}>
               <Calendar bordered renderCell={renderCell} className='white-background' />
+              </CustomProvider>
       </div>
     )
   
   };
   
-  export default LocalCalendar
+  export default LocalCalendar;
