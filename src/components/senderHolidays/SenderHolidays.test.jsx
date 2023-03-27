@@ -6,4 +6,8 @@ describe('sender holidays test', () => {
     const { getByText } = render(<SenderHolidays />);
     expect(getByText(/Vacaciones/i)).toBeInTheDocument();
   });
+  it('2 buttons exists', () => {
+    const { getAllByRole } = render(<SenderHolidays />);
+    expect(getAllByRole('button').length).toBe(2);
+  });
 });
