@@ -15,28 +15,29 @@ function LocalNavbar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
           <Link to="employees" className="link_brand">
-                        Plantilla
+                        Registro de Personal
                     </Link>
                     <br/>
                     <Link to="profile" className="link_brand">
                         Perfil
                     </Link>
                     <br/>
-                    <Link to="absences" className="link_brand">
-                        Ausencias
+                    <div>
+                    <Link to="homeUser" className="link_brand">
+                      Menú Personal
                     </Link>
+                    </div>
                     <br/>
                     <div>
                     <Link to="solicitudes" className="link_brand">
                         Solicitudes
                     </Link>
                     </div>
-                    <div>
-                    <Link to="homeUser" className="link_brand">
-                      Menú Personal
+                    <br/>
+                    <Link to="absences" className="link_brand">
+                        Actualizar Ausencia
                     </Link>
-                    </div>
-            
+                    <br/>
           </Nav>
           <Nav>
             <Nav.Link href="#deets"></Nav.Link>
