@@ -7,3 +7,34 @@
     background-color: #CFE695;
     border: none;
 }
+
+#profileHeader{
+    border: solid 2px salmon;
+    display: flex;
+    justify-content: space-around;
+}
+
+#detailsContainer{
+    border: solid 2px rgb(114, 250, 202);
+}
+
+#photoContainer{
+    border: solid 2px rgb(115, 20, 177);
+    min-width: 20%;
+}
+/*
+#nameDetails{
+    align-self: center;
+}*/
+#fieldTitle{
+    background-color: #FBFBFB;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: fit-content;
+}
+#employPhoto{
+    border-radius: 100%;
+    width: 18%;
+    justify-self: flex-start;
+}
