@@ -6,11 +6,11 @@ const  Absences= () => {
    <Container className="p-5">
          <h1>Actualizar Ausencia</h1>   
          
-      <Card class ="ausData">
+      <Card class="datbox">
          <Card.Title className="text-center">  
             <div>
                <table className="userName">
-                  <tr><th>Montse Martos</th></tr>
+                  <tr><th>Manuel Ferrero Rocher</th></tr>
                </table>
             </div>
    
