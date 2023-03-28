@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Calendar, Whisper, Popover, Badge } from 'rsuite';
 import '../calendar/Calendar.css';
 import { getAbsences } from '../../services/employee.service'
+import Swal from 'sweetalert2';
   
   const LocalCalendar = () => {
     const [calendarData, setCalendarData] = useState(null)
@@ -10,11 +11,21 @@ import { getAbsences } from '../../services/employee.service'
       const day = date.getDate();
       const month = date.getMonth();
       const year = date.getFullYear()
+      const dataToShow = []
       calendarData.forEach(row => {
-        console.log(row)
+        const createdAt = new Date(row.startingDate)
+        const dayCreated = createdAt.getDate();
+        const monthCreated = createdAt.getMonth();
+        const yearCreated = createdAt.getFullYear()
+
+        if (yearCreated == year && monthCreated == month && dayCreated == day) {
+          dataToShow.push({ time: row.startingTime, title: row.description, info: row })
+        }
       })
+
+      return dataToShow
     
-      switch (day) {
+      /* switch (day) {
         case 10:
           return [
             { time: '10:30 am', title: 'Meeting' },
@@ -31,7 +42,18 @@ import { getAbsences } from '../../services/employee.service'
           ];
         default:
           return [];
-      }
+      } */
+    }
+
+    const handleShowInfo = (item) => {
+      const p = document.createElement("p")
+      p.innerHTML = `<b>Descripcion</b>: ${item.info.description}<br/>
+      <b>Status</b>: ${item.info.status}<br/>
+      <b>Inicio</b>: ${item.info.startingTime}<br/>
+      <b>Final</b>: ${item.info.endingTime}<br/>
+      <b>Link</b>: <a href='${item.info.addDocument}' target='_blank'>Descargar</a><br/>
+      `
+      Swal.fire("Event Info", p, 'info')
     }
 
     useEffect(() => {
@@ -56,7 +78,7 @@ import { getAbsences } from '../../services/employee.service'
               speaker={
                 <Popover>
                   {list.map((item, index) => (
-                    <p key={index}>
+                    <p key={index} >
                       <b>{item.time}</b> - {item.title}
                     </p>
                   ))}
@@ -71,7 +93,7 @@ import { getAbsences } from '../../services/employee.service'
         return (
           <ul className="calendar-todo-list">
             {displayList.map((item, index) => (
-              <li key={index}>
+              <li key={index} title={item.time + ' - ' + item.title} onClick={() => handleShowInfo(item)}>
                 <Badge /> <b>{item.time}</b> - {item.title}
               </li>
             ))}
