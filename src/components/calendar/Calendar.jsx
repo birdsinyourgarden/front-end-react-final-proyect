@@ -108,7 +108,7 @@ import Swal from 'sweetalert2';
     return (
       calendarData && (
         <div>
-                <Calendar bordered renderCell={renderCell} className='white-background' />
+                <Calendar compact bordered renderCell={renderCell} className='white-background' />
         </div>
       )
     )
