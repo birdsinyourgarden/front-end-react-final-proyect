@@ -3,8 +3,10 @@ import { Calendar, Whisper, Popover, Badge } from 'rsuite';
 import '../calendar/Calendar.css';
 import { getAbsences } from '../../services/employee.service'
 import Swal from 'sweetalert2';
+import { CustomProvider } from "rsuite";
+import esES from "rsuite/locales/es_ES";
   
-  const LocalCalendar = () => {
+  const LocalCalendar = (props) => {
     const [calendarData, setCalendarData] = useState(null)
 
     function getTodoList(date) {
@@ -108,7 +110,10 @@ import Swal from 'sweetalert2';
     return (
       calendarData && (
         <div>
-                <Calendar compact bordered renderCell={renderCell} className='white-background' />
+          <CustomProvider locale={esES}>
+                <Calendar compact={props.compact} bordered renderCell={renderCell} className='white-background' 
+                isoWeek/>
+                </CustomProvider>
         </div>
       )
     )
