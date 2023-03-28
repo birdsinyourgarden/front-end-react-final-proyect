@@ -3,23 +3,24 @@ import "../absences/Absences.css";
 
 const  Absences= () => {
    return (
-      <Container className="p-5">
-         <Card className="text-start">
-            <Card.Body>
-               <Card.Title className="text-center">
-               <h1>Actualizar Ausencia</h1> 
-               <div>
+   <Container className="p-5">
+         <h1>Actualizar Ausencia</h1>   
+         
+      <Card class ="ausData">
+         <Card.Title className="text-center">  
+            <div>
                <table className="userName">
-                     <tr><th>Montse Martos</th></tr>
+                  <tr><th>Montse Martos</th></tr>
                </table>
-               </div>
-               <div>
+            </div>
+   
+            <div>
                <table className="dateAbscens">
                <tr><td>Dias de Petición. 23/03/2023 - 25/03/2023</td></tr>
                </table>
                </div>   
                </Card.Title>
-                     
+
                <Form.Group  controlId="event"> 
                   <Form.Label class="event">Evento</Form.Label>
                      <Form.Select className="list" controlId="abscensSector">
@@ -74,10 +75,8 @@ const  Absences= () => {
             <button class="btn btn-primary btn-success me-md-2" type="button">Cancelada</button>
             <button class="btn btn-primary" type="button">Rechazada</button>
       </div>
-
    </div>
-   </Card.Body>
-      </Card>
+      </Card>      
          </Container>
 );
 };

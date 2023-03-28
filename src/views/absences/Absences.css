@@ -1,36 +1,39 @@
-      .text-center {
+      h1 {
         box-sizing: border-box;
-        position: absolute;
-    width: 830px;
-    height: 65px;
-    left: -145px;
-    top: -31px;
-    background: #658A05;
-    border: 1px solid #000000;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-      font-size: 15px;
-      font:bold;
-      color: #ffffff;
+        width: 830px;
+        height: 80px;
+        margin-left: -485px;
+        margin-top: -33px;
+        background: #658A05;
+        border: 1px solid #000000;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        font-size: 15px;
+        font:bold;
+        color: #ffffff;
         }
 
-form {
+        .ausData {
+        width: 565px;
+        height: 527px;
+        left: 288px;
+        top: 19px;
+        background-color: #658A05;
+        }
 
-    /* Frame 1 */
+        .text-center {
+          width: 865px;
+height: 128px;
+left: 0px;
+top: -4px;
+          /* Rectangle 99 */
+    background-color: #FFE8C6;
+  }
 
-position: absolute;
-width: 865px;
-height: 527px;
-left: 288px;
-top: 319px;
-
-background: #9BAD5B;
-}
-  
 .userName {
     max-width: 260px;
-    margin-left: 50px;
-    margin-top: -5px;
+    margin-left: 150px;
+    margin-top: -25px;
     font-size: 25px;
     background: #CFE695;
     background-size: 10%;
@@ -43,7 +46,7 @@ background: #9BAD5B;
 .dateAbscens {
   max-width: 300px;
   margin-left: 0px;
-  margin-top: 12px;
+  margin-top: 52px;
   font-size: 15px;
   background: #CFE695;
   color: #000;
