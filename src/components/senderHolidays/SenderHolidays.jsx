@@ -93,7 +93,7 @@ export default function SenderHolidays() {
             />
           </div>
         </div>
-        <div>
+        <div id="holidaysBtns">
           <button type="reset" className="btn btn-link" onClick={handleReset}>
             <img src="/resetBlue.png" alt="botón borrar"></img>
           </button>

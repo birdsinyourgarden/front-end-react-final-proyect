@@ -1,3 +1,12 @@
+
+@media only screen and (max-width: 600px) {
+  #holidaysBtns{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+}
+
 h1 {
     color: white;
     font-weight: 400;
@@ -34,4 +43,9 @@ textarea {
 
 button {
     cursor: pointer;
+}
+
+#holidaysBtns{
+  display: flex;
+  justify-content: center;
 }
