@@ -8,15 +8,17 @@ test('Local Navbar links are rendered correctly', () => {
       <LocalNavbar />
     </BrowserRouter>
   );
-  const empleadosLink = screen.getByText(/Empleados/i);
-  const ausenciasLink = screen.getByText(/Ausencias/i);
+  const employeesLink = screen.getByText(/Registro de Personal/i);
+  const profileLink = screen.getByText(/Perfil/i);
+  const userMenuLink = screen.getByText(/Menú Personal/i);
   const solicitudesLink = screen.getByText(/Solicitudes/i);
-  const menuUsuarioLink = screen.getByText(/Menú Usuario/i);
+  const absencesLink = screen.getByText(/Actualizar Ausencia/i);
 
-  expect(empleadosLink).toHaveAttribute('href', '/employees');
-  expect(ausenciasLink).toHaveAttribute('href', '/absences');
+  expect(employeesLink).toHaveAttribute('href', '/employees');
+  expect(profileLink).toHaveAttribute('href', '/profile');
+  expect(userMenuLink).toHaveAttribute('href', '/homeUser');
   expect(solicitudesLink).toHaveAttribute('href', '/solicitudes');
-  expect(menuUsuarioLink).toHaveAttribute('href', '/homeUser');
+  expect(absencesLink).toHaveAttribute('href', '/absences');
 });
 
 describe('Local Navbar', () => {
