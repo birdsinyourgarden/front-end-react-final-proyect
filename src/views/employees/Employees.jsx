@@ -84,16 +84,9 @@ const  Employees= () => {
                   <option value="true">Activo</option>
                   <option value="false">Baja</option>
                   </Form.Select>
-               </Form.Group>
-               <Form.Group>
-                  <Form.Label>¿Es personal de Administración?</Form.Label>
-                  <Form.Select className="mb-3" controlId="employeeAuth">
-                  <option value="false">No</option>
-                  <option value="true">Si</option>
-                  </Form.Select>
-               </Form.Group>
+                  </Form.Group>
    <Button id="createBtn" variant="primary" type="submit">
-               Incorporar Personal
+               Crear Usuario
                </Button>
             </Form>
             </Card.Body>
