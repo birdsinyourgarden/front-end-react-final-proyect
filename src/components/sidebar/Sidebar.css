@@ -1,8 +1,8 @@
 .green {
     background-color: #cfe695;
     max-height: 96vh;
-    margin-top: 10px;
-    margin-bottom: 0px;
+    margin-bottom: 4vh;
+    margin-top: 4vh;
 }
 
 .scrollbar{
@@ -33,4 +33,9 @@
 
 .contenedor::-webkit-scrollbar-track {
     border-radius: 0px;  
+}
+
+img.round.mt-2.figure-img.img-fluid{
+    border-radius: 100%;
+    margin-right: 3vh;
 }
