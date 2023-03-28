@@ -1,48 +1,33 @@
 import { Alert } from "react-bootstrap"
 import Userpill from "./userpill/Userpill"
 import './Sidebar.css'
+import { getEmployees } from "../../services/employee.service"
+import Employees from "../../views/employees/Employees"
+import { useEffect } from "react"
+import { useState } from "react";
 
 function Sidebar () {
-    const availablerequests = [
-        {
-            name: 'Juan Perez',
-            image: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80'
-        },
-        {
-            name: 'Ana Cardozo',
-            image: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80'
-        },
-        {
-            name: 'Maria Sanchez',
-            image: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80'
-        },
-        {
-            name: 'Juan Ruiz',
-            image: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80'
-        },
-        {
-            name: 'Mario Perez',
-            image: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80'
-        },
-        {
-            name: 'Sara Marin',
-            image: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80'
-        },
-        {
-            name: 'Sara Marin',
-            image: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80'
-        },
-        {
-            name: 'Sara Marin',
-            image: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80'
-        },
-    ]
+    const [employeesArray, setEmployees] = useState(null);
+    
+    const showEmployees = () => {
+    getEmployees().then(
+        response => {
+            setEmployees(response.data)
+        }
+        ).catch(e => {
+        console.log (e)
+        }) 
+    }
+    useEffect(() => {
+        showEmployees();
+    }, [])
+    
     return (
         <Alert variant="success" className="green scrollbar contenedor">
             {
-                availablerequests.map(request => {
+                employeesArray && employeesArray.map(employee => {
                     return (
-                        <Userpill name={request.name} image={request.image} />
+                        <Userpill name={employee.name + ' ' + employee.surname} image={employee.image} id={employee.id} refreshAction={showEmployees} />
                     )
                 })
             }
