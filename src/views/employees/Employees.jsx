@@ -232,7 +232,7 @@ const Employees = () => {
                         type="file"
                         className="form-control shadow"
                         {...register("image", {
-                           required: true,
+                           required: false,
                         })}
             />
             {errors.image?.type === "required" && (
@@ -261,11 +261,11 @@ const Employees = () => {
                      <input
                         type="date"
                         name="party"
-                        required
+                        
                         {...register("endingDate", {
                            min: "2010-04-01",
                            max: "2024-04-20",
-                           required: true,
+                           required: false,
                         })}
                      />
                      <span class="validity"></span>
