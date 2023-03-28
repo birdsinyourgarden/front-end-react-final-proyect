@@ -145,8 +145,8 @@ export default function SenderAbsences() {
               required
             />
           </div>
-          <div className="col mb-4">
-            <label>Motivo</label>
+          <div id="motiveCont" className="col mb-4">
+            <label id="motiveLabel">Motivo</label>
             <textarea
               name="message"
               cols="25"
