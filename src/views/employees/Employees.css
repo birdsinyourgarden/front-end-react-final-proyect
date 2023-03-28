@@ -27,6 +27,9 @@ label {
     content: "✓";
   }
 
+  .fail {
+    border-color: red;
+  }
   #createBtn{
     background-color: #658A05;
     border: none;
