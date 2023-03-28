@@ -1,0 +1,207 @@
+@media only screen and (max-width: 600px) {
+    #profileHeader{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    #detailTitle{
+        font-size: 1.1rem;
+    }
+
+    #detailsHeader{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    #detailContent{
+        width: 28vh!important;
+    }
+
+    #detailFields{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 2vh;
+    }
+
+    #fieldContent{
+        margin-top: 1.2vh;
+    }
+
+}
+
+@media only screen and (max-width: 850px) {
+    #profileHeader{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    #detailTitle{
+        font-size: 1.1rem;
+    }
+
+    #detailsHeader{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    #detailContent{
+        width: 28vh!important;
+    }
+
+    #detailFields{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 2vh;
+    }
+
+    #fieldContent{
+        margin-top: 1.2vh;
+    }
+
+}
+
+.profileWrapper{
+    height: 100%;
+}
+
+.profTitle{
+    background-color:#658A05;
+    width: 50%;
+    height: 65px;
+    margin-top: 4vh;
+    color: white;
+    font-size: 1.8em;
+    text-align: left;
+    padding-left: 3vh;
+    padding-top: 1vh;
+    border-radius: 5px;
+}
+
+#profileTemplate{
+width: 100%;
+} 
+
+#profileCard{
+    background-color: #9BAD5B;
+    border: none;
+    border-radius: 10px;
+    
+}
+
+#profileDetails{
+    background-color: #CFE695;
+    border: none;
+    border-radius: 10px;
+}
+
+#profileHeader{
+    display: flex;
+    justify-content: flex-start;
+}
+
+#photoContainer, #detailsContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#detailsContainer{
+    display: flex;
+    align-content:flex-end;
+}
+
+#photoContainer{
+    width: 18vh;
+    height: 18vh;
+    margin-left: 0;
+    margin-right: 10vh;
+    
+}
+
+.mainDetails{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#detailTitle{
+    color: white;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: fit-content;
+    margin-right: 20px;
+    font-size: 1.2em;
+}
+
+
+#detailContent{
+    background: rgba(251, 251, 251, 0.58);
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: fit-content;
+    width: fit-content;
+    margin-right: 5em;
+    font-size: 1.1em;
+}
+
+#detailsHeader{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+#detailFields{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    
+}
+
+
+#fieldTitle{
+    background: #FBFBFB;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 20vh;
+    margin-right: 20px;
+    font-size: 1.2em;
+}
+
+#fieldContent{
+    background: rgba(251, 251, 251, 0.58);
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 20vh;
+    margin-right: 5em;
+    font-size: 1.1em;
+    justify-content: center;
+}
+
+#employPhoto{
+    border-radius: 100%;
+    width: 17vh;
+    height: auto;
+    margin: auto;
+}
+
+.btnRight{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#editBtn{
+    background-color: #658A05;
+    border: none;
+    font-family: 'Fresca', sans-serif;
+    font-size: 1.2em;
+    margin-top: 1.2em ;
+    justify-self: flex-end;
+}
+

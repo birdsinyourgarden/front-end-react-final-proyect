@@ -3,7 +3,7 @@ import { registerPost } from "../../services/user.service";
 import { Link, useNavigate } from "react-router-dom";
 import swal from "sweetalert";
 import { useForm } from "react-hook-form";
-import "./register.css";
+import "./Register.css";
 import '../../components/form_books/formBooks.css'
 
 const Register = () => {

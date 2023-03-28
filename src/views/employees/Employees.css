@@ -32,4 +32,12 @@ label {
     border: none;
     font-family: 'Fresca', sans-serif;
     font-size: 1.2em;
+    margin-top: 1.2em ;
+
+  }
+
+  #regisTittle{
+    font-family: 'Fresca', sans-serif;
+    font-size: 1.6em;
+    margin-bottom: 1.2em;
   }

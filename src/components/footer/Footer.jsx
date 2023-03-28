@@ -9,7 +9,7 @@ function Footer() {
           <img src="/Copyright.png" alt="Copyright"></img>
           <img src="/femCoders.png" alt="logo Fem Coders"></img>
         </div>
-      </footer>    
+      </footer>
     </Card>
   );
 }
