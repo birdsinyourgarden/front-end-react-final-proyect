@@ -3,13 +3,13 @@ import '../footer/Footer.css';
 
 function Footer() {
   return (
-    <Card id="foot">    
+    <Card id="foot">
       <footer>
-        <div class="d-flex justify-content-between align-items-center">
-          <img src="./public/Copyright.png" alt="Copyright"></img>
-          <img src="./public/femCoders.png" alt="logo Fem Coders"></img>
+        <div className="d-flex justify-content-between align-items-center">
+          <img src="/Copyright.png" alt="Copyright"></img>
+          <img src="/femCoders.png" alt="logo Fem Coders"></img>
         </div>
-      </footer>    
+      </footer>
     </Card>
   );
 }

@@ -1,0 +1,14 @@
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.picker {
+    border-radius: 8px;
+}
+
+.max-width {
+    max-width: 500px;
+}

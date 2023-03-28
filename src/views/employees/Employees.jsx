@@ -312,7 +312,7 @@ const Employees = () => {
                         <option value="true">Si</option>
                      </Form.Select>
                   </Form.Group>
-                  <Button variant="primary" type="submit">
+                  <Button id="createBtn" variant="primary" type="submit">
                      Crear Usuario
                   </Button>
                </Form>

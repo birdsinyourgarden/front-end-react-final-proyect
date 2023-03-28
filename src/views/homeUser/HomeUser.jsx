@@ -1,15 +1,20 @@
+import SenderHolidays from "../../components/senderHolidays/SenderHolidays";
+import SenderAbsences from "../../components/senderAbsences/SenderAbsences";
+import "../homeUser/HomeUser.css";
+import LocalCalendar from '../../components/calendar/Calendar';
 
-import "../homeUser/HomeUser.css"
-
-function HomeUser(){
-
-    return (
-        <div>
-
-            Menú de Usuario
-
-        </div>
-    )
+function HomeUser() {
+  return (
+    <div className="container">
+      <div className="max-width mx-auto p-4">
+        <LocalCalendar compact />
+      </div>
+      <div className="wrap">
+        <SenderHolidays />
+        <SenderAbsences />
+      </div>
+    </div>
+  );
 }
 
-export default HomeUser
+export default HomeUser;

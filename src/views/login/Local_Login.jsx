@@ -55,9 +55,9 @@ const LocalLogin = () => {
   return (
     <Container id="logCard">
       <Card className='login-card shadow'>
-        <Form className="logstyle" onSubmit={handleSubmit(customSubmit)}>
+        <Form className="logStyle" onSubmit={handleSubmit(customSubmit)}>
           <Form.Group className="mb-4" controlId="formBasicEmail">
-            <Form.Label>Email</Form.Label>
+            <Form.Label id="labTypoColor">Email</Form.Label>
             <input
               type="email"
               placeholder="Enter email"
@@ -69,7 +69,7 @@ const LocalLogin = () => {
           </Form.Group>
 
           <Form.Group className="mb-4" controlId="formBasicPassword">
-            <Form.Label>Contraseña</Form.Label>
+            <Form.Label id="labTypoColor">Contraseña</Form.Label>
             <input
               type="password"
               placeholder="Password"
@@ -93,7 +93,7 @@ const LocalLogin = () => {
         {(
           loginError &&
           <Container>
-            <Alert variant="danger">Usuario o password invalidos</Alert>
+            <Alert variant="danger">Usuario o contraseña invalidos</Alert>
           </Container>
         )}
       </Card>

@@ -36,7 +36,7 @@ function LocalNavbar() {
  }, [])
   return (
     <Navbar collapseOnSelect expand="lg" variant="light" className="bgnavbar p-3">
-        <Navbar.Brand href="home"><img src="./public/Aidei.png" alt="logo Aidei"></img></Navbar.Brand>
+        <Navbar.Brand href="home"><img src="/Aidei.png" alt="logo Aidei"></img></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
         { localStorage.getItem('isAdmin') == '1' ? (
