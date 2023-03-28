@@ -3,13 +3,16 @@ import "../employees/Employees.css";
 
 const  Employees= () => {
    return (
+      <div className="profileWrapper">
+         <div>
+            <p className="regisTitle">Registro de Personal</p>
+         </div>
       <Container className="p-5">
-         <Card className="text-start">
+         <Card id="regisCardStyle" className="text-start">
             <Card.Title id="regisTittle" className="text-center">
-               Registro de Personal
             </Card.Title>
             <Card.Body>
-            <Form>
+            <Form id="regisForm">
                <Form.Group className="mb-3" controlId="employeeName">
                   <Form.Label>Nombre</Form.Label>
                   <Form.Control type="text" placeholder="Nombre del Empleado" />
@@ -85,13 +88,16 @@ const  Employees= () => {
                   <option value="false">Baja</option>
                   </Form.Select>
                   </Form.Group>
-   <Button id="createBtn" variant="primary" type="submit">
-               Crear Usuario
-               </Button>
+               <div id="btnContainer">
+                  <Button id="createBtn" variant="primary" type="submit">
+                     Crear Usuario
+                  </Button>
+               </div>
             </Form>
             </Card.Body>
          </Card>
       </Container>
+   </div>
    );
 };
 
