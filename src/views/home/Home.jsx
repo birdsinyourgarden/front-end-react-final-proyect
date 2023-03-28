@@ -12,14 +12,16 @@ function Home(){
 
 return (
     <div>
-        <Row>
-        <Col lg="3">
-            <Sidebar/>
-        </Col>
-        <Col lg="9">
-        <LocalCalendar className='white-background' />
-        </Col>
-        </Row>
+        <div id="homeAdminLayout">
+            <Row>
+            <Col lg="3">
+                <Sidebar/>
+            </Col>
+            <Col lg="9">
+            <LocalCalendar className='white-background' />
+            </Col>
+            </Row>
+        </div>
     </div>
 )
 }

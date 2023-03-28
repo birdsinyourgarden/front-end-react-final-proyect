@@ -3,7 +3,7 @@
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
-}*/
+}
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
@@ -32,7 +32,7 @@
 
 .read-the-docs {
   color: hwb(0 3% 97%);
-}
+}*/
 
 .calendar-todo-list {
   text-align: left;
@@ -44,7 +44,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  background-color: #7839ac;
+  background-color: #3FB2FD;
   border-radius: 5px;
 }
 
@@ -73,6 +73,8 @@
 .rs-calendar-table{
   border: none!important;
   background-color: white;
+  width: 93%;
+  margin: 2%;
 }
 
 
@@ -88,16 +90,17 @@
 .rs-calendar-table-cell-selected{
   color: black;
   background-color: #c8eefa;
+  border: 0px!important;
   border-radius: 8px!important;
-  margin: 0.7vh;
-  padding: 10xp;
-  width:90vh!important;
+  margin: 0.3vh!important;
+  width:auto!important;
 }
 
 
 .white-background {
   background-color: #8CAC39;
   border-radius: 10px;
-  margin-bottom: 8px;
-  margin-top: 8px;
+  margin-bottom: 4vh;
+  margin-top: 4vh;
+  width: 93%;
 }
