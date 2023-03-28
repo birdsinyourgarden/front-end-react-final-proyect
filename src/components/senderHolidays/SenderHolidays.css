@@ -7,6 +7,10 @@
   }
 }
 
+.form-mail.rounded-4.px-5.py-4{
+  margin-top: 2vh;
+}
+
 h1 {
     color: white;
     font-weight: 400;
