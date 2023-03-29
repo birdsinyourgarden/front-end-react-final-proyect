@@ -13,56 +13,57 @@
         color: #ffffff;
         }
 
-        .datbox {
+      .databox {
                 margin-top: 5vh;
                 width: 865px;
                 height: 527px;
                 left: 288px;
-                top: 319px;
-                background-color: #6d862c !important;
+                top: 19px;
+                background-color: #6d862c;
         }
 
-        .text-center {
+      .title {
+        position: relative;
           width: 865px;
           height: 100px;
-          left: 0px;
-          top: -4px;
+          left: -33px;
+          top: -33px;
           /* Rectangle 99 */
         background-color: #FFE8C6;
   }
 
-.userName {
-    max-width: 360px;
-    background: #CFE695;
-    color: #000;
-    font-family: 'Kantumruy';
-    font-style: normal;
-    font-size: 22px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    line-height: 25px;
-    border: solid .25em transparent;
-    border-radius: 1.375em;
+      .userName {
+              max-width: 360px;
+          background: #CFE695;
+          color: #000;
+          font-family: 'Kantumruy';
+          font-style: normal;
+          font-size: 22px;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          justify-content: center;
+          line-height: 25px;
+          border: solid .25em transparent;
+          border-radius: 1.375em;
 }
 
-.dateAbscens {
-  max-width: 460px;
-  margin-top: 2%;
-    background: #CFE695;
-    color: #000;
-  font-family: 'Kantumruy';
-  font-style: normal;
-  font-size: 22px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  line-height: 25px;
-  border: solid .25em transparent;
-  border-radius: 1.375em;
-  }
+          .dateAbscens {
+            max-width: 460px;
+            margin-top: 2%;
+            background: #CFE695;
+            color: #000;
+            font-family: 'Kantumruy';
+            font-style: normal;
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            line-height: 25px;
+            border: solid .25em transparent;
+            border-radius: 1.375em;
+            }
         
 .event, .mb-3 {
   width: 10em;
@@ -71,8 +72,8 @@
   flex-flow: column wrap;
   flex-wrap: wrap;
   color: #000;
-  margin-left: 10px;
-  margin-top: 35px;
+  left: 10px;
+  top: 2px;
   border-radius: 10px;
   justify-content: center;
   align-items: center;
@@ -120,15 +121,13 @@ select option [value="20"], [value="21"]
 }
 
 .DescriptionTitle {  
-  max-width: 40%;
   width: 10em;
   font-size: 25px;
   display: flex;
-  margin: auto;
   flex-flow: column wrap;
   color: #000;
-  margin-left: -15px;
-  margin-top: 45px;
+  margin-left: -2px;
+  margin-top: 35px;
   border-radius: 10px;
   justify-content: center;
   align-items: center;
@@ -141,9 +140,8 @@ textarea {
   max-width: 100%;
     height: 8em;
     width: 25em;
-  margin-left: 45em; 
-  margin: auto;
-  margin-top: 5px; 
+  margin-left: 25em; 
+  margin-top: -2.8em; 
   display: flex;
   flex-flow: column wrap;
   border: 1px solid rgb(140, 195, 139);
@@ -154,20 +152,19 @@ textarea {
 }
 
 .choice {
-  max-width: 100%;
-      width: 25em;
-  margin-left: 45em;
-  margin-top: -3.5em; 
-  display: flex;
-  margin: auto;
+  width: 25em;
+  left: 45em;
+  top: -2em;
   flex-flow: column wrap;
+  display: flex;
+  
   background-color: rgb(154, 197, 222);
   border-collapse: collapse; 
 }
 
 .btn-danger {
   max-width: 25em;
-  margin-left: -15px;
+  margin-left: -5px;
   margin-top: 80px;
 
 }

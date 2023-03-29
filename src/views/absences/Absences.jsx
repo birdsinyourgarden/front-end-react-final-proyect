@@ -6,8 +6,8 @@ const  Absences= () => {
    <Container className="p-5">
          <h1>Actualizar Ausencia</h1>   
          
-      <Card class="datbox">
-         <Card.Title className="text-center">  
+      <Card className="databox">
+         <Card.Title className="title">  
             <div>
                <table className="userName">
                   <tr><th>Manuel Ferrero Rocher</th></tr>
