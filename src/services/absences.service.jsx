@@ -12,3 +12,12 @@ export const  absence = (data) => {
     return axios.post(baseUrl + "/auth/absences", data, config);
  };
 
+ export const createAbsence = (data) => {
+   const token = localStorage.getItem("token");
+  const config = {
+     headers: {
+        Authorization: `Bearer ${token}`,
+     },
+  }
+   return axios.post(baseUrl + "/auth/createAbsence", data, config);
+};

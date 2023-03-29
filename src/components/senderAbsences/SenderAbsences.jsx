@@ -9,7 +9,7 @@ import "./SenderAbsences.css";
 import Swal from "sweetalert2";
 import "sweetalert2/dist/sweetalert2.min.css";
 import { useForm } from "react-hook-form";
-
+import {createAbsence} from '../../services/absences.service'
 
 
 const SenderAbsences = ()=> {
@@ -28,7 +28,6 @@ const SenderAbsences = ()=> {
   } = useForm();
 
 const absencesSubmit = (data) => {
-console.log(data)
   // Send email
 
   Swal.fire({
@@ -63,7 +62,6 @@ console.log(data)
           formData.append("addDocument", documentURL);
           createAbsence(formData)
             .then((res) => {
-              console.log(res)
               handleReset();
                 handleReset();
                 Swal.fire ( {
@@ -83,9 +81,10 @@ console.log(data)
               });
         })
         .catch((error) => {
+          console.log(error)
           Swal.fire(
             "¡Error!",
-            "Ha ocurrido un error al enviar la petición.",
+            "Ha ocurrido un error al enviar la petición. Email",
             "error"
           );
         });
