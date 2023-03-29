@@ -1,3 +1,33 @@
+
+@media only screen and (max-width: 600px) {
+    #senderBtns{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+#absence-form.form-mail-blue.rounded-4.px-5.py-4{
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#motiveCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#motiveLabel{
+    display: flex;
+    justify-content: center;
+}
+
 h1 {
     color: white;
     font-weight: 400;

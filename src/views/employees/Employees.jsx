@@ -90,9 +90,14 @@ const Employees = () => {
 
 
    return (
+
+      <div className="profileWrapper">
+         <div>
+            <p className="regisTitle">Registro de Personal</p>
+         </div>
       <Container className="p-5">
-         <Card className="text-start">
-            <Card.Title className="text-center">Registro de Empleados</Card.Title>
+         <Card id="regisCardStyle" className="text-start">
+            <Card.Title id="regisTittle" className="text-center"></Card.Title>
             <Card.Body>
                <Form id="employees-form" onSubmit={handleSubmit(customSubmit, onErrors)}>
                   <Form.Group className="mb-3" controlId="employeeName">
@@ -107,7 +112,7 @@ const Employees = () => {
                         })}
                      />
                      {errors.name?.type === "required" && (
-                        <small className="fail">The field cannot be empty</small>
+                        <small className="fail">Este campo no puede estar vacío</small>
                      )}
                      {errors.name?.type === "maxLength" && (
                         <small className="fail">Corrija el campo</small>
@@ -124,19 +129,19 @@ const Employees = () => {
                            maxLength: 15,
                         })}aria-invalid={errors.surname ? "true" : "false"} 
                      />
-                     {errors.surname?.type === 'required' && <p role="alert">Apellido es requerido</p>}
+                     {errors.surname?.type === 'required' && <p role="alert">El apellido es requerido</p>}
                   </Form.Group>
                   <Form.Group className="mb-3" controlId="employeeEmail">
-                     <Form.Label>Correo</Form.Label>
+                     <Form.Label>Email</Form.Label>
                         <input
                         className={errors.email ? 'form-control shadow fail' : 'form-control shadow'}
-                        {...register("email", { required: "Email Address is required" })} 
+                        {...register("email", { required: "Es necesario introducir un email" })} 
                         aria-invalid={errors.email ? "true" : "false"} 
                         />
-      {errors.email && <p role="alert">{errors.email?.message}</p>}
+                        {errors.email && <p role="alert">{errors.email?.message}</p>}
                   </Form.Group>
                   <Form.Group className="mb-3" controlId="password">
-                     <Form.Label>Password</Form.Label>
+                     <Form.Label>Contraseña</Form.Label>
                      <input
                         type="password"
                         placeholder="Escribe una contraseña"
@@ -148,17 +153,17 @@ const Employees = () => {
                         })}
                      />
                      {errors.password?.type === "required" && (
-                        <small className="fail">The field cannot be empty</small>
+                        <small className="fail">Este campo no puede estar vacío</small>
                      )}
                      {errors.password?.type === "maxLength" && (
-                        <small className="fail">Maximum characters are eight</small>
+                        <small className="fail">El número máximo de caracteres es ocho</small>
                      )}
                   </Form.Group>
                   <Form.Group className="mb-3" controlId="confirmPassword">
-                     <Form.Label>Confirmar Password</Form.Label>
+                     <Form.Label>Confirmar Contraseña</Form.Label>
                      <input
                         type="password"
-                        placeholder="Vuelve a escribir la contraseña"
+                        placeholder="Introduce de nuevo la contraseña"
                         className={errors.password2 ? 'form-control shadow fail' : 'form-control shadow'}
                         {...register("password2", {
                            required: true,
@@ -167,17 +172,17 @@ const Employees = () => {
                         })}
                      />
                      {errors.password2?.type === "required" && (
-                        <small className="fail">The field cannot be empty</small>
+                        <small className="fail">Este campo no puede estar vacío</small>
                      )}
                      {errors.password2?.type === "maxLength" && (
-                        <small className="fail">Maximum characters are eight</small>
+                        <small className="fail">El número máximo de caracteres es ocho</small>
                      )}
                   </Form.Group>
                   <Form.Group className="mb-3" controlId="employeePhone">
                      <Form.Label>Teléfono</Form.Label>
                      <input
                         type="number"
-                        placeholder="Escribe un teléfono"
+                        placeholder="Introduce el número de teléfono"
                         className={errors.phone ? 'form-control shadow fail' : 'form-control shadow'}
                         {...register("phone", {
                            required: true,
@@ -186,17 +191,17 @@ const Employees = () => {
                         })}
                      />
                      {errors.phone?.type === "required" && (
-                        <small className="fail">The field cannot be empty</small>
+                        <small className="fail">Este campo no puede estar vacío</small>
                      )}
                      {errors.phone?.type === "maxLength" && (
-                        <small className="fail">Maximum characters are eight</small>
+                        <small className="fail">El número máximo de caracteres es ocho</small>
                      )}
                   </Form.Group>
                   <Form.Group className="mb-3" controlId="employeeDni">
                      <Form.Label>DNI/NIE</Form.Label>
                      <input
                         type="text"
-                        placeholder="DNI/NIE"
+                        placeholder="Introduce número de DNI/NIE"
                         className={errors.idNumber ? 'form-control shadow fail' : 'form-control shadow'}
                         {...register("idNumber", {
                            required: true,
@@ -205,15 +210,15 @@ const Employees = () => {
                         })}
                      />
                      {errors.idNumber?.type === "required" && (
-                        <small className="fail">The field cannot be empty</small>
+                        <small className="fail">Este campo no puede estar vacío</small>
                      )}
                      {errors.idNumber?.type === "maxLength" && (
-                        <small className="fail">Maximum characters are eight</small>
+                        <small className="fail">El número máximo de caracteres es ocho</small>
                      )}
                   </Form.Group>
                   <Form.Group>
                      <Form.Label>Sector</Form.Label>
-                     <Form.Select
+                     <Form.Select id="selectField"
                         className={errors.sector? 'form-control shadow fail' : 'form-control shadow'}
                         controlId="employeeSector"
                         {...register("sector", {
@@ -237,10 +242,10 @@ const Employees = () => {
                         })}
             />
             {errors.image?.type === "required" && (
-               <small className="fail">The field cannot be empty</small>
+               <small className="fail">Este campo no puede estar vacío</small>
             )}
             {errors.image?.type === "maxLength" && (
-               <small className="fail">Maximum characters are eight</small>
+               <small className="fail">El número máximo de caracteres es ocho</small>
             )}
                   </Form.Group>
                   <Form.Group className="mb-3" controlId="employeeStarting">
@@ -272,8 +277,8 @@ const Employees = () => {
                      <span class="validity"></span>
                   </Form.Group>
                   <Form.Group>
-                     <Form.Label>Estado del Empleado</Form.Label>
-                     <Form.Select
+                     <Form.Label>Estado Actual</Form.Label>
+                     <Form.Select id="selectField"
                         className={errors.status ? 'form-control shadow fail' : 'form-control shadow'}
                         controlId="employeeStatus"
                         {...register("status", {
@@ -287,8 +292,8 @@ const Employees = () => {
                      </Form.Select>
                   </Form.Group>
                   <Form.Group>
-                     <Form.Label>Tipo de Contrato del Empleado</Form.Label>
-                     <Form.Select
+                     <Form.Label>Tipo de Contrato </Form.Label>
+                     <Form.Select id="selectField"
                         className={errors.contractType ? 'form-control shadow fail' : 'form-control shadow'}
                         controlId="employeeType"
                         {...register("contractType", {
@@ -302,8 +307,8 @@ const Employees = () => {
                      </Form.Select>
                   </Form.Group>
                   <Form.Group>
-                     <Form.Label>Es Administrador?</Form.Label>
-                     <Form.Select
+                     <Form.Label>¿Es Personal de Administración?</Form.Label>
+                     <Form.Select id="selectField"
                         className={errors.isAdmin ? 'form-control shadow fail' : 'form-control shadow'}
                         controlId="employeeAuth"
                         {...register("isAdmin", {
@@ -316,13 +321,16 @@ const Employees = () => {
                         <option value="1">Si</option>
                      </Form.Select>
                   </Form.Group>
+                  <div id="btnContainer">
                   <Button id="createBtn" variant="primary" type="submit">
-                     Crear Usuario
+                     Crear Registro
                   </Button>
+                  </div>
                </Form>
             </Card.Body>
          </Card>
       </Container>
+      </div>
    );
 };
 

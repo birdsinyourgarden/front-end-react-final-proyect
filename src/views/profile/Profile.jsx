@@ -28,7 +28,7 @@ const  Profile= () => {
                         </div>
                     </Card.Title>
                 <Card.Body id="profileDetails">
-                <Form>    
+                <Form >    
                     <Form.Group id="detailFields" className="mb-3" controlId="employeeDni">
                         <Form.Label id="fieldTitle">DNI/NIE:</Form.Label>
                         <Form.Label id="fieldContent">25587562P</Form.Label>
