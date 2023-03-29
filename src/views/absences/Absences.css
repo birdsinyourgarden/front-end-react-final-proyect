@@ -167,16 +167,32 @@ select option [value="20"], [value="21"]
 #choice {
   width: 24em;
   margin-left: 26em;
-  margin-top: -4.5em; 
+  margin-top: -3.5em; 
   display: flex;
   flex-flow: column wrap;
   background-color: rgb(154, 197, 222);
   border-collapse: collapse; 
 }
 
-.btn-danger {
-  max-width: 25em;
-  margin-left: -5px;
-  margin-top: 80px;
-
+#buttonDelete {
+  max-width: 12em;
+  left: 5px;
+  margin-top: 2em;
+  background: #406330;
 }
+
+#btnGuardar {
+  max-width: 10em;
+  margin-left: 25em;
+  margin-top: -2.5em;
+  background: #8A4505;
+}
+
+#btnLimpiar {
+  max-width: 10em;
+  margin-left: 38em;
+  margin-top: -2.5em;
+  background: #0F296D;
+}
+
+

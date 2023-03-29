@@ -66,17 +66,13 @@ const  Absences= () => {
                      </Form.Select>
                   </Form.Group>
                                  
-   <div class="buttons">
-      <div class="d-grid gap-2 d-md-flex justify-content-md-start">                     
-            <button type="button" class="btn btn-danger">Borrar</button>
-      </div>
+               <button id="buttonDelete" type="button" class="btn btn-danger">Volver</button>
+   
 
-      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button class="btn btn-primary btn-success me-md-2" type="button">Cancelada</button>
-            <button class="btn btn-primary" type="button">Rechazada</button>
-      </div>
-   </div>
-      </Card>      
+            <button id="btnGuardar" class="btn btn-primary btn-success me-md-2" type="button">Guardadar</button>
+            <button id="btnLimpiar" class="btn btn-primary" type="button">Limpiar</button>
+   
+         </Card>      
          </Container>
 );
 };
