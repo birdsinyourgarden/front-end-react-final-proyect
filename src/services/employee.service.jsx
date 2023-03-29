@@ -19,7 +19,7 @@ export const  registerEmployee = (data) => {
         Authorization: `Bearer ${token}`,
     },
     }
-    return axios.get(baseUrl + "/employees", config);
+    return axios.post(baseUrl + "/employees", {}, config);
 };
 
 export const deleteUser = (id) => {
@@ -39,5 +39,5 @@ export const getAbsences = () => {
          Authorization: `Bearer ${token}`,
       },
    }
-   return axios.get(baseUrl + '/auth/absences/', config)
+   return axios.post(baseUrl + '/auth/absences/', {}, config)
 }

@@ -57,14 +57,15 @@ const Employees = () => {
                icon:'success',
                position: 'center',
          })
-         .catch((error) => {
-            Swal.fire(
-            '¡Error!',
-            'Ha ocurrido un error al enviar la petición.',
-            'error'
-            );
-         });
-      })
+      }).catch((error) => {
+         console.log(error)
+         const message = error.response.data.replace('{', "").replace('}', "").replace('[', "").replace(']', '')
+         Swal.fire(
+         '¡Error!',
+         'Ha ocurrido un error al enviar la petición.</br><smal>'+message+'</small>',
+         'error'
+         );
+      });
 
       const handleReset = () => {
          setemployeeName(null);
@@ -277,11 +278,12 @@ const Employees = () => {
                         controlId="employeeStatus"
                         {...register("status", {
                            required: true,
+                           valueAsNumber: true,
                         })}
                      >
                         <option selected>Elija una opción</option>
-                        <option value="true">Activo</option>
-                        <option value="false">Baja</option>
+                        <option value="1">Activo</option>
+                        <option value="0">Baja</option>
                      </Form.Select>
                   </Form.Group>
                   <Form.Group>
@@ -291,11 +293,12 @@ const Employees = () => {
                         controlId="employeeType"
                         {...register("contractType", {
                            required: true,
+                           valueAsNumber: true,
                         })}
                      >
                         <option selected>Elija una opción</option>
-                        <option value="true">Permanente</option>
-                        <option value="false">Temporal</option>
+                        <option value="1">Permanente</option>
+                        <option value="0">Temporal</option>
                      </Form.Select>
                   </Form.Group>
                   <Form.Group>
@@ -305,11 +308,12 @@ const Employees = () => {
                         controlId="employeeAuth"
                         {...register("isAdmin", {
                            required: true,
+                           valueAsNumber: true,
                         })}
                      >
                         <option selected>Elija una opción</option>
-                        <option value="false">No</option>
-                        <option value="true">Si</option>
+                        <option value="0">No</option>
+                        <option value="1">Si</option>
                      </Form.Select>
                   </Form.Group>
                   <Button id="createBtn" variant="primary" type="submit">
