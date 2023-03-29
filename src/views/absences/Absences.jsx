@@ -10,13 +10,13 @@ const  Absences= () => {
             <Card.Title id="boxTitle" className="title">  
             <div>
                 <table id="userData" className="userName">
-                    <tr><th>Manuel Ferrero Rocher</th></tr>
+                    <tr><th>Sierri Pérez</th></tr>
                 </table>
             </div>
 
             <div>
                 <table id="checkDate" className="dateAbscens">
-                <tr><td>Dias de Petición. 23/03/2023 - 25/03/2023</td></tr>
+                <tr><td>Días de Petición: 23/03/2023 - 25/03/2023</td></tr>
                 </table>
                 </div>   
                 </Card.Title>
@@ -34,8 +34,8 @@ const  Absences= () => {
                             <option value="8">Mudanzas</option>
                             <option value="9">Baja IT</option>
                             <option value="10">Baja Maternidad</option>
-                            <option value="11">Maternidad: 2 semanas extras retribuidas Arrabal</option>
-                            <option value="12">Matrernidad: 2 semanas extras sin retribición</option>
+                            <option value="11">Maternidad: 2 semanas extras retribuidas</option>
+                            <option value="12">Matrernidad: 2 semanas extras sin retribución</option>
                             <option value="13">Baja Paternidad</option>
                             <option value="14">Periodo de lactancia</option>
                             <option value="15">Matrimonio o inclución registro pareja de Hecho</option>
@@ -49,11 +49,11 @@ const  Absences= () => {
                 </Form.Group>
 
                 <Form.Group controlId="description">
-                    <Form.Label id="descriptionTitle">Descripcion</Form.Label>
+                    <Form.Label id="descriptionTitle">Motivo</Form.Label>
                 </Form.Group>
 
                 <Form.Group className="Description">
-                        <textarea id="causeDescription" type="text" placeholder="Description de Ausencias" rows="5"/>
+                        <textarea id="causeDescription" type="text" placeholder="Descripción de la ausencia" rows="5"/>
                 </Form.Group>
                                 
                 <Form.Group id="justificationTitle"className="mb-3" controlId="justification">
@@ -62,7 +62,7 @@ const  Absences= () => {
                     <Form.Group>
                         <Form.Select id="choice" controlId="justificationStatus">
                         <option value="true">Justificado</option>
-                        <option value="false">Acusasion</option>
+                        <option value="false">Injustificado</option>
                         </Form.Select>
                     </Form.Group>
                                     
