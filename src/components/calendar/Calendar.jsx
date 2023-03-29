@@ -130,3 +130,4 @@ import esES from "rsuite/locales/es_ES";
   };
   
   export default LocalCalendar
+  
