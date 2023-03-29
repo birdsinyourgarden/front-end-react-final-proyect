@@ -184,7 +184,8 @@ To run the tests, execute the following command(s)
 ## Methodology 📚
   
 - Testing
-- Agile with Scrum To run the tests, execute the following command(s)
+- Agile with Scrum & Kanban
+- Mob, pair and solo programming
 
 **BACK**
 
