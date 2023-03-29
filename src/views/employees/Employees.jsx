@@ -201,7 +201,7 @@ const Employees = () => {
                      <Form.Label>DNI/NIE</Form.Label>
                      <input
                         type="text"
-                        placeholder="DNI/NIE"
+                        placeholder="Introduce número de DNI/NIE"
                         className={errors.idNumber ? 'form-control shadow fail' : 'form-control shadow'}
                         {...register("idNumber", {
                            required: true,
@@ -218,7 +218,7 @@ const Employees = () => {
                   </Form.Group>
                   <Form.Group>
                      <Form.Label>Sector</Form.Label>
-                     <Form.Select
+                     <Form.Select id="selectField"
                         className={errors.sector? 'form-control shadow fail' : 'form-control shadow'}
                         controlId="employeeSector"
                         {...register("sector", {
@@ -277,8 +277,8 @@ const Employees = () => {
                      <span class="validity"></span>
                   </Form.Group>
                   <Form.Group>
-                     <Form.Label>Estado del Empleado</Form.Label>
-                     <Form.Select
+                     <Form.Label>Estado Actual</Form.Label>
+                     <Form.Select id="selectField"
                         className={errors.status ? 'form-control shadow fail' : 'form-control shadow'}
                         controlId="employeeStatus"
                         {...register("status", {
@@ -292,8 +292,8 @@ const Employees = () => {
                      </Form.Select>
                   </Form.Group>
                   <Form.Group>
-                     <Form.Label>Tipo de Contrato del Empleado</Form.Label>
-                     <Form.Select
+                     <Form.Label>Tipo de Contrato </Form.Label>
+                     <Form.Select id="selectField"
                         className={errors.contractType ? 'form-control shadow fail' : 'form-control shadow'}
                         controlId="employeeType"
                         {...register("contractType", {
@@ -307,8 +307,8 @@ const Employees = () => {
                      </Form.Select>
                   </Form.Group>
                   <Form.Group>
-                     <Form.Label>Es Administrador?</Form.Label>
-                     <Form.Select
+                     <Form.Label>¿Es Personal de Administración?</Form.Label>
+                     <Form.Select id="selectField"
                         className={errors.isAdmin ? 'form-control shadow fail' : 'form-control shadow'}
                         controlId="employeeAuth"
                         {...register("isAdmin", {
@@ -321,9 +321,11 @@ const Employees = () => {
                         <option value="1">Si</option>
                      </Form.Select>
                   </Form.Group>
+                  <div id="btnContainer">
                   <Button id="createBtn" variant="primary" type="submit">
-                     Crear Usuario
+                     Crear Registro
                   </Button>
+                  </div>
                </Form>
             </Card.Body>
          </Card>

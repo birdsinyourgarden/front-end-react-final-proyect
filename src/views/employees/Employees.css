@@ -72,6 +72,10 @@ label {
     content: "✓";
   }
 
+  #selectField{
+    margin-bottom: 1vh;
+  }
+
   #btnContainer{
     display: flex;
     justify-content: flex-end;
