@@ -1,0 +1,350 @@
+@media only screen and (max-width: 600px) {
+    .solicitudeTitle{
+        width: fit-content!important;
+        height: fit-content!important;
+        font-size: 1.4em!important;
+        padding-right: 4vh!important;
+    }
+
+    #processingLayout{
+        display: flex;
+        flex-direction: column!important;
+    }
+
+    .processingTitle{
+        height: fit-content!important;
+        font-size: 1.1em!important;
+        padding-bottom: 1vh!important;
+    }
+
+    #processingSolicitudeCard{
+        width: 90%!important;
+        font-size: 1em!important;
+        margin-top: 1vh!important;
+    }
+    
+    #manageBtn{
+        font-size: 1em!important;
+        margin-top: 2vh!important;
+    }
+
+    
+    #rejectingLayout{
+        display: flex;
+        justify-content: center!important;
+    }
+
+    .rejectingTitle{
+        height: fit-content!important;
+        font-size: 1.1em!important;
+        padding-bottom: 1vh!important;
+    }
+
+    #rejectingSolicitudeCard{
+        width: 90%!important;
+        font-size: 1em!important;
+        margin-top: 1vh!important;
+    }
+
+    
+    #approvedHolidayLayout{
+        display: flex;
+        justify-content: center!important;
+    }
+
+    .approvedHolidayTitle{
+        height: fit-content!important;
+        font-size: 1.1em!important;
+        padding-bottom: 1vh!important;
+    }
+
+    #approvedHolidayCard{
+        width: 90%!important;
+        font-size: 1em!important;
+        margin-top: 1vh!important;
+    }
+    
+    
+    #approvedAbsenceLayout{
+        display: flex;
+        flex-direction: column!important;
+    }
+
+    .approvedAbsenceTitle{
+        height: fit-content!important;
+        font-size: 1.1em!important;
+        padding-bottom: 1vh!important;
+    }
+
+    #approvedAbsenceCard{
+        width: 90%!important;
+        font-size: 1em!important;
+        margin-top: 1vh!important;
+    }
+    
+    #editAbsenceBtn{
+        font-size: 1em!important;
+        margin-top: 2vh!important;
+    }
+
+}
+
+@media only screen and (max-width: 850px) {
+    .solicitudeTitle{
+        width: fit-content!important;
+        height: fit-content!important;
+        font-size: 1.4em!important;
+        padding-right: 4vh!important;
+    }
+
+    #processingLayout{
+        display: flex;
+        flex-direction: column!important;
+    }
+
+    .processingTitle{
+        height: fit-content!important;
+        font-size: 1.1em!important;
+        padding-bottom: 1vh!important;
+    }
+
+    #processingSolicitudeCard{
+        width: 90%!important;
+        font-size: 1em!important;
+        margin-top: 1vh!important;
+    }
+    
+    #manageBtn{
+        font-size: 1em!important;
+        margin-top: 2vh!important;
+    }
+
+    
+    #rejectingLayout{
+        display: flex;
+        justify-content: center!important;
+    }
+
+    .rejectingTitle{
+        height: fit-content!important;
+        font-size: 1.1em!important;
+        padding-bottom: 1vh!important;
+    }
+
+    #rejectingSolicitudeCard{
+        width: 90%!important;
+        font-size: 1em!important;
+        margin-top: 1vh!important;
+    }
+
+    
+    #approvedHolidayLayout{
+        display: flex;
+        justify-content: center!important;
+    }
+
+    .approvedHolidayTitle{
+        height: fit-content!important;
+        font-size: 1.1em!important;
+        padding-bottom: 1vh!important;
+    }
+
+    #approvedHolidayCard{
+        width: 90%!important;
+        font-size: 1em!important;
+        margin-top: 1vh!important;
+    }
+    
+    
+    #approvedAbsenceLayout{
+        display: flex;
+        flex-direction: column!important;
+    }
+
+    .approvedAbsenceTitle{
+        height: fit-content!important;
+        font-size: 1.1em!important;
+        padding-bottom: 1vh!important;
+    }
+
+    #approvedAbsenceCard{
+        width: 90%!important;
+        font-size: 1em!important;
+        margin-top: 1vh!important;
+    }
+    
+    #editAbsenceBtn{
+        font-size: 1em!important;
+        margin-top: 2vh!important;
+    }
+
+}
+
+.profileWrapper{
+    height: 100%;
+    font-family: 'Fresca', sans-serif;
+}
+
+.solicitudeTitle{
+    background-color:#658A05;
+    width: 50%;
+    height: 65px;
+    margin-top: 4vh;
+    color: white;
+    font-size: 1.8em;
+    text-align: left;
+    padding-left: 3vh;
+    padding-top: 1vh;
+    border-radius: 5px;
+}
+
+#sectionBground{
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    background-color: #9BAD5B;
+    border-radius: 10px;
+    width:90%;
+    height: 90%;
+}
+
+.processingTitle{
+    background-color:#666C71;
+    width: fit-content;
+    height: 40px;
+    margin-top: 4vh;
+    color: black;
+    font-size: 1.3em;
+    text-align: left;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    padding-top: 1vh;
+    border-radius: 5px;
+    display: flex;
+    align-content: center;
+}
+
+#processingLayout{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#processingSolicitudeCard{
+    background-color:#666C71;
+    width: 70%;
+    padding: 2vh;
+    color: black;
+    font-size: 1.2em;
+    display: flex;
+    align-content: center;
+    border: none;
+    border-radius: 10px;
+}
+
+#manageBtn{
+    background-color:#666C71;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+    margin-left: 3vh;
+}
+
+.rejectingTitle{
+    background-color:#FD2222;
+    width: fit-content;
+    height: 40px;
+    margin-top: 4vh;
+    color: black;
+    font-size: 1.3em;
+    text-align: left;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    padding-top: 1vh;
+    border-radius: 5px;
+    display: flex;
+    align-content: center;
+}
+
+#rejectingSolicitudeCard{
+    background-color:#FD2222;
+    width: 70%;
+    padding: 2vh;
+    color: black;
+    font-size: 1.2em;
+    display: flex;
+    align-content: center;
+    border: none;
+    border-radius: 10px;
+}
+
+.approvedHolidayTitle{
+    background-color:#658A05;
+    width: fit-content;
+    height: 40px;
+    margin-top: 4vh;
+    color: black;
+    font-size: 1.3em;
+    text-align: left;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    padding-top: 1vh;
+    border-radius: 5px;
+    display: flex;
+    align-content: center;
+}
+
+#approvedHolidayCard{
+    background-color:#658A05;
+    width: 70%;
+    padding: 2vh;
+    color: black;
+    font-size: 1.2em;
+    display: flex;
+    align-content: center;
+    border: none;
+    border-radius: 10px;
+}
+
+.approvedAbsenceTitle{
+    background-color:#3FB2FD;
+    width: fit-content;
+    height: 40px;
+    margin-top: 4vh;
+    color: black;
+    font-size: 1.3em;
+    text-align: left;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    padding-top: 1vh;
+    border-radius: 5px;
+    display: flex;
+    align-content: center;
+}
+
+#approvedAbsenceLayout{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#approvedAbsenceCard{
+    background-color:#3FB2FD;
+    width: 70%;
+    padding: 2vh;
+    color: black;
+    font-size: 1.2em;
+    display: flex;
+    align-content: center;
+    border: none;
+    border-radius: 10px;
+}
+
+#editAbsenceBtn{
+    background-color:#3FB2FD;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+    margin-left: 3vh;
+}

@@ -1,3 +1,16 @@
+
+@media only screen and (max-width: 600px) {
+  #holidaysBtns{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+}
+
+.form-mail.rounded-4.px-5.py-4{
+  margin-top: 2vh;
+}
+
 h1 {
     color: white;
     font-weight: 400;
@@ -34,4 +47,9 @@ textarea {
 
 button {
     cursor: pointer;
+}
+
+#holidaysBtns{
+  display: flex;
+  justify-content: center;
 }

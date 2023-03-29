@@ -1,37 +1,67 @@
 @media only screen and (max-width: 600px) {
+
+    .profTitle{
+        width: fit-content!important;
+        height: fit-content!important;
+        font-size: 1.4em!important;
+        padding-right: 4vh!important;
+    }
+
+    #profileCard{
+        padding: 2vh!important;
+    }
+
     #profileHeader{
         display: flex;
         justify-content: flex-start;
         flex-wrap: wrap;
     }
 
+    #photoContainer{
+        margin-bottom: 2vh;
+    }
+
     #detailTitle{
         font-size: 1.1rem;
     }
-
-    #detailsHeader{
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-    }
+    
 
     #detailContent{
-        width: 28vh!important;
+        width: fit-content!important;
     }
 
     #detailFields{
-        display: flex;
-        flex-wrap: wrap;
         margin-top: 2vh;
+        width: fit-content!important;
+    }
+
+    #fieldTitle{
+        width: fit-content!important;
     }
 
     #fieldContent{
         margin-top: 1.2vh;
+        width: fit-content!important;
     }
 
+    .btnRight{
+    justify-content: center!important;
+    }
 }
 
 @media only screen and (max-width: 850px) {
+
+    .profTitle{
+        width: fit-content!important;
+        height: fit-content!important;
+        font-size: 1.4em!important;
+        padding-right: 4vh!important;
+    }
+
+    #profileCard{
+        padding: 2vh!important;
+    }
+
     #profileHeader{
         display: flex;
         justify-content: flex-start;
@@ -42,6 +72,7 @@
         font-size: 1.1rem;
     }
 
+
     #detailsHeader{
         display: flex;
         justify-content: flex-start;
@@ -50,18 +81,20 @@
 
     #detailContent{
         width: 28vh!important;
+        justify-content: center!important;
     }
 
     #detailFields{
         display: flex;
         flex-wrap: wrap;
         margin-top: 2vh;
+        width: fit-content!important;
     }
 
     #fieldContent{
         margin-top: 1.2vh;
+        width: fit-content!important;
     }
-
 }
 
 .profileWrapper{
@@ -87,6 +120,7 @@ width: 100%;
 
 #profileCard{
     background-color: #9BAD5B;
+    padding: 7vh;
     border: none;
     border-radius: 10px;
     
@@ -118,7 +152,6 @@ width: 100%;
     height: 18vh;
     margin-left: 0;
     margin-right: 10vh;
-    
 }
 
 .mainDetails{
@@ -159,7 +192,6 @@ width: 100%;
     display: flex;
     flex-direction: row;
     align-content: center;
-    
 }
 
 
@@ -168,7 +200,7 @@ width: 100%;
     border-radius: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    width: 20vh;
+    width: 25vh;
     margin-right: 20px;
     font-size: 1.2em;
 }
@@ -178,7 +210,7 @@ width: 100%;
     border-radius: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    width: 20vh;
+    width: 25vh;
     margin-right: 5em;
     font-size: 1.1em;
     justify-content: center;
@@ -204,4 +236,3 @@ width: 100%;
     margin-top: 1.2em ;
     justify-self: flex-end;
 }
-
