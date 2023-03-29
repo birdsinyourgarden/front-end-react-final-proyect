@@ -233,13 +233,5 @@ PENDING - IN PROCESS - PROCESSED
   
 ***
 
-## Next Steps 👣
 
-- Finish connecting Back and Front.
-- Ensure that documents attached in absences are not only uploaded to Cloudinary, but also saved in the database.
-- Modify the employee's update so that they can edit certain fields of their personal information. For example: change the password they use to log in to the application or their profile picture.
-- Create a table for the status of absence requests and another for holidays, so that the scalability of the code is maintained and the status of the request can be incorporated into the application: 
-PENDING - IN PROCESS - PROCESSED
-- Adding more functionalities to the calendar.
-- Correct the user endingDate field so that it works exactly as we want it to.
 
