@@ -1,5 +1,6 @@
 .profileWrapper{
     height: 100%;
+    font-family: 'Fresca', sans-serif;
 }
 
 .solicitudeTitle{
@@ -17,7 +18,9 @@
 
 #sectionBground{
     margin-top: 4vh;
+    margin-bottom: 4vh;
     padding-top: 2vh;
+    padding-bottom: 2vh;
     background-color: #9BAD5B;
     border-radius: 10px;
     width:90%;
@@ -36,4 +39,130 @@
     padding-right: 3vh;
     padding-top: 1vh;
     border-radius: 5px;
+    display: flex;
+    align-content: center;
+}
+
+#processingLayout{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#processingSolicitudeCard{
+    background-color:#666C71;
+    width: 70%;
+    padding: 2vh;
+    color: black;
+    font-size: 1.2em;
+    display: flex;
+    align-content: center;
+    border: none;
+    border-radius: 10px;
+}
+
+#manageBtn{
+    background-color:#666C71;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+    margin-left: 3vh;
+}
+
+.rejectingTitle{
+    background-color:#FD2222;
+    width: fit-content;
+    height: 40px;
+    margin-top: 4vh;
+    color: black;
+    font-size: 1.3em;
+    text-align: left;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    padding-top: 1vh;
+    border-radius: 5px;
+    display: flex;
+    align-content: center;
+}
+
+#rejectingSolicitudeCard{
+    background-color:#FD2222;
+    width: 70%;
+    padding: 2vh;
+    color: black;
+    font-size: 1.2em;
+    display: flex;
+    align-content: center;
+    border: none;
+    border-radius: 10px;
+}
+
+.approvedHolidayTitle{
+    background-color:#658A05;
+    width: fit-content;
+    height: 40px;
+    margin-top: 4vh;
+    color: black;
+    font-size: 1.3em;
+    text-align: left;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    padding-top: 1vh;
+    border-radius: 5px;
+    display: flex;
+    align-content: center;
+}
+
+#approvedHolidayCard{
+    background-color:#658A05;
+    width: 70%;
+    padding: 2vh;
+    color: black;
+    font-size: 1.2em;
+    display: flex;
+    align-content: center;
+    border: none;
+    border-radius: 10px;
+}
+
+.approvedAbsenceTitle{
+    background-color:#3FB2FD;
+    width: fit-content;
+    height: 40px;
+    margin-top: 4vh;
+    color: black;
+    font-size: 1.3em;
+    text-align: left;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    padding-top: 1vh;
+    border-radius: 5px;
+    display: flex;
+    align-content: center;
+}
+
+#approvedAbsenceLayout{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#approvedAbsenceCard{
+    background-color:#3FB2FD;
+    width: 70%;
+    padding: 2vh;
+    color: black;
+    font-size: 1.2em;
+    display: flex;
+    align-content: center;
+    border: none;
+    border-radius: 10px;
+}
+
+#editAbsenceBtn{
+    background-color:#3FB2FD;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+    margin-left: 3vh;
 }
