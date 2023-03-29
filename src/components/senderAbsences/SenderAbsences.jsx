@@ -46,6 +46,12 @@ const absencesSubmit = (data) => {
           "WrHmfsnC8q7_pqnIC"
         )
         .then(() => {
+          Swal.fire ( {
+            title:'Enviado',
+            text:'Email de confirmacion eviado.', 
+            icon:'success',
+            position: 'center',
+          })
           const formData = new FormData();
           const starting = new Date(startDate).toJSON().slice(0, 10)
           const ending = new Date(endDate).toJSON().slice(0, 10)
@@ -71,8 +77,6 @@ const absencesSubmit = (data) => {
                 position: 'center',
               })
               }).catch((error) => {
-                console.log(error)
-                const message = error.response.data.replace('{', "").replace('}', "").replace('[', "").replace(']', '')
                 Swal.fire(
                 '¡Error!',
                 'Ha ocurrido un error al enviar la petición.</br><smal>'+message+'</small>',
@@ -81,7 +85,6 @@ const absencesSubmit = (data) => {
               });
         })
         .catch((error) => {
-          console.log(error)
           Swal.fire(
             "¡Error!",
             "Ha ocurrido un error al enviar la petición. Email",
@@ -99,7 +102,9 @@ const absencesSubmit = (data) => {
     setDocumentURL(data);
   }
 
-  const onErrors = (e) => { console.log(e)}
+  const onErrors = (e) => {
+    
+  }
 
   const handleReset = () => {
     setStartDate(null);
