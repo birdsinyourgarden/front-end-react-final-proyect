@@ -1,5 +1,12 @@
 @media only screen and (max-width: 600px) {
 
+    .profTitle{
+        width: fit-content!important;
+        height: fit-content!important;
+        font-size: 1.4em!important;
+        padding-right: 4vh!important;
+    }
+
     #profileCard{
         padding: 2vh!important;
     }
@@ -39,12 +46,18 @@
 
     .btnRight{
     justify-content: center!important;
-}
-
-
+    }
 }
 
 @media only screen and (max-width: 850px) {
+
+    .profTitle{
+        width: fit-content!important;
+        height: fit-content!important;
+        font-size: 1.4em!important;
+        padding-right: 4vh!important;
+    }
+
     #profileCard{
         padding: 2vh!important;
     }

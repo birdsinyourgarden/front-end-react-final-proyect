@@ -1,3 +1,94 @@
+@media only screen and (max-width: 600px) {
+    .solicitudeTitle{
+        width: fit-content!important;
+        height: fit-content!important;
+        font-size: 1.4em!important;
+        padding-right: 4vh!important;
+    }
+
+    #processingLayout{
+        display: flex;
+        flex-direction: column!important;
+    }
+
+    .processingTitle{
+        height: fit-content!important;
+        font-size: 1.1em!important;
+        padding-bottom: 1vh!important;
+    }
+
+    #processingSolicitudeCard{
+        width: 90%!important;
+        font-size: 1em!important;
+        margin-top: 1vh!important;
+    }
+    
+    #manageBtn{
+        font-size: 1em!important;
+        margin-top: 2vh!important;
+    }
+
+    
+    #rejectingLayout{
+        display: flex;
+        justify-content: center!important;
+    }
+
+    .rejectingTitle{
+        height: fit-content!important;
+        font-size: 1.1em!important;
+        padding-bottom: 1vh!important;
+    }
+
+    #rejectingSolicitudeCard{
+        width: 90%!important;
+        font-size: 1em!important;
+        margin-top: 1vh!important;
+    }
+
+    
+    #approvedHolidayLayout{
+        display: flex;
+        justify-content: center!important;
+    }
+
+    .approvedHolidayTitle{
+        height: fit-content!important;
+        font-size: 1.1em!important;
+        padding-bottom: 1vh!important;
+    }
+
+    #approvedHolidayCard{
+        width: 90%!important;
+        font-size: 1em!important;
+        margin-top: 1vh!important;
+    }
+    
+    
+    #approvedAbsenceLayout{
+        display: flex;
+        flex-direction: column!important;
+    }
+
+    .approvedAbsenceTitle{
+        height: fit-content!important;
+        font-size: 1.1em!important;
+        padding-bottom: 1vh!important;
+    }
+
+    #approvedAbsenceCard{
+        width: 90%!important;
+        font-size: 1em!important;
+        margin-top: 1vh!important;
+    }
+    
+    #editAbsenceBtn{
+        font-size: 1em!important;
+        margin-top: 2vh!important;
+    }
+
+}
+
 .profileWrapper{
     height: 100%;
     font-family: 'Fresca', sans-serif;
