@@ -184,7 +184,50 @@ To run the tests, execute the following command(s)
 ## Methodology 📚
   
 - Testing
-- Agile with Scrum
+- Agile with Scrum To run the tests, execute the following command(s)
+
+**BACK**
+
+```bash
+  php artisan test
+```
+<img width="628" alt="test_artisan_aidei_presentación" src="https://user-images.githubusercontent.com/98114939/228551487-e6ced1fd-2198-4c74-8063-2fa9ff23644b.png">
+
+```bash
+
+  vendor/bin/phpunit
+```
+<img width="595" alt="test_vendor_aidei_presentación" src="https://user-images.githubusercontent.com/98114939/228551607-af91fdc5-eee4-4e94-b320-432e5f64c9e1.png">
+
+**FRONT**
+
+```bash
+
+  npm run test
+```
+<img width="444" alt="test_npm_aidei_presentación" src="https://user-images.githubusercontent.com/98114939/228554458-35c1ee09-8abd-477d-812e-aacd07c93875.png">
+
+
+
+***
+
+## Methodology 📚
+  
+- Testing
+- Agile with Scrum & Kanban
+- Mob, pair and solo programming
+  
+***
+
+## Next Steps 👣
+
+- Finish connecting Back and Front.
+- Ensure that documents attached in absences are not only uploaded to Cloudinary, but also saved in the database.
+- Modify the employee's update so that they can edit certain fields of their personal information. For example: change the password they use to log in to the application or their profile picture.
+- Create a table for the status of absence requests and another for holidays, so that the scalability of the code is maintained and the status of the request can be incorporated into the application: 
+PENDING - IN PROCESS - PROCESSED
+- Adding more functionalities to the calendar.
+- Correct the user endingDate field so that it works exactly as we want it to.
 - Mob, pair and solo programming
   
 ***
