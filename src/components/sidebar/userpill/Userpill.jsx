@@ -6,12 +6,12 @@ import { deleteUser } from "../../../services/employee.service"
 
 function Userpill({name, image, id, refreshAction}) {
     const handleDeleteUser = () => {
-        Swal.fire("Delete Uuser", "Estas seguro de borrar al usuario? Diablo!", "question").then(
+        Swal.fire("Borrar Empleado", "Esta seguro de borrar al usuario?", "question").then(
             res => {
                 if (res.isConfirmed) {
                     deleteUser(id).then(
                         res => {
-                            Swal.fire("Delete Uuser", "El Usuario ha sido borrado", "success").then(
+                            Swal.fire("Empleado borrado", "El Usuario ha sido borrado", "success").then(
                                 () => {
                                     refreshAction()
                                 }
@@ -19,7 +19,7 @@ function Userpill({name, image, id, refreshAction}) {
                         }
                     ).catch(
                         err => {
-                            Swal.fire("Delete User", "Ha ocurrido un error", "error")
+                            Swal.fire("Borrado de Usuario", "Ha ocurrido un error", "error")
                         }
                     )
                 }

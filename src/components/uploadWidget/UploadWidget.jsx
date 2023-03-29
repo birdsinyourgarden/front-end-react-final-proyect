@@ -12,7 +12,7 @@ const UploadWidget = (props) => {
         uploadPreset: "q6l5mrmq",
       },
       function (error, result) {
-        if (result.info.secure_url) {
+        if (result.event === 'success') {
           props.url(result.info.secure_url);
           props.onAdd();
         }

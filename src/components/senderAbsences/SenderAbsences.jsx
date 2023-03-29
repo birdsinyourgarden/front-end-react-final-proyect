@@ -8,10 +8,12 @@ import UploadWidget from "../../components/uploadWidget/UploadWidget";
 import "./SenderAbsences.css";
 import Swal from "sweetalert2";
 import "sweetalert2/dist/sweetalert2.min.css";
+import { useForm } from "react-hook-form";
 
-/* const baseUrl = import.meta.env.VITE_BACKEND_URL; */
 
-export default function SenderAbsences() {
+
+const SenderAbsences = ()=> {
+
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
   const [startTime, setStartTime] = useState(null);
@@ -19,50 +21,86 @@ export default function SenderAbsences() {
   const [documentURL, setDocumentURL] = useState("");
   const [added, setAdded] = useState(false);
 
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+const absencesSubmit = (data) => {
+console.log(data)
+  // Send email
+
+  Swal.fire({
+    title: "¿Quieres enviar la petición?",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonText: "Sí, enviar",
+    cancelButtonText: "Cancelar",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      emailjs
+        .sendForm(
+          "service_19vqrs9",
+          "absences",
+          document.getElementById('absence-form'),
+          "WrHmfsnC8q7_pqnIC"
+        )
+        .then(() => {
+          const formData = new FormData();
+          const starting = new Date(startDate).toJSON().slice(0, 10)
+          const ending = new Date(endDate).toJSON().slice(0, 10)
+          const initTime = new Date(startTime)
+          const startingT = initTime.getHours() + ':' + initTime.getMinutes() + ':' + initTime.getSeconds()
+          const finalTime = new Date(endTime)
+          const endingTime = finalTime.getHours() + ':' + finalTime.getMinutes() + ':' + finalTime.getSeconds()
+          formData.append("user_id", data.user_id);
+          formData.append("startingDate", starting);
+          formData.append("startingTime", startingT);
+          formData.append("endingDate", ending);
+          formData.append("endingTime", endingTime);
+          formData.append("description", data.description);
+          formData.append("addDocument", documentURL);
+          createAbsence(formData)
+            .then((res) => {
+              console.log(res)
+              handleReset();
+                handleReset();
+                Swal.fire ( {
+                title:'Enviado',
+                text:'Se ha registrado con exito', 
+                icon:'success',
+                position: 'center',
+              })
+              }).catch((error) => {
+                console.log(error)
+                const message = error.response.data.replace('{', "").replace('}', "").replace('[', "").replace(']', '')
+                Swal.fire(
+                '¡Error!',
+                'Ha ocurrido un error al enviar la petición.</br><smal>'+message+'</small>',
+              'error'
+                );
+              });
+        })
+        .catch((error) => {
+          Swal.fire(
+            "¡Error!",
+            "Ha ocurrido un error al enviar la petición.",
+            "error"
+          );
+        });
+    }
+  });
+
+  // end send email
+
+}
+
   function getURL(data) {
     setDocumentURL(data);
   }
 
-  const sendEmail = (event) => {
-    event.preventDefault();
-    Swal.fire({
-      title: "¿Quieres enviar la petición?",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonText: "Sí, enviar",
-      cancelButtonText: "Cancelar",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        /* try {
-                    axios.post(baseUrl + "/auth/createAbsence", event.target);
-                } catch (error) {
-                    console.error("Error calling the API", error.message);
-                } */
-        emailjs
-          .sendForm(
-            "service_19vqrs9",
-            "absences",
-            event.target,
-            "WrHmfsnC8q7_pqnIC"
-          )
-          .then((response) => {
-            handleReset();
-            Swal.fire(
-              "¡Enviada!",
-              "La petición ha sido enviada con éxito.",
-              "success"
-            );
-          })
-          .catch((error) => {
-            Swal.fire(
-              "¡Error!",
-              "Ha ocurrido un error al enviar la petición.",
-              "error"
-            );
-          });
-      }
-    });
-  };
+  const onErrors = (e) => { console.log(e)}
 
   const handleReset = () => {
     setStartDate(null);
@@ -81,12 +119,15 @@ export default function SenderAbsences() {
       <form
         id="absence-form"
         className="form-mail-blue rounded-4 px-5 py-4"
-        onSubmit={sendEmail}
+        onSubmit={handleSubmit(absencesSubmit, onErrors)}
       >
         <div className="row">
           <div className="col mb-4">
             <label>Inicio</label>
             <DatePicker
+            className={errors.startingDate ? 'form-control shadow fail' : 'form-control shadow'}
+            {...register("startingDate", {
+            })}
               name="startDate"
               selected={startDate}
               onChange={(date) => setStartDate(date)}
@@ -96,10 +137,12 @@ export default function SenderAbsences() {
               locale={es}
               dateFormat="dd/MM/yyyy"
               placeholderText="Selecciona una fecha"
-              className="picker mb-2"
-              required
             />
+            <hr></hr>
             <DatePicker
+            className={errors.startingTime ? 'form-control shadow fail' : 'form-control shadow'}
+            {...register("startingTime", {
+            })}
               name="startTime"
               selected={startTime}
               onChange={(date) => setStartTime(date)}
@@ -110,13 +153,15 @@ export default function SenderAbsences() {
               timeCaption="Hora"
               dateFormat="HH:mm"
               placeholderText="Selecciona una hora"
-              className="picker"
-              required
+              
             />
           </div>
           <div className="col mb-4">
             <label>Fin</label>
             <DatePicker
+            className={errors.endingDate ? 'form-control shadow fail' : 'form-control shadow'}
+            {...register("endingDate", {
+            })}
               name="endDate"
               selected={endDate}
               onChange={(date) => setEndDate(date)}
@@ -127,10 +172,11 @@ export default function SenderAbsences() {
               locale={es}
               dateFormat="dd/MM/yyyy"
               placeholderText="Selecciona una fecha"
-              className="picker mb-2"
-              required
-            />
+            /><hr></hr>
             <DatePicker
+            className={errors.endingTime ? 'form-control shadow fail' : 'form-control shadow'}
+            {...register("endingTime", {
+            })}
               name="endTime"
               selected={endTime}
               onChange={(date) => setEndTime(date)}
@@ -141,19 +187,19 @@ export default function SenderAbsences() {
               timeCaption="Hora"
               dateFormat="HH:mm"
               placeholderText="Selecciona una hora"
-              className="picker"
-              required
             />
           </div>
-          <div className="col mb-4">
+          <div 
+          className={errors.description ? 'form-control shadow fail' : 'form-control shadow'}
+          >
             <label>Motivo</label>
             <textarea
-              name="message"
+            {...register("description", {
+            })}
               cols="25"
               rows="4"
               placeholder="Añade un motivo"
               maxLength={255}
-              required
             />
           </div>
         </div>
@@ -171,3 +217,4 @@ export default function SenderAbsences() {
     </div>
   );
 }
+export default SenderAbsences

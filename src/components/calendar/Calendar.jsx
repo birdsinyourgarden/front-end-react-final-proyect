@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react';
 import { Calendar, Whisper, Popover, Badge } from 'rsuite';
 import '../calendar/Calendar.css';
-import { getAbsences } from '../../services/employee.service'
+import { getAbsences, getHolidays } from '../../services/employee.service'
 import Swal from 'sweetalert2';
 import { CustomProvider } from "rsuite";
 import esES from "rsuite/locales/es_ES";
   
   const LocalCalendar = (props) => {
     const [calendarData, setCalendarData] = useState(null)
+    const [holidayData, setHolidayData] = useState(null)
 
     function getTodoList(date) {
       const day = date.getDate();
@@ -21,40 +22,42 @@ import esES from "rsuite/locales/es_ES";
         const yearCreated = createdAt.getFullYear()
 
         if (yearCreated == year && monthCreated == month && dayCreated == day) {
-          dataToShow.push({ time: row.startingTime, title: row.description, info: row })
+          dataToShow.push({ time: row.startingTime, title: row.description, info: row, type: 'absence' })
+        }
+      })
+
+      holidayData.forEach(row => {
+        const createdAt = new Date(row.startingDate)
+        const dayCreated = createdAt.getDate();
+        const monthCreated = createdAt.getMonth();
+        const yearCreated = createdAt.getFullYear()
+
+        if (yearCreated == year && monthCreated == month && dayCreated == day) {
+          dataToShow.push({ time: row.startingDate, title: row.endingDate, info: row, type: 'holiday' })
         }
       })
 
       return dataToShow
     
-      /* switch (day) {
-        case 10:
-          return [
-            { time: '10:30 am', title: 'Meeting' },
-            { time: '12:00 pm', title: 'Lunch' }
-          ];
-        case 15:
-          return [
-            { time: '09:30 pm', title: 'Products Introduction Meeting' },
-            { time: '12:30 pm', title: 'Client entertaining' },
-            { time: '02:00 pm', title: 'Product design discussion' },
-            { time: '05:00 pm', title: 'Product test and acceptance' },
-            { time: '06:30 pm', title: 'Reporting' },
-            { time: '10:00 pm', title: 'Going home to walk the dog' }
-          ];
-        default:
-          return [];
-      } */
     }
 
     const handleShowInfo = (item) => {
       const p = document.createElement("p")
-      p.innerHTML = `<b>Descripcion</b>: ${item.info.description}<br/>
-      <b>Status</b>: ${item.info.status}<br/>
-      <b>Inicio</b>: ${item.info.startingTime}<br/>
-      <b>Final</b>: ${item.info.endingTime}<br/>
-      <b>Link</b>: <a href='${item.info.addDocument}' target='_blank'>Descargar</a><br/>
-      `
+      if (item.type === 'absence') {
+        p.innerHTML = `<b>Descripcion</b>: ${item.info.description}<br/>
+        <b>Inicio</b>: ${item.info.startingTime}<br/>
+        <b>Final</b>: ${item.info.endingTime}<br/>
+        <b>Link</b>: <a href='${item.info.addDocument}' target='_blank'>Descargar</a><br/>
+        `
+        
+      } else {
+        p.innerHTML = `<b>Descripcion</b>: Vacaciones<br/>
+        <b>Status</b>: ${item.info.status}<br/>
+        <b>Inicio</b>: ${item.info.startingDate}<br/>
+        <b>Final</b>: ${item.info.endingDate}<br/>
+        `
+      }
+
       Swal.fire("Event Info", p, 'info')
     }
 
@@ -62,6 +65,12 @@ import esES from "rsuite/locales/es_ES";
       getAbsences().then(
         res => {
           setCalendarData(res.data)
+        }
+      )
+
+      getHolidays().then(
+        res => {
+          setHolidayData(res.data)
         }
       )
     }, [])
@@ -95,8 +104,8 @@ import esES from "rsuite/locales/es_ES";
         return (
           <ul className="calendar-todo-list">
             {displayList.map((item, index) => (
-              <li key={index} title={item.time + ' - ' + item.title} onClick={() => handleShowInfo(item)}>
-                <Badge /> <b>{item.time}</b> - {item.title}
+              <li key={index} title={item.time + ' - ' + item.title} onClick={() => handleShowInfo(item)} className={item.type === 'absence' ? 'absence-row' : 'holiday-row'}>
+              <Badge /> <b>{item.time}</b> - {item.title}
               </li>
             ))}
             {moreCount ? moreItem : null}
@@ -108,7 +117,7 @@ import esES from "rsuite/locales/es_ES";
     }
   
     return (
-      calendarData && (
+      (calendarData && holidayData) && (
         <div>
           <CustomProvider locale={esES}>
                 <Calendar compact={props.compact} bordered renderCell={renderCell} className='white-background' 

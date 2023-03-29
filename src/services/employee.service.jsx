@@ -3,23 +3,22 @@ import axios from "axios";
 const baseUrl = import.meta.env.VITE_BACKEND_URL;
 
 export const  registerEmployee = (data) => {
-    const token = localStorage.getItem("token");
+   const token = localStorage.getItem("token");
    const config = {
       headers: {
          Authorization: `Bearer ${token}`,
       },
    }
-    return axios.post(baseUrl + "/registerEmployee", data, config);
- };
-
- export const getEmployees = () => {
-    const token = localStorage.getItem("token");
-    const config = {
-    headers: {
-        Authorization: `Bearer ${token}`,
-    },
-    }
-    return axios.post(baseUrl + "/auth/dashboard", {}, config);
+   return axios.post(baseUrl + "/registerEmployee", data, config);
+};
+export const getEmployees = () => {
+const token = localStorage.getItem("token");
+const config = {
+headers: {
+      Authorization: `Bearer ${token}`,
+   },
+   }
+   return axios.post(baseUrl + "/auth/dashboard", {}, config);
 };
 
 export const deleteUser = (id) => {
@@ -40,4 +39,14 @@ export const getAbsences = () => {
       },
    }
    return axios.post(baseUrl + '/auth/absences/', {}, config)
+}
+
+export const getHolidays = () => {
+   const token = localStorage.getItem("token");
+   const config = {
+      headers: {
+         Authorization: `Bearer ${token}`,
+      },
+   }
+   return axios.post(baseUrl + '/auth/holidays', {}, config)
 }

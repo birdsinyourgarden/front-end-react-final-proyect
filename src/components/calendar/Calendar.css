@@ -104,3 +104,11 @@
   margin-top: 4vh; 
   width: 93%;
 }
+
+.absence-row{
+  background-color: blueviolet;
+}
+
+.holiday-row{
+  background-color: darkcyan;
+}
