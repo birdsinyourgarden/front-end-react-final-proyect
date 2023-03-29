@@ -1,8 +1,8 @@
-      h1 {
+      #pageTitle {
         box-sizing: border-box;
         width: 830px;
         height: 80px;
-        margin-left: -485px;
+        margin-left: -45px;
         margin-top: -33px;
         background: #658A05;
         border: 1px solid #000000;
@@ -13,7 +13,7 @@
         color: #ffffff;
         }
 
-      .databox {
+      #dataBox {
                 margin-top: 5vh;
                 width: 865px;
                 height: 527px;
@@ -22,9 +22,9 @@
                 background-color: #6d862c;
         }
 
-      .title {
+      #boxTitle {
         position: relative;
-          width: 865px;
+          width: 867px;
           height: 100px;
           left: -33px;
           top: -33px;
@@ -32,7 +32,7 @@
         background-color: #FFE8C6;
   }
 
-      .userName {
+      #userData {
               max-width: 360px;
           background: #CFE695;
           color: #000;
@@ -48,7 +48,7 @@
           border-radius: 1.375em;
 }
 
-          .dateAbscens {
+          #checkDate {
             max-width: 460px;
             margin-top: 2%;
             background: #CFE695;
@@ -65,7 +65,7 @@
             border-radius: 1.375em;
             }
         
-.event, .mb-3 {
+#eventTitle {
   width: 10em;
   font-size: 25px;
   display: flex;
@@ -82,10 +82,9 @@
   linear-gradient(#a9e0b0, #d7ed96) border-box;
 }
 
-.list {
-  max-width: 100%;
-  width: 25em;
-  margin-left: 25em;
+#listAbscens {
+  width: 24em;
+  margin-left: 26em;
   margin-top: -2.8em; 
   display: flex;
   flex-flow: column wrap;
@@ -120,7 +119,7 @@ select option [value="20"], [value="21"]
   background: rgba(237, 151, 31, 0.88);
 }
 
-.DescriptionTitle {  
+#descriptionTitle {  
   width: 10em;
   font-size: 25px;
   display: flex;
@@ -136,28 +135,41 @@ select option [value="20"], [value="21"]
   linear-gradient(#6f92b9, #d7ed96) border-box;
 }
 
-textarea {
-  max-width: 100%;
+#causeDescription {
     height: 8em;
     width: 25em;
-  margin-left: 25em; 
-  margin-top: -2.8em; 
+    margin-left: 28em; 
+    margin-top: -2.8em; 
+    display: flex;
+    flex-flow: column wrap;
+    border: 1px solid rgb(140, 195, 139);
+    background:
+    linear-gradient(#CFE695, #96AA1B) content-box,
+    linear-gradient(#a9e0b0, #d7ed96) border-box;
+    color: rgb(4, 4, 4);
+}
+
+#justificationTitle {
+  width: 10em;
+  font-size: 25px;
   display: flex;
-  flex-flow: column wrap;
-  border: 1px solid rgb(140, 195, 139);
+  color: #000;
+  margin-left: 8px;
+  margin-top: 35px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
   background:
   linear-gradient(#CFE695, #96AA1B) content-box,
   linear-gradient(#a9e0b0, #d7ed96) border-box;
-  color: rgb(4, 4, 4);
 }
 
-.choice {
-  width: 25em;
-  left: 45em;
-  top: -2em;
-  flex-flow: column wrap;
+#choice {
+  width: 24em;
+  margin-left: 26em;
+  margin-top: -4.5em; 
   display: flex;
-  
+  flex-flow: column wrap;
   background-color: rgb(154, 197, 222);
   border-collapse: collapse; 
 }

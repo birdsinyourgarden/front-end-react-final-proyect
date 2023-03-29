@@ -3,27 +3,27 @@ import "../absences/Absences.css";
 
 const  Absences= () => {
    return (
-   <Container className="p-5">
+   <Container id="pageTitle" className="p-5">
          <h1>Actualizar Ausencia</h1>   
          
-      <Card className="databox">
-         <Card.Title className="title">  
+      <Card id="dataBox">
+         <Card.Title id="boxTitle" className="title">  
             <div>
-               <table className="userName">
+               <table id="userData" className="userName">
                   <tr><th>Manuel Ferrero Rocher</th></tr>
                </table>
             </div>
    
             <div>
-               <table className="dateAbscens">
+               <table id="checkDate" className="dateAbscens">
                <tr><td>Dias de Petición. 23/03/2023 - 25/03/2023</td></tr>
                </table>
                </div>   
                </Card.Title>
 
                <Form.Group  controlId="event"> 
-                  <Form.Label class="event">Evento</Form.Label>
-                     <Form.Select className="list" controlId="abscensSector">
+                  <Form.Label id="eventTitle" class="event">Evento</Form.Label>
+                     <Form.Select id="listAbscens" className="list" controlId="abscensSector">
                            <option value="1">Ausencia Autorizada - Enfermedad</option>
                            <option value="2">Cita Médica</option>
                            <option value="3">Acompañamiento al médico de familiares adultos</option>
@@ -49,18 +49,18 @@ const  Absences= () => {
                </Form.Group>
 
                <Form.Group controlId="description">
-                  <Form.Label class="DescriptionTitle">Descripcion</Form.Label>
+                  <Form.Label id="descriptionTitle">Descripcion</Form.Label>
                </Form.Group>
 
-               <Form.Group class="Description">
-                     <textarea type="text" placeholder="Description de Ausencias" rows="5"/>
+               <Form.Group className="Description">
+                     <textarea id="causeDescription" type="text" placeholder="Description de Ausencias" rows="5"/>
                </Form.Group>
                               
-               <Form.Group className="mb-3" controlId="justification">
-                  <Form.Label class="justificationTitle">Justificante</Form.Label>
+               <Form.Group id="justificationTitle"className="mb-3" controlId="justification">
+                  <Form.Label>Justificante</Form.Label>
                   </Form.Group>
                   <Form.Group>
-                     <Form.Select className="choice" controlId="justificationStatus">
+                     <Form.Select id="choice" controlId="justificationStatus">
                         <option value="true">Justificado</option>
                         <option value="false">Acusasion</option>
                      </Form.Select>
