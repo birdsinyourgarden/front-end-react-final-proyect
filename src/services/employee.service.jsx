@@ -19,7 +19,7 @@ export const  registerEmployee = (data) => {
         Authorization: `Bearer ${token}`,
     },
     }
-    return axios.post(baseUrl + "/employees", {}, config);
+    return axios.post(baseUrl + "/auth/dashboard", {}, config);
 };
 
 export const deleteUser = (id) => {
