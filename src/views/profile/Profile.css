@@ -17,22 +17,13 @@
     #detailTitle{
         font-size: 1.1rem;
     }
-
-    #detailsHeader{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
+    
 
     #detailContent{
-        width: 28vh!important;
-        display: flex!important;
-        justify-content: center!important;
+        width: fit-content!important;
     }
 
     #detailFields{
-        display: flex;
-        flex-wrap: wrap;
         margin-top: 2vh;
         width: fit-content!important;
     }
@@ -45,6 +36,11 @@
         margin-top: 1.2vh;
         width: fit-content!important;
     }
+
+    .btnRight{
+    justify-content: center!important;
+}
+
 
 }
 
@@ -71,7 +67,8 @@
     }
 
     #detailContent{
-        width: 20vh!important;
+        width: 28vh!important;
+        justify-content: center!important;
     }
 
     #detailFields{
