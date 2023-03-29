@@ -14,7 +14,7 @@ return (
     <div>
         <div id="homeAdminLayout">
             <Row>
-            <Col lg="3">
+            <Col id="employeesList" lg="3">
                 <Sidebar/>
             </Col>
             <Col lg="9">
