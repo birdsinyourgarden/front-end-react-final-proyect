@@ -229,7 +229,6 @@ To run the tests, execute the following command(s)
 PENDING - IN PROCESS - PROCESSED
 - Adding more functionalities to the calendar.
 - Correct the user endingDate field so that it works exactly as we want it to.
-- Mob, pair and solo programming
   
 ***
 
